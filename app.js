@@ -1,17 +1,14 @@
 const SHEET_ID =
-  "1Pax-uq-WIefiiInGaYvvECl0Mlg_hGvLtEzZDzIJT1g";
-
-const API_KEY =
-  "AIzaSyDUMMY"; // пока не нужен
+"1Pax-uq-WIefiiInGaYvvECl0Mlg_hGvLtEzZDzIJT1g";
 
 const TABLE_URL =
-`https://opensheet.elk.sh/${SHEET_ID}/ТУРНИРНАЯ ТАБЛИЦА`;
+`https://opensheet.elk.sh/${SHEET_ID}/${encodeURIComponent("ТУРНИРНАЯ ТАБЛИЦА")}`;
 
 const SETTINGS_URL =
-`https://opensheet.elk.sh/${SHEET_ID}/НАСТРОЙКИ`;
+`https://opensheet.elk.sh/${SHEET_ID}/${encodeURIComponent("НАСТРОЙКИ")}`;
 
 const TEAMS_URL =
-`https://opensheet.elk.sh/${SHEET_ID}/СПИСОК КОМАНД`;
+`https://opensheet.elk.sh/${SHEET_ID}/${encodeURIComponent("СПИСОК КОМАНД")}`;
 
 let standings = [];
 let teams = {};
