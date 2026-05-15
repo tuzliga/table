@@ -65,8 +65,8 @@ function renderHeader() {
 
   if (logo) {
     document.getElementById(
-      "league-logo"
-    ).src = logo;
+  "league-logo"
+).src = `./${logo}`;
   }
 
   document.getElementById(
