@@ -96,7 +96,7 @@ function renderTable() {
       html += `
       <div class="row short-row">
 
-        <div>${team.№}</div>
+        <div>${team["№"]}</div>
 
         <div class="team-box">
 
