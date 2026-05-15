@@ -1,317 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  background:
-  linear-gradient(
-    135deg,
-    #001629 0%,
-    #00233d 50%,
-    #001629 100%
-  );
-
-  color:#fff;
-  font-family:'Inter',sans-serif;
-
-  display:flex;
-  justify-content:center;
-}
-
-.app{
-  width:100%;
-  max-width:430px;
-  min-height:100vh;
-}
-
-/* HEADER */
-
-.header{
-  padding:18px 18px 8px;
-}
-
-.league-info{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.league-logo{
-  width:118px;
-  height:118px;
-  object-fit:contain;
-  flex-shrink:0;
-}
-
-#league-name{
-  font-family:'Oswald',sans-serif;
-  font-size:46px;
-  font-weight:600;
-  line-height:.95;
-  letter-spacing:.4px;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
-#season{
-  color:#efbb35;
-  font-family:'Oswald',sans-serif;
-  font-size:20px;
-  font-weight:400;
-  margin-top:2px;
-  letter-spacing:.8px;
-}
+  <title>Тузлига</title>
 
-/* TOP NAV */
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
 
-.tabs{
-  display:flex;
-  justify-content:space-around;
+  <script
+    src="https://unpkg.com/lucide@latest"
+  ></script>
+</head>
 
-  margin-top:8px;
+<body>
 
-  border-bottom:
-  1px solid rgba(255,255,255,.08);
-}
+<div class="app">
 
-.tab{
-  border:none;
-  background:none;
+  <header class="header">
 
-  color:#8d98a5;
+    <div class="league-info">
 
-  font-family:'Oswald',sans-serif;
-  font-size:18px;
-  font-weight:500;
+      <img
+        id="league-logo"
+        class="league-logo"
+        src=""
+        alt="logo"
+      >
 
-  padding:16px 0;
-  cursor:pointer;
+      <div class="league-text">
+        <h1 id="league-name">
+          ТУЗЛИГА
+        </h1>
 
-  position:relative;
-}
+        <p id="season">
+          СЕЗОН 2026
+        </p>
+      </div>
 
-.tab.active{
-  color:#efbb35;
-}
+    </div>
 
-.tab.active::after{
-  content:'';
-  position:absolute;
-  left:0;
-  bottom:0;
+  </header>
 
-  width:100%;
-  height:2px;
+  <!-- TOP TABS -->
 
-  background:#efbb35;
-}
+  <nav class="tabs">
 
-/* SWITCH */
+    <button class="tab active">
 
-.mode-switch{
-  display:flex;
+      <i data-lucide="trophy"></i>
 
-  margin:16px 16px 14px;
+      <span>
+        ТАБЛИЦА
+      </span>
 
-  border-radius:22px;
-  overflow:hidden;
+    </button>
 
-  background:
-  rgba(255,255,255,.03);
+    <button class="tab">
 
-  border:
-  1px solid rgba(255,255,255,.08);
-}
+      <i data-lucide="calendar-days"></i>
 
-.mode{
-  flex:1;
-  border:none;
-  background:none;
+      <span>
+        МАТЧИ
+      </span>
 
-  color:#d4d9df;
+    </button>
 
-  font-family:'Oswald',sans-serif;
-  font-size:18px;
-  font-weight:500;
+    <button class="tab">
 
-  padding:15px 0;
-  cursor:pointer;
-}
+      <i data-lucide="circle-dot"></i>
 
-.mode.active{
-  background:#d9aa28;
-  color:#000;
-}
+      <span>
+        БОМБАРДИРЫ
+      </span>
 
-/* TABLE */
+    </button>
 
-.table-card{
-  margin:0 14px 30px;
+  </nav>
 
-  border-radius:28px;
-  overflow:hidden;
+  <!-- SUB TABS -->
 
-  background:
-  rgba(255,255,255,.03);
+  <div class="mode-switch">
 
-  border:
-  1px solid rgba(255,255,255,.08);
+    <button
+      class="mode active"
+      data-mode="short"
+    >
+      ВКРАТЦЕ
+    </button>
 
-  backdrop-filter:
-  blur(18px);
-}
+    <button
+      class="mode"
+      data-mode="full"
+    >
+      ПОЛНОСТЬЮ
+    </button>
 
-.row{
-  display:grid;
-  align-items:center;
+    <button
+      class="mode"
+      data-mode="form"
+    >
+      ФОРМА
+    </button>
 
-  min-height:66px;
+  </div>
 
-  padding:0 14px;
+  <div
+    id="table-container"
+  ></div>
 
-  border-bottom:
-  1px solid rgba(255,255,255,.05);
-}
+</div>
 
-.row:last-child{
-  border-bottom:none;
-}
+<script src="app.js"></script>
 
-.header-row{
-  min-height:54px;
+<script>
+  lucide.createIcons();
+</script>
 
-  color:#7f8b9a;
-
-  font-size:12px;
-  font-weight:600;
-}
-
-/* SHORT */
-
-.short-row{
-  grid-template-columns:
-  24px
-  1fr
-  38px
-  48px
-  48px;
-}
-
-/* FULL */
-
-.full-row{
-  grid-template-columns:
-  18px
-  1.2fr
-  repeat(7,26px)
-  34px;
-
-  font-size:12px;
-}
-
-/* FORM */
-
-.form-row{
-  grid-template-columns:
-  24px
-  36px
-  1fr
-  auto;
-}
-
-/* TEAM */
-
-.team-box{
-  display:flex;
-  align-items:center;
-  gap:10px;
-
-  min-width:0;
-
-  font-family:'Oswald',sans-serif;
-  font-size:18px;
-  font-weight:500;
-}
-
-.team-box span{
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
-.team-logo{
-  width:34px;
-  height:34px;
-  object-fit:contain;
-  flex-shrink:0;
-}
-
-/* POINTS */
-
-.points{
-  color:#efbb35;
-  font-size:18px;
-  font-weight:700;
-}
-
-.positive{
-  color:#1fdb61;
-  font-weight:600;
-}
-
-.negative{
-  color:#ff4f4f;
-  font-weight:600;
-}
-
-/* TOP 3 */
-
-.row:nth-child(2){
-  border-left:
-  4px solid #1ddb53;
-}
-
-.row:nth-child(3){
-  border-left:
-  4px solid #208eff;
-}
-
-.row:nth-child(4){
-  border-left:
-  4px solid #efbb35;
-}
-
-/* FORM */
-
-.form{
-  display:flex;
-  gap:5px;
-}
-
-.circle{
-  width:24px;
-  height:24px;
-
-  border-radius:50%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:10px;
-  font-weight:700;
-}
-
-.win{
-  background:#1ec95b;
-}
-
-.draw{
-  background:#808a96;
-}
-
-.loss{
-  background:#ff4f4f;
-}
+</body>
+</html>
