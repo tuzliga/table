@@ -1,14 +1,17 @@
 const SHEET_ID =
 "1Pax-uq-WIefiiInGaYvvECl0Mlg_hGvLtEzZDzIJT1g";
 
+const BASE_URL =
+`https://opensheet.elk.sh/${SHEET_ID}`;
+
 const TABLE_URL =
-`https://opensheet.elk.sh/${SHEET_ID}/${encodeURIComponent("ТУРНИРНАЯ ТАБЛИЦА")}`;
+`${BASE_URL}/${encodeURIComponent("ТУРНИРНАЯ ТАБЛИЦА")}`;
 
 const SETTINGS_URL =
-`https://opensheet.elk.sh/${SHEET_ID}/${encodeURIComponent("НАСТРОЙКИ")}`;
+`${BASE_URL}/${encodeURIComponent("НАСТРОЙКИ")}`;
 
 const TEAMS_URL =
-`https://opensheet.elk.sh/${SHEET_ID}/${encodeURIComponent("СПИСОК КОМАНД")}`;
+`${BASE_URL}/${encodeURIComponent("СПИСОК КОМАНД")}`;
 
 let standings = [];
 let teams = {};
@@ -17,6 +20,7 @@ let currentMode = "short";
 
 async function loadData() {
   try {
+
     const [
       standingsRes,
       settingsRes,
@@ -27,7 +31,8 @@ async function loadData() {
       fetch(TEAMS_URL)
     ]);
 
-    standings = await standingsRes.json();
+    standings =
+      await standingsRes.json();
 
     const settingsData =
       await settingsRes.json();
@@ -35,20 +40,39 @@ async function loadData() {
     const teamsData =
       await teamsRes.json();
 
-    settingsData.forEach(item => {
-      settings[item.A] = item.B;
+    // настройки
+    settingsData.forEach(row => {
+
+      const values =
+        Object.values(row);
+
+      const key =
+        values[0];
+
+      const value =
+        values[1];
+
+      settings[key] = value;
     });
 
+    // логотипы команд
     teamsData.forEach(team => {
-      teams[team.КОМАНДА] =
-        team.ЛОГО || "";
+
+      const teamName =
+        team["КОМАНДА"];
+
+      const logo =
+        team["ЛОГО"];
+
+      teams[teamName] =
+        logo || "";
     });
 
     renderHeader();
     renderTable();
 
   } catch (error) {
-    console.error("Ошибка загрузки:", error);
+    console.error(error);
   }
 }
 
@@ -57,26 +81,39 @@ function renderHeader() {
   const logo =
     settings["ЛОГО_ЛИГИ"];
 
-  const name =
-    settings["НАЗВАНИЕ"] || "ТУЗЛИГА";
+  const leagueName =
+    settings["НАЗВАНИЕ"] ||
+    "ТУЗЛИГА";
 
   const season =
-    settings["СЕЗОН"] || "2026";
+    settings["СЕЗОН"] ||
+    "2026";
 
-  if (logo) {
-  document.getElementById(
-    "league-logo"
-  ).src = `./${logo}`;
-}
+  // логотип
+  const logoElement =
+    document.getElementById(
+      "league-logo"
+    );
 
+  if (logoElement && logo) {
+    logoElement.src = logo;
+  }
+
+  // название
   document.getElementById(
     "league-name"
-  ).innerText = name;
+  ).innerText =
+    leagueName;
 
+  // сезон
   document.getElementById(
     "season"
   ).innerText =
     `СЕЗОН ${season}`;
+}
+
+function getDefaultLogo() {
+  return "https://cdn-icons-png.flaticon.com/512/54/54481.png";
 }
 
 function renderTable() {
@@ -89,31 +126,34 @@ function renderTable() {
   let html =
     `<div class="table-card">`;
 
+  // ВКРАТЦЕ
   if (currentMode === "short") {
 
     html += `
-      <div class="row short-row header-row">
-        <div>#</div>
-        <div>КОМАНДА</div>
-        <div>И</div>
-        <div>+/-</div>
-        <div>ОЧКИ</div>
-      </div>
+    <div class="row short-row header-row">
+      <div>#</div>
+      <div>КОМАНДА</div>
+      <div>И</div>
+      <div>+/-</div>
+      <div>ОЧКИ</div>
+    </div>
     `;
 
     standings.forEach(team => {
 
       const rm =
-        Number(team.РМ || 0);
+        Number(team["РМ"] || 0);
 
       const logo =
-        teams[team.КОМАНДА] ||
-        "https://cdn-icons-png.flaticon.com/512/54/54481.png";
+        teams[team["КОМАНДА"]] ||
+        getDefaultLogo();
 
       html += `
       <div class="row short-row">
 
-        <div>${team["№"]}</div>
+        <div>
+          ${team["№"]}
+        </div>
 
         <div class="team-box">
 
@@ -123,24 +163,28 @@ function renderTable() {
           />
 
           <span>
-            ${team.КОМАНДА}
+            ${team["КОМАНДА"]}
           </span>
 
         </div>
 
-        <div>${team.И}</div>
+        <div>
+          ${team["И"]}
+        </div>
 
         <div class="${
           rm >= 0
           ? "positive"
           : "negative"
         }">
+
           ${rm > 0 ? "+" : ""}
           ${rm}
+
         </div>
 
         <div class="points">
-          ${team.ОЧКИ}
+          ${team["ОЧКИ"]}
         </div>
 
       </div>
@@ -148,21 +192,22 @@ function renderTable() {
     });
   }
 
+  // ПОЛНОСТЬЮ
   if (currentMode === "full") {
 
     html += `
-      <div class="row full-row header-row">
-        <div>#</div>
-        <div>КОМ</div>
-        <div>И</div>
-        <div>В</div>
-        <div>Н</div>
-        <div>П</div>
-        <div>ЗМ</div>
-        <div>ПМ</div>
-        <div>РМ</div>
-        <div>О</div>
-      </div>
+    <div class="row full-row header-row">
+      <div>#</div>
+      <div>КОМ</div>
+      <div>И</div>
+      <div>В</div>
+      <div>Н</div>
+      <div>П</div>
+      <div>ЗМ</div>
+      <div>ПМ</div>
+      <div>РМ</div>
+      <div>О</div>
+    </div>
     `;
 
     standings.forEach(team => {
@@ -171,17 +216,17 @@ function renderTable() {
       <div class="row full-row">
 
         <div>${team["№"]}</div>
-        <div>${team.КОМАНДА}</div>
-        <div>${team.И}</div>
-        <div>${team.В}</div>
-        <div>${team.Н}</div>
-        <div>${team.П}</div>
-        <div>${team.ЗМ}</div>
-        <div>${team.ПМ}</div>
-        <div>${team.РМ}</div>
+        <div>${team["КОМАНДА"]}</div>
+        <div>${team["И"]}</div>
+        <div>${team["В"]}</div>
+        <div>${team["Н"]}</div>
+        <div>${team["П"]}</div>
+        <div>${team["ЗМ"]}</div>
+        <div>${team["ПМ"]}</div>
+        <div>${team["РМ"]}</div>
 
         <div class="points">
-          ${team.ОЧКИ}
+          ${team["ОЧКИ"]}
         </div>
 
       </div>
@@ -189,31 +234,34 @@ function renderTable() {
     });
   }
 
+  // ФОРМА
   if (currentMode === "form") {
 
     html += `
-      <div class="row form-row header-row">
-        <div>#</div>
-        <div></div>
-        <div>КОМАНДА</div>
-        <div>ФОРМА</div>
-      </div>
+    <div class="row form-row header-row">
+      <div>#</div>
+      <div></div>
+      <div>КОМАНДА</div>
+      <div>ФОРМА</div>
+    </div>
     `;
 
     standings.forEach(team => {
 
       const logo =
-        teams[team.КОМАНДА] ||
-        "https://cdn-icons-png.flaticon.com/512/54/54481.png";
+        teams[team["КОМАНДА"]] ||
+        getDefaultLogo();
 
       const form =
-        (team.ФОРМА || "")
+        (team["ФОРМА"] || "")
         .split("");
 
       html += `
       <div class="row form-row">
 
-        <div>${team["№"]}</div>
+        <div>
+          ${team["№"]}
+        </div>
 
         <img
           class="team-logo"
@@ -221,7 +269,7 @@ function renderTable() {
         />
 
         <div>
-          ${team.КОМАНДА}
+          ${team["КОМАНДА"]}
         </div>
 
         <div class="form">
@@ -265,6 +313,7 @@ function renderTable() {
   container.innerHTML = html;
 }
 
+// переключение вкладок
 document
 .querySelectorAll(".mode")
 .forEach(button => {
@@ -276,11 +325,14 @@ document
       document
       .querySelectorAll(".mode")
       .forEach(btn =>
-        btn.classList.remove("active")
+        btn.classList.remove(
+          "active"
+        )
       );
 
-      button.classList
-      .add("active");
+      button.classList.add(
+        "active"
+      );
 
       currentMode =
         button.dataset.mode;
