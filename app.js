@@ -64,10 +64,10 @@ function renderHeader() {
     settings["СЕЗОН"] || "2026";
 
   if (logo) {
-    document.getElementById(
-  "league-logo"
-).src = `./${logo}`;
-  }
+  document.getElementById(
+    "league-logo"
+  ).src = `./${logo}`;
+}
 
   document.getElementById(
     "league-name"
