@@ -2,62 +2,126 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Тузлига 2026</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Тузлига</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
+
+  <script
+    src="https://unpkg.com/lucide@latest"
+  ></script>
 </head>
+
 <body>
 
-  <div class="app">
+<div class="app">
 
-    <header class="header">
-      <div class="league-info">
-        <img id="league-logo" class="league-logo" src="" alt="Лого">
-        <div>
-          <h1 id="league-name">ТУЗЛИГА</h1>
-          <p id="season">СЕЗОН 2026</p>
-        </div>
+  <header class="header">
+
+    <div class="league-info">
+
+      <img
+        id="league-logo"
+        class="league-logo"
+        src=""
+        alt="logo"
+      >
+
+      <div class="league-text">
+        <h1 id="league-name">
+          ТУЗЛИГА
+        </h1>
+
+        <p id="season">
+          СЕЗОН 2026
+        </p>
       </div>
-    </header>
 
-    <nav class="tabs">
-
-  <button class="tab active">
-    🏆
-    <span>ТАБЛИЦА</span>
-  </button>
-
-  <button class="tab">
-    🗓️
-    <span>МАТЧИ</span>
-  </button>
-
-  <button class="tab">
-    ⚽
-    <span>БОМБАРДИРЫ</span>
-  </button>
-
-</nav>
-
-    <div class="mode-switch">
-      <button class="mode active" data-mode="short">
-        ВКРАТЦЕ
-      </button>
-
-      <button class="mode" data-mode="full">
-        ПОЛНОСТЬЮ
-      </button>
-
-      <button class="mode" data-mode="form">
-        ФОРМА
-      </button>
     </div>
 
-    <div id="table-container"></div>
+  </header>
+
+  <!-- TOP TABS -->
+
+  <nav class="tabs">
+
+    <button class="tab active">
+
+      <i data-lucide="trophy"></i>
+
+      <span>
+        ТАБЛИЦА
+      </span>
+
+    </button>
+
+    <button class="tab">
+
+      <i data-lucide="calendar-days"></i>
+
+      <span>
+        МАТЧИ
+      </span>
+
+    </button>
+
+    <button class="tab">
+
+      <i data-lucide="circle-dot"></i>
+
+      <span>
+        БОМБАРДИРЫ
+      </span>
+
+    </button>
+
+  </nav>
+
+  <!-- SUB TABS -->
+
+  <div class="mode-switch">
+
+    <button
+      class="mode active"
+      data-mode="short"
+    >
+      ВКРАТЦЕ
+    </button>
+
+    <button
+      class="mode"
+      data-mode="full"
+    >
+      ПОЛНОСТЬЮ
+    </button>
+
+    <button
+      class="mode"
+      data-mode="form"
+    >
+      ФОРМА
+    </button>
 
   </div>
 
-  <script src="app.js"></script>
+  <div
+    id="table-container"
+  ></div>
+
+</div>
+
+<script src="app.js"></script>
+
+<script>
+  lucide.createIcons();
+</script>
 
 </body>
 </html>
