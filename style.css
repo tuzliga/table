@@ -6,13 +6,19 @@
   box-sizing:border-box;
 }
 
+html,body{
+  min-height:100%;
+}
+
 body{
   background:
-  linear-gradient(
-    180deg,
-    #041a2d 0%,
-    #02111f 100%
-  );
+    radial-gradient(
+      circle at top,
+      #082746 0%,
+      #031a2f 28%,
+      #021120 60%,
+      #010c18 100%
+    );
 
   color:#fff;
   font-family:'Inter',sans-serif;
@@ -30,7 +36,7 @@ body{
 /* HEADER */
 
 .header{
-  padding:18px 18px 10px;
+  padding:14px 16px 8px;
 }
 
 .league-info{
@@ -40,34 +46,43 @@ body{
 }
 
 .league-logo{
-  width:120px;
-  height:120px;
+  width:122px;
+  height:122px;
   object-fit:contain;
+  flex-shrink:0;
+}
+
+.league-text{
+  display:flex;
+  flex-direction:column;
 }
 
 #league-name{
   font-size:42px;
-  font-weight:500;
+  line-height:.92;
+  font-weight:400;
   letter-spacing:-1px;
 }
 
 #season{
-  color:#f0b72f;
+  color:#efbb35;
   font-size:18px;
   font-weight:400;
   margin-top:2px;
+  letter-spacing:.2px;
 }
 
-/* TOP TABS */
+/* TOP NAV */
 
 .tabs{
   display:flex;
   justify-content:space-around;
 
-  border-bottom:
-  1px solid rgba(255,255,255,.08);
+  margin-top:2px;
 
-  margin-top:4px;
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.08);
 }
 
 .tab{
@@ -78,20 +93,21 @@ body{
   align-items:center;
   gap:8px;
 
-  color:#8e98a5;
+  color:#7f8895;
 
-  font-size:15px;
+  font-size:16px;
   font-weight:400;
 
-  padding:16px 0 14px;
+  padding:18px 0 16px;
 
   cursor:pointer;
   position:relative;
 }
 
 .tab svg{
-  width:20px;
-  height:20px;
+  width:21px;
+  height:21px;
+  stroke-width:1.9;
 }
 
 .tab.active{
@@ -100,6 +116,7 @@ body{
 
 .tab.active::after{
   content:'';
+
   position:absolute;
   left:0;
   bottom:0;
@@ -116,65 +133,71 @@ body{
   display:flex;
   gap:10px;
 
-  margin:20px 16px 16px;
+  margin:18px 16px 18px;
 }
 
 .mode{
   flex:1;
-  height:44px;
 
-  border-radius:16px;
+  height:42px;
+
+  border-radius:14px;
 
   border:
-  1px solid rgba(
-    255,255,255,.12
-  );
+    1px solid
+    rgba(255,255,255,.12);
 
   background:
-  rgba(255,255,255,.02);
+    rgba(255,255,255,.02);
 
-  color:#97a0ab;
+  color:#8d96a2;
 
   font-size:14px;
   font-weight:400;
 
   cursor:pointer;
+  transition:.2s;
 }
 
 .mode.active{
-  border:1px solid #efbb35;
+  border:
+    1px solid #efbb35;
+
   color:#efbb35;
-  background:transparent;
+
+  background:
+    rgba(239,187,53,.05);
 }
 
 /* TABLE */
 
 .table-card{
-  margin:0 14px 30px;
+  margin:0 14px 26px;
 
   border-radius:26px;
   overflow:hidden;
 
   background:
-  rgba(255,255,255,.03);
+    rgba(255,255,255,.03);
 
   border:
-  1px solid rgba(
-    255,255,255,.08
-  );
+    1px solid
+    rgba(255,255,255,.08);
+
+  backdrop-filter:
+    blur(16px);
 }
 
 .row{
   display:grid;
   align-items:center;
 
-  min-height:68px;
+  min-height:66px;
   padding:0 14px;
 
   border-bottom:
-  1px solid rgba(
-    255,255,255,.05
-  );
+    1px solid
+    rgba(255,255,255,.05);
 }
 
 .row:last-child{
@@ -182,21 +205,23 @@ body{
 }
 
 .header-row{
-  min-height:52px;
+  min-height:50px;
 
-  color:#788391;
+  color:#6f7c8d;
+
   font-size:12px;
+  font-weight:400;
 }
 
 /* SHORT TABLE */
 
 .short-row{
   grid-template-columns:
-  22px
-  1fr
-  36px
-  46px
-  46px;
+    22px
+    1fr
+    34px
+    44px
+    44px;
 }
 
 .team-box{
@@ -212,9 +237,8 @@ body{
   width:38px;
   height:38px;
   object-fit:contain;
+  flex-shrink:0;
 }
-
-/* COLORS */
 
 .points{
   color:#efbb35;
@@ -222,26 +246,26 @@ body{
 }
 
 .positive{
-  color:#22d761;
+  color:#18d95c;
 }
 
 .negative{
-  color:#ff5353;
+  color:#ff5252;
 }
 
 /* TOP 3 */
 
 .row:nth-child(2){
   border-left:
-  3px solid #18d85a;
+    3px solid #1ad85a;
 }
 
 .row:nth-child(3){
   border-left:
-  3px solid #2a8dff;
+    3px solid #2891ff;
 }
 
 .row:nth-child(4){
   border-left:
-  3px solid #efbb35;
+    3px solid #efbb35;
 }
