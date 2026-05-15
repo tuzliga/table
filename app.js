@@ -16,54 +16,67 @@ let settings = {};
 let currentMode = "short";
 
 async function loadData() {
+  try {
+    const [
+      standingsRes,
+      settingsRes,
+      teamsRes
+    ] = await Promise.all([
+      fetch(TABLE_URL),
+      fetch(SETTINGS_URL),
+      fetch(TEAMS_URL)
+    ]);
 
-  const [
-    standingsRes,
-    settingsRes,
-    teamsRes
-  ] = await Promise.all([
-    fetch(TABLE_URL),
-    fetch(SETTINGS_URL),
-    fetch(TEAMS_URL)
-  ]);
+    standings = await standingsRes.json();
 
-  standings = await standingsRes.json();
+    const settingsData =
+      await settingsRes.json();
 
-  const settingsData =
-    await settingsRes.json();
+    const teamsData =
+      await teamsRes.json();
 
-  const teamsData =
-    await teamsRes.json();
+    settingsData.forEach(item => {
+      settings[item.A] = item.B;
+    });
 
-  settingsData.forEach(item => {
-    settings[item.A] = item.B;
-  });
+    teamsData.forEach(team => {
+      teams[team.КОМАНДА] =
+        team.ЛОГО || "";
+    });
 
-  teamsData.forEach(team => {
-    teams[team.КОМАНДА] =
-      team.ЛОГО || "";
-  });
+    renderHeader();
+    renderTable();
 
-  renderHeader();
-  renderTable();
+  } catch (error) {
+    console.error("Ошибка загрузки:", error);
+  }
 }
 
 function renderHeader() {
 
-  document.getElementById(
-    "league-logo"
-  ).src =
+  const logo =
     settings["ЛОГО_ЛИГИ"];
+
+  const name =
+    settings["НАЗВАНИЕ"] || "ТУЗЛИГА";
+
+  const season =
+    settings["СЕЗОН"] || "2026";
+
+  if (logo) {
+    document.getElementById(
+      "league-logo"
+    ).src = logo;
+  }
 
   document.getElementById(
     "league-name"
-  ).innerText =
-    settings["НАЗВАНИЕ"];
+  ).innerText = name;
 
   document.getElementById(
     "season"
   ).innerText =
-    `СЕЗОН ${settings["СЕЗОН"]}`;
+    `СЕЗОН ${season}`;
 }
 
 function renderTable() {
@@ -76,7 +89,7 @@ function renderTable() {
   let html =
     `<div class="table-card">`;
 
-  if(currentMode === "short") {
+  if (currentMode === "short") {
 
     html += `
       <div class="row short-row header-row">
@@ -91,7 +104,11 @@ function renderTable() {
     standings.forEach(team => {
 
       const rm =
-        Number(team.РМ);
+        Number(team.РМ || 0);
+
+      const logo =
+        teams[team.КОМАНДА] ||
+        "https://cdn-icons-png.flaticon.com/512/54/54481.png";
 
       html += `
       <div class="row short-row">
@@ -102,10 +119,7 @@ function renderTable() {
 
           <img
             class="team-logo"
-            src="${
-              teams[team.КОМАНДА]
-              || 'https://cdn-icons-png.flaticon.com/512/54/54481.png'
-            }"
+            src="${logo}"
           />
 
           <span>
@@ -134,21 +148,21 @@ function renderTable() {
     });
   }
 
-  if(currentMode === "full") {
+  if (currentMode === "full") {
 
     html += `
-    <div class="row full-row header-row">
-      <div>#</div>
-      <div>КОМ</div>
-      <div>И</div>
-      <div>В</div>
-      <div>Н</div>
-      <div>П</div>
-      <div>ЗМ</div>
-      <div>ПМ</div>
-      <div>РМ</div>
-      <div>О</div>
-    </div>
+      <div class="row full-row header-row">
+        <div>#</div>
+        <div>КОМ</div>
+        <div>И</div>
+        <div>В</div>
+        <div>Н</div>
+        <div>П</div>
+        <div>ЗМ</div>
+        <div>ПМ</div>
+        <div>РМ</div>
+        <div>О</div>
+      </div>
     `;
 
     standings.forEach(team => {
@@ -156,12 +170,8 @@ function renderTable() {
       html += `
       <div class="row full-row">
 
-        <div>${team.№}</div>
-
-        <div>
-          ${team.КОМАНДА}
-        </div>
-
+        <div>${team["№"]}</div>
+        <div>${team.КОМАНДА}</div>
         <div>${team.И}</div>
         <div>${team.В}</div>
         <div>${team.Н}</div>
@@ -179,18 +189,22 @@ function renderTable() {
     });
   }
 
-  if(currentMode === "form") {
+  if (currentMode === "form") {
 
     html += `
-    <div class="row form-row header-row">
-      <div>#</div>
-      <div></div>
-      <div>КОМАНДА</div>
-      <div>ФОРМА</div>
-    </div>
+      <div class="row form-row header-row">
+        <div>#</div>
+        <div></div>
+        <div>КОМАНДА</div>
+        <div>ФОРМА</div>
+      </div>
     `;
 
     standings.forEach(team => {
+
+      const logo =
+        teams[team.КОМАНДА] ||
+        "https://cdn-icons-png.flaticon.com/512/54/54481.png";
 
       const form =
         (team.ФОРМА || "")
@@ -199,14 +213,11 @@ function renderTable() {
       html += `
       <div class="row form-row">
 
-        <div>${team.№}</div>
+        <div>${team["№"]}</div>
 
         <img
           class="team-logo"
-          src="${
-            teams[team.КОМАНДА]
-            || 'https://cdn-icons-png.flaticon.com/512/54/54481.png'
-          }"
+          src="${logo}"
         />
 
         <div>
@@ -214,34 +225,34 @@ function renderTable() {
         </div>
 
         <div class="form">
+
           ${form.map(letter => {
 
             let cls = "";
+            let text = "";
 
-            if(letter === "W")
+            if (letter === "W") {
               cls = "win";
+              text = "В";
+            }
 
-            if(letter === "D")
+            if (letter === "D") {
               cls = "draw";
+              text = "Н";
+            }
 
-            if(letter === "L")
+            if (letter === "L") {
               cls = "loss";
-
-            const text =
-              letter === "W"
-              ? "В"
-              : letter === "D"
-              ? "Н"
-              : "П";
+              text = "П";
+            }
 
             return `
-            <div
-              class="circle ${cls}"
-            >
-              ${text}
-            </div>
+              <div class="circle ${cls}">
+                ${text}
+              </div>
             `;
           }).join("")}
+
         </div>
 
       </div>
@@ -265,8 +276,7 @@ document
       document
       .querySelectorAll(".mode")
       .forEach(btn =>
-        btn.classList
-        .remove("active")
+        btn.classList.remove("active")
       );
 
       button.classList
