@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 *{
   margin:0;
@@ -15,8 +15,8 @@ body{
     #001629 100%
   );
 
-  font-family:'Inter',sans-serif;
   color:#fff;
+  font-family:'Inter',sans-serif;
 
   display:flex;
   justify-content:center;
@@ -31,52 +31,49 @@ body{
 /* HEADER */
 
 .header{
-  padding:18px 18px 10px;
+  padding:18px 18px 8px;
 }
 
 .league-info{
   display:flex;
   align-items:center;
-  gap:14px;
+  gap:10px;
 }
 
 .league-logo{
-  width:88px;
-  height:88px;
+  width:118px;
+  height:118px;
   object-fit:contain;
+  flex-shrink:0;
 }
 
 #league-name{
-  font-family:
-  'Barlow Condensed',
-  sans-serif;
-
-  font-size:56px;
-  line-height:.9;
-  font-weight:700;
+  font-family:'Oswald',sans-serif;
+  font-size:46px;
+  font-weight:600;
+  line-height:.95;
+  letter-spacing:.4px;
 }
 
 #season{
   color:#efbb35;
-
-  font-family:
-  'Barlow Condensed',
-  sans-serif;
-
-  font-size:24px;
-  margin-top:4px;
+  font-family:'Oswald',sans-serif;
+  font-size:20px;
+  font-weight:400;
+  margin-top:2px;
+  letter-spacing:.8px;
 }
 
-/* TOP MENU */
+/* TOP NAV */
 
 .tabs{
   display:flex;
   justify-content:space-around;
 
+  margin-top:8px;
+
   border-bottom:
   1px solid rgba(255,255,255,.08);
-
-  margin-top:8px;
 }
 
 .tab{
@@ -85,17 +82,14 @@ body{
 
   color:#8d98a5;
 
-  font-family:
-  'Barlow Condensed',
-  sans-serif;
-
-  font-size:22px;
-  font-weight:600;
+  font-family:'Oswald',sans-serif;
+  font-size:18px;
+  font-weight:500;
 
   padding:16px 0;
+  cursor:pointer;
 
   position:relative;
-  cursor:pointer;
 }
 
 .tab.active{
@@ -105,10 +99,12 @@ body{
 .tab.active::after{
   content:'';
   position:absolute;
-  bottom:0;
   left:0;
+  bottom:0;
+
   width:100%;
   height:2px;
+
   background:#efbb35;
 }
 
@@ -117,13 +113,13 @@ body{
 .mode-switch{
   display:flex;
 
-  margin:18px 16px 14px;
+  margin:16px 16px 14px;
 
   border-radius:22px;
   overflow:hidden;
 
   background:
-  rgba(255,255,255,.04);
+  rgba(255,255,255,.03);
 
   border:
   1px solid rgba(255,255,255,.08);
@@ -131,20 +127,16 @@ body{
 
 .mode{
   flex:1;
-
   border:none;
   background:none;
 
   color:#d4d9df;
 
-  font-family:
-  'Barlow Condensed',
-  sans-serif;
+  font-family:'Oswald',sans-serif;
+  font-size:18px;
+  font-weight:500;
 
-  font-size:22px;
-  font-weight:600;
-
-  padding:16px 0;
+  padding:15px 0;
   cursor:pointer;
 }
 
@@ -175,9 +167,9 @@ body{
   display:grid;
   align-items:center;
 
-  min-height:76px;
+  min-height:66px;
 
-  padding:0 16px;
+  padding:0 14px;
 
   border-bottom:
   1px solid rgba(255,255,255,.05);
@@ -188,10 +180,11 @@ body{
 }
 
 .header-row{
-  min-height:56px;
+  min-height:54px;
 
-  color:#8691a0;
-  font-size:13px;
+  color:#7f8b9a;
+
+  font-size:12px;
   font-weight:600;
 }
 
@@ -199,23 +192,23 @@ body{
 
 .short-row{
   grid-template-columns:
-  28px
+  24px
   1fr
-  40px
-  52px
-  52px;
+  38px
+  48px
+  48px;
 }
 
 /* FULL */
 
 .full-row{
   grid-template-columns:
-  20px
+  18px
   1.2fr
-  repeat(7,28px)
+  repeat(7,26px)
   34px;
 
-  font-size:13px;
+  font-size:12px;
 }
 
 /* FORM */
@@ -223,7 +216,7 @@ body{
 .form-row{
   grid-template-columns:
   24px
-  38px
+  36px
   1fr
   auto;
 }
@@ -237,12 +230,9 @@ body{
 
   min-width:0;
 
-  font-family:
-  'Barlow Condensed',
-  sans-serif;
-
+  font-family:'Oswald',sans-serif;
   font-size:18px;
-  font-weight:600;
+  font-weight:500;
 }
 
 .team-box span{
@@ -258,7 +248,7 @@ body{
   flex-shrink:0;
 }
 
-/* NUMBERS */
+/* POINTS */
 
 .points{
   color:#efbb35;
@@ -267,12 +257,12 @@ body{
 }
 
 .positive{
-  color:#22d55b;
+  color:#1fdb61;
   font-weight:600;
 }
 
 .negative{
-  color:#ff5252;
+  color:#ff4f4f;
   font-weight:600;
 }
 
@@ -280,12 +270,12 @@ body{
 
 .row:nth-child(2){
   border-left:
-  4px solid #22d34d;
+  4px solid #1ddb53;
 }
 
 .row:nth-child(3){
   border-left:
-  4px solid #2091ff;
+  4px solid #208eff;
 }
 
 .row:nth-child(4){
@@ -319,7 +309,7 @@ body{
 }
 
 .draw{
-  background:#7d8792;
+  background:#808a96;
 }
 
 .loss{
