@@ -344,8 +344,8 @@ body{
 /* TABLE NUMBERS */
 
 .short-row > div:not(.team-box){
-  font-size:12px;
-  font-weight:400;
+  font-size:18px;
+  font-weight:600;
 }
 
 /* POINTS */
@@ -353,7 +353,7 @@ body{
 .points{
   color:#efbb35;
 
-  font-size:20px !important;
+  font-size:18px !important;
   font-weight:600;
 
   line-height:1;
@@ -362,11 +362,11 @@ body{
 /* GOAL DIFFERENCE */
 
 .positive{
-  color:#19db63;
+  color:#11883e;
 }
 
 .negative{
-  color:#11883e;
+  color:#881111;
 }
 
 /* TOP 3 */
