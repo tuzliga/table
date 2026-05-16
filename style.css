@@ -738,10 +738,10 @@ body{
 
   align-items:center;
 
-  min-height:58px;
+  min-height:42px;
 
   padding:
-    0 10px;
+    0 8px;
 }
 
 .form-header{
