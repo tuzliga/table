@@ -292,7 +292,7 @@ body{
   align-items:center;
 }
 
-/* CENTER CELLS */
+/* CELLS */
 
 .short-row > div,
 .header-row > div{
@@ -309,6 +309,14 @@ body{
   text-align:center;
 }
 
+/* TEAM HEADER */
+
+.header-row > div:nth-child(2){
+  justify-content:flex-start;
+
+  padding-left:8px;
+}
+
 /* TEAM COLUMN */
 
 .team-box{
@@ -316,17 +324,12 @@ body{
   align-items:center;
   justify-content:flex-start;
 
-  gap:10px;
-
-  font-size:12px;
-  font-weight:400;
+  gap:8px;
 
   text-align:left;
-}
 
-.header-row > div:nth-child(2){
-  justify-content:flex-start;
-  padding-left:34px;
+  font-size:11px;
+  font-weight:400;
 }
 
 /* TEAM LOGO */
@@ -348,7 +351,7 @@ body{
 
 /* POINTS */
 
-.points{
+.short-row .points{
   color:#efbb35;
 
   font-size:24px;
@@ -371,15 +374,15 @@ body{
 
 .row:nth-child(2){
   border-left:
-    4px solid #16d954;
+    2px solid #16d954;
 }
 
 .row:nth-child(3){
   border-left:
-    4px solid #2a8dff;
+    2px solid #2a8dff;
 }
 
 .row:nth-child(4){
   border-left:
-    4px solid #efbb35;
+    2px solid #efbb35;
 }
