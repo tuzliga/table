@@ -292,44 +292,13 @@ if (currentMode === "form") {
   `;
 
   standings.forEach(team => {
-    
-  console.log(team);
-    
+
     const logo =
       teams[team["КОМАНДА"]] ||
       getDefaultLogo();
 
-   const form = ["W","D","L"];
-    let formHtml = "";
-
-    form.forEach(letter => {
-
-      let cls = "";
-      let text = "";
-
-      if (letter === "W") {
-        cls = "win";
-        text = "В";
-      }
-
-      if (letter === "D") {
-        cls = "draw";
-        text = "Н";
-      }
-
-      if (letter === "L") {
-        cls = "loss";
-        text = "П";
-      }
-
-      formHtml += `
-        <div class="
-          form-circle ${cls}
-        ">
-          ${text}
-        </div>
-      `;
-    });
+    const form =
+      ["W","D","L"];
 
     html += `
       <div class="
@@ -356,9 +325,39 @@ if (currentMode === "form") {
         </div>
 
         <div class="form-box">
-          ${formHtml}
-        </div>
+    `;
 
+    form.forEach(letter => {
+
+      let cls = "";
+      let text = "";
+
+      if (letter === "W") {
+        cls = "win";
+        text = "В";
+      }
+
+      if (letter === "D") {
+        cls = "draw";
+        text = "Н";
+      }
+
+      if (letter === "L") {
+        cls = "loss";
+        text = "П";
+      }
+
+      html += `
+        <div class="
+          form-circle ${cls}
+        ">
+          ${text}
+        </div>
+      `;
+    });
+
+    html += `
+        </div>
       </div>
     `;
   });
