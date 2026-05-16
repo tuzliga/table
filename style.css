@@ -260,14 +260,14 @@ body{
 /* TABLE NUMBERS */
 
 .short-row > div:not(.team-box){
-  font-size:10px;
+  font-size:12px;
   font-weight:400;
 }
 
 /* очки */
 
 .points{
-  font-size:11px;
+  font-size:12px;
   font-weight:600;
 }
 
