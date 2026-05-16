@@ -227,7 +227,9 @@ body{
 
   font-weight:400;
 }
-/* TABLE */
+/* =========================
+   TABLE
+========================= */
 
 .table-card{
   margin:0 14px 30px;
@@ -244,6 +246,8 @@ body{
     );
 }
 
+/* ROW */
+
 .row{
   display:grid;
   align-items:center;
@@ -257,46 +261,29 @@ body{
       255,255,255,.05
     );
 }
-/* TABLE NUMBERS */
-
-.short-row > div:not(.team-box){
-  font-size:12px;
-  font-weight:400;
-}
-
-/* очки */
-
-.points{
-  font-size:20px;
-  font-weight:600;
-}
 
 .row:last-child{
   border-bottom:none;
 }
 
+/* HEADER */
+
 .header-row{
-  min-height:34px;
-  text-align:center;
+  min-height:30px;
+
   color:#7d8793;
 
-  font-size:7px;
+  font-size:8px;
   font-weight:400;
 
   letter-spacing:.2px;
 }
-.header-row div{
-  text-align:center;
-}
 
-.header-row div:nth-child(2){
-  text-align:left;
-}
-/* SHORT */
+/* GRID */
 
 .short-row{
   grid-template-columns:
-    30px
+    34px
     minmax(120px,1fr)
     44px
     44px
@@ -304,29 +291,72 @@ body{
 
   align-items:center;
 }
+
+/* CENTER ALL CELLS */
+
+.short-row > div,
+.header-row > div{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+}
+
+/* POSITION COLUMN (# + 1-8) */
+
+.short-row > div:first-child,
+.header-row > div:first-child{
+  justify-content:center;
+}
+
+/* TEAM COLUMN */
+
 .team-box{
   display:flex;
   align-items:center;
+  justify-content:flex-start !important;
+
   gap:10px;
 
-  font-size:12px;
+  font-size:11px;
   font-weight:400;
+
+  text-align:left;
 }
+
+.header-row > div:nth-child(2){
+  justify-content:flex-start;
+  padding-left:34px;
+}
+
+/* TEAM LOGO */
 
 .team-logo{
   width:24px;
   height:24px;
+
   object-fit:contain;
   flex-shrink:0;
 }
 
-/* COLORS */
+/* NUMBERS */
+
+.short-row > div:not(.team-box){
+  font-size:10px;
+  font-weight:400;
+}
+
+/* POINTS */
 
 .points{
   color:#efbb35;
-  font-size:20px;
+
+  font-size:16px;
   font-weight:700;
 }
+
+/* GOAL DIFFERENCE */
 
 .positive{
   color:#19db63;
@@ -335,49 +365,20 @@ body{
 .negative{
   color:#ff5252;
 }
-/* TABLE ALIGN */
 
-.short-row > div{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-/* TEAM COLUMN */
-
-.team-box{
-  justify-content:flex-start !important;
-
-  gap:10px;
-
-  text-align:left;
-}
-
-/* HEADER */
-
-.header-row > div:nth-child(2){
-  justify-content:flex-start;
-
-  padding-left:34px;
-}  
-
-.header-row > div:nth-child(2){
-  justify-content:flex-start;
-}
 /* TOP 3 */
 
 .row:nth-child(2){
   border-left:
-    3px solid #16d954;
+    2px solid #16d954;
 }
 
 .row:nth-child(3){
   border-left:
-    3px solid #2a8dff;
+    2px solid #2a8dff;
 }
 
 .row:nth-child(4){
   border-left:
-    3px solid #efbb35;
+    2px solid #efbb35;
 }
-
