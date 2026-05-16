@@ -308,20 +308,20 @@ if (currentMode === "form") {
       let cls = "";
       let text = "";
 
-      if (letter === "W") {
-        cls = "win";
-        text = "В";
-      }
+      if (letter === "🟢") {
+  cls = "win";
+  text = "В";
+}
 
-      if (letter === "D") {
-        cls = "draw";
-        text = "Н";
-      }
+if (letter === "🟡") {
+  cls = "draw";
+  text = "Н";
+}
 
-      if (letter === "L") {
-        cls = "loss";
-        text = "П";
-      }
+if (letter === "🔴") {
+  cls = "loss";
+  text = "П";
+}
 
       formHtml += `
         <div class="form-circle ${cls}">
