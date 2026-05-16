@@ -276,6 +276,10 @@ if (currentMode === "full") {
     `;
   });
 }
+    html += `</div>`;
+
+  container.innerHTML = html;
+}
 // ФОРМА
 if (currentMode === "form") {
 
