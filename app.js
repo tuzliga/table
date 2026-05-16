@@ -631,10 +631,8 @@ if (currentMode === "full") {
     `;
   });
 }
-    html += `</div>`;
 
-  container.innerHTML = html;
-}
+
 // ФОРМА
 if (currentMode === "form") {
 
@@ -729,6 +727,11 @@ if (currentMode === "form") {
       </div>
     `;
   });
+}
+  html += `</div>`;
+
+container.innerHTML =
+  html;
 }
 /* TOP TABS */
 
