@@ -231,15 +231,16 @@ body{
    TABLE
 ========================= */
 
+/* =========================
+   TABLE
+========================= */
+
 .table-card{
   margin:0 14px 30px;
-
   border-radius:18px;
   overflow:hidden;
 
-  background:rgba(
-    11,35,58,.92
-  );
+  background:rgba(11,35,58,.92);
 
   border:1px solid rgba(
     255,255,255,.06
@@ -253,7 +254,6 @@ body{
   align-items:center;
 
   min-height:35px;
-
   padding:0 14px;
 
   border-bottom:
@@ -267,19 +267,13 @@ body{
 }
 
 /* HEADER */
-.header-row > div:nth-child(2){
-  justify-content:flex-start;
 
-  padding-left:34px;
-
-  font-size:7px;
-}
 .header-row{
   min-height:30px;
 
   color:#7d8793;
 
-  font-size:8px;
+  font-size:7px;
   font-weight:400;
 
   letter-spacing:.2px;
@@ -298,7 +292,7 @@ body{
   align-items:center;
 }
 
-/* ALL CELLS */
+/* DEFAULT = CENTER */
 
 .short-row > div,
 .header-row > div{
@@ -306,80 +300,38 @@ body{
   align-items:center;
   justify-content:center;
 }
-/* TEAM COLUMN */
 
-.team-box{
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-
-  gap:8px;
-
-  text-align:left;
-
-  width:100%;
-  padding-left:4px;
-
-  font-size:10px;
-  font-weight:400;
-}
 /* POSITION COLUMN */
 
-.short-row > div:first-child,
-.header-row > div:first-child{
-  justify-content:center;
-  text-align:center;
+.short-row > div:first-child{
+  font-size:12px;
+  font-weight:500;
+  color:#a7b0bc;
 }
-/* TEAM COLUMN */
+
+/* TEAM HEADER */
+
+.header-row > div:nth-child(2){
+  justify-content:flex-start;
+  padding-left:36px;
+}
+
+/* TEAM COLUMN ONLY LEFT */
 
 .team-box{
   display:flex;
   align-items:center;
   justify-content:flex-start;
 
+  width:100%;
+
   gap:8px;
+  padding-left:4px;
 
   text-align:left;
-
-  width:100%;
-  padding-left:4px;
 
   font-size:10px;
   font-weight:400;
-}
-/* TEAM HEADER */
-
-.header-row{
-  min-height:30px;
-
-  color:#7d8793;
-
-  font-size:10px !important;
-  font-weight:400;
-
-  letter-spacing:.2px;
-}
-/* FORCE HEADER FONT */
-
-.header-row > div{
-  font-size:10px !important;
-}
-/* TEAM COLUMN */
-
-.team-box{
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-
-  gap:8px;
-
-  text-align:left;
-
-  font-size:12px;
-  font-weight:400;
-
-  width:100%;
-  padding-left:4px;
 }
 
 /* TEAM LOGO */
@@ -392,10 +344,10 @@ body{
   flex-shrink:0;
 }
 
-/* TABLE NUMBERS */
+/* NUMBERS */
 
 .short-row > div:not(.team-box){
-  font-size:12px;
+  font-size:10px;
   font-weight:400;
 }
 
@@ -404,13 +356,13 @@ body{
 .points{
   color:#efbb35;
 
-  font-size:16px !important;
+  font-size:16px;
   font-weight:600;
 
   line-height:1;
 }
 
-/* GOAL DIFFERENCE */
+/* GOAL DIFF */
 
 .positive{
   color:#19c85b;
@@ -419,27 +371,17 @@ body{
 .negative{
   color:#cf1717;
 }
-/* POSITION NUMBERS */
 
-.short-row > div:first-child{
-  font-size:16px;
-  font-weight:500;
-
-  color:#b2bcc8;
-}
 /* TOP 3 */
 
 .row:nth-child(2){
-  border-left:
-    2px solid #16d954;
+  border-left:2px solid #16d954;
 }
 
 .row:nth-child(3){
-  border-left:
-    2px solid #2a8dff;
+  border-left:2px solid #2a8dff;
 }
 
 .row:nth-child(4){
-  border-left:
-    2px solid #efbb35;
+  border-left:2px solid #efbb35;
 }
