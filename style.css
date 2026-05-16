@@ -372,7 +372,9 @@ body{
 
 .short-row > div:first-child{
   font-size:16px;
-  font-weight:600;
+  font-weight:500;
+
+  color:#b2bcc8;
 }
 /* TOP 3 */
 
