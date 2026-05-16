@@ -180,14 +180,9 @@ if (modeTabs) {
 
 if (currentTab === "matches") {
 
-  html += `
-    <div class="matches-wrap">
-
-      <div class="
-  table-card
-  matches-card
-">
-  `;
+ html += `
+  <div class="matches-wrap">
+`;
 
  let currentGroup = "";
 
@@ -215,14 +210,7 @@ matches.forEach(match => {
 
         font-size:11px;
 
-        border-bottom:
-          1px solid
-          rgba(
-            255,255,255,.05
-          );
-      ">
-
-        <span style="
+          <span style="
           color:#efbb35;
           font-weight:600;
         ">
@@ -259,7 +247,7 @@ html += `
   align-items:center;
 
   padding:
-    14px 16px;
+    8px 16px 2px;
 
   margin:
     8px 10px;
@@ -267,24 +255,24 @@ html += `
   border-radius:14px;
 
   background:
-    rgba(
-      8,25,43,.45
-    );
+  rgba(
+    20,48,78,.58
+  );
 
   border:
-    1px solid rgba(
-      255,255,255,.06
-    );
+  1px solid rgba(
+    255,255,255,.04
+  );
 ">
 
     <div style="
   display:flex;
   align-items:center;
-  justify-content:flex-end;
+  justify-content:center;
 
-  gap:8px;
+  gap:10px;
 
-  padding-right:14px;
+  padding-right:0px;
 
   border-right:
     1px solid rgba(
@@ -395,11 +383,11 @@ html += `
     <div style="
   display:flex;
   align-items:center;
-  justify-content:flex-start;
+  justify-content:center;
 
-  gap:8px;
+  gap:10px;
 
-  padding-left:14px;
+  padding-left:0px;
 
   border-left:
     1px solid rgba(
@@ -447,7 +435,6 @@ html += `
 
   html += `
       </div>
-    </div>
   `;
 
   container.innerHTML =
