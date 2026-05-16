@@ -685,7 +685,7 @@ body{
 .full-row .points{
   color:#efbb35;
 
-  font-size:12px;
+   font-size:12px !important;
   font-weight:600;
 }
 
