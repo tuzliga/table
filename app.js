@@ -190,7 +190,161 @@ if (currentTab === "matches") {
 
   `;
 
-  matches.forEach(match => {
+  let currentTour = "";
+
+matches.forEach(match => {
+
+  const tour =
+    match["ТУР"];
+
+  const date =
+    match["ДАТА"];
+
+  const status =
+    match["СТАТУС МАТЧА"];
+
+  const homeLogo =
+    teams[
+      match["КОМАНДА 1"]
+    ] ||
+    getDefaultLogo();
+
+  const awayLogo =
+    teams[
+      match["КОМАНДА 2"]
+    ] ||
+    getDefaultLogo();
+
+  if (
+    currentTour !==
+    `${tour}-${date}`
+  ) {
+
+    currentTour =
+    `${tour}-${date}`;
+
+    html += `
+      <div class="
+        match-day
+      ">
+
+        <div class="
+          match-tour
+        ">
+          ${tour} ТУР
+        </div>
+
+        <div class="
+          match-date
+        ">
+          ${date}
+        </div>
+
+      </div>
+    `;
+  }
+
+  html += `
+    <div class="
+      match-card
+    ">
+
+      <div class="
+        match-team
+      ">
+
+        <img
+          class="
+            match-logo
+          "
+          src="${homeLogo}"
+        />
+
+        <span>
+          ${
+            match[
+              "КОМАНДА 1"
+            ]
+          }
+        </span>
+
+      </div>
+
+      <div class="
+        match-center
+      ">
+
+        ${
+          status ===
+          "Завершен"
+
+          ? `
+
+          <div class="
+            match-score
+          ">
+            ${
+              match["ГОЛЫ 1"]
+            }
+            -
+            ${
+              match["ГОЛЫ 2"]
+            }
+          </div>
+
+          <div class="
+            match-status
+          ">
+            ЗАВЕРШЕН
+          </div>
+
+          `
+
+          : `
+
+          <div class="
+            match-time
+          ">
+            ${
+              match["ВРЕМЯ"]
+            }
+          </div>
+
+          <div class="
+            match-vs
+          ">
+            VS
+          </div>
+
+          `
+        }
+
+      </div>
+
+      <div class="
+        match-team away
+      ">
+
+        <span>
+          ${
+            match[
+              "КОМАНДА 2"
+            ]
+          }
+        </span>
+
+        <img
+          class="
+            match-logo
+          "
+          src="${awayLogo}"
+        />
+
+      </div>
+
+    </div>
+  `;
+});
 
     html += `
       <div class="
