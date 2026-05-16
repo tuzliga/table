@@ -142,12 +142,13 @@ body{
 
   position:absolute;
   left:50%;
-  bottom:0;
+  bottom:7;
 
   transform:
     translateX(-50%);
 
-  width:58px;
+  width:100%;
+  max-width:133px;
   height:2px;
 
   background:#efbb35;
