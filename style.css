@@ -598,6 +598,12 @@ body{
 .full-row.rank-3{
   border-left:2px solid #efbb35;
 }
+/* SHORT TABLE TEAM SIZE */
+
+.short-row .team-box{
+  font-size:12px;
+  font-weight:500;
+}
 /* =========================
    FULL TABLE
 ========================= */
