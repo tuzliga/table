@@ -741,7 +741,7 @@ body{
   min-height:34px;
 
   padding:
-    0 8px;
+    0 0px;
 }
 
 .form-header{
@@ -793,6 +793,7 @@ body{
   gap:10px;
 
   min-width:0;
+  padding-left:8px;
 }
 
 .form-row .team-box span{
