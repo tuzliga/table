@@ -260,6 +260,7 @@ if (
 }
 
 if (
+  date &&
   currentDate !==
   date
 ) {
