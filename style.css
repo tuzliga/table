@@ -303,9 +303,26 @@ body{
 .short-row > div,
 .header-row > div{
   display:flex;
-  justify-content:flex-start !important;
+  align-items:center;
+  justify-content:center;
 }
+/* TEAM COLUMN */
 
+.team-box{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+
+  gap:8px;
+
+  text-align:left;
+
+  width:100%;
+  padding-left:4px;
+
+  font-size:10px;
+  font-weight:400;
+}
 /* POSITION COLUMN */
 
 .short-row > div:first-child,
