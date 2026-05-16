@@ -651,7 +651,7 @@ body{
   padding-left:0;
   margin-left:-4px;
 
-  font-size:10px;
+  font-size:14px;
 }
 
 /* HEADER TEAM */
@@ -701,4 +701,20 @@ body{
 
 .full-row.rank-3{
   border-left:2px solid #efbb35;
+}
+/* FULL TABLE COLORS */
+
+.wins{
+  color:#2f8f4f;
+  font-weight:500;
+}
+
+.draws{
+  color:#b08a2f;
+  font-weight:500;
+}
+
+.losses{
+  color:#9a3434;
+  font-weight:500;
 }
