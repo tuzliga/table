@@ -262,72 +262,62 @@ html += `
 
 html += `
   <div style="
-    display:grid;
+  display:grid;
+  grid-template-columns:
+    1fr
+    90px
+    1fr;
 
-    grid-template-columns:
-      minmax(0,1fr)
-      120px
-      minmax(0,1fr);
+  align-items:center;
 
-    align-items:center;
+  padding:
+    16px 18px;
+">
 
-    padding:
-      18px 26px;
+<div style="
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
 
-    width:100%;
+  gap:10px;
+">
 
-    box-sizing:border-box;
+  <div style="
+    color:white;
+    font-size:14px;
+    font-weight:500;
   ">
 
-    <div style="
-      display:flex;
-      align-items:center;
-      justify-content:flex-end;
+    ${
+      match[
+        "КОМАНДА 1"
+      ]
+    }
 
-      gap:10px;
+  </div>
 
-      min-width:0;
-    ">
+  <img
+    src="${
+      teams[
+        match[
+          "КОМАНДА 1"
+        ]
+      ] ||
+      getDefaultLogo()
+    }"
 
-      <div style="
-        color:white;
-        font-size:14px;
-        font-weight:500;
+    style="
+      width:42px;
+      height:42px;
+      object-fit:contain;
+      flex-shrink:0;
+    "
+  />
 
-        white-space:nowrap;
-      ">
-
-        ${
-          match[
-            "КОМАНДА 1"
-          ]
-        }
-
-      </div>
-
-      <img
-        src="${
-          teams[
-            match[
-              "КОМАНДА 1"
-            ]
-          ] ||
-          getDefaultLogo()
-        }"
-
-        style="
-          width:42px;
-          height:42px;
-          object-fit:contain;
-          flex-shrink:0;
-        "
-      />
-
-    </div>
+</div>
 
     <div style="
       text-align:center;
-      width:120px;
     ">
 
       ${
@@ -342,11 +332,15 @@ html += `
         ">
 
           ${
-            match["ГОЛЫ 1"]
+            match[
+              "ГОЛЫ 1"
+            ]
           }
           -
           ${
-            match["ГОЛЫ 2"]
+            match[
+              "ГОЛЫ 2"
+            ]
           }
 
         </div>
@@ -369,7 +363,9 @@ html += `
           font-weight:600;
         ">
           ${
-            match["ВРЕМЯ"]
+            match[
+              "ВРЕМЯ"
+            ]
           }
         </div>
 
@@ -387,53 +383,48 @@ html += `
     </div>
 
     <div style="
-      display:flex;
-      align-items:center;
-      justify-content:flex-start;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
 
-      gap:10px;
+  gap:10px;
+">
 
-      min-width:0;
-    ">
+  <img
+    src="${
+      teams[
+        match[
+          "КОМАНДА 2"
+        ]
+      ] ||
+      getDefaultLogo()
+    }"
 
-      <img
-        src="${
-          teams[
-            match[
-              "КОМАНДА 2"
-            ]
-          ] ||
-          getDefaultLogo()
-        }"
+    style="
+      width:42px;
+      height:42px;
+      object-fit:contain;
+      flex-shrink:0;
+    "
+  />
 
-        style="
-          width:42px;
-          height:42px;
-          object-fit:contain;
-          flex-shrink:0;
-        "
-      />
+  <div style="
+    color:white;
+    font-size:14px;
+    font-weight:500;
+  ">
 
-      <div style="
-        color:white;
-        font-size:14px;
-        font-weight:500;
-
-        white-space:nowrap;
-      ">
-
-        ${
-          match[
-            "КОМАНДА 2"
-          ]
-        }
-
-      </div>
-
-    </div>
+    ${
+      match[
+        "КОМАНДА 2"
+      ]
+    }
 
   </div>
+
+</div>
 `;
+});
 
   html += `
       </div>
