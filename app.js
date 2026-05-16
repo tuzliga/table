@@ -297,14 +297,10 @@ if (currentMode === "form") {
       teams[team["КОМАНДА"]] ||
       getDefaultLogo();
 
-   const rawForm =
-  String(team["ФОРМА"] || "")
-  .trim();
-
-const form =
-  String(team["ФОРМА"] || "")
-  .trim()
-  .split(/\s+/);
+    const form =
+      String(team["ФОРМА"] || "")
+      .trim()
+      .split(/\s+/);
 
     let formHtml = "";
 
@@ -314,21 +310,24 @@ const form =
       let text = "";
 
       if (letter === "W") {
-  cls = "win";
-  text = "В";
-}
+        cls = "win";
+        text = "В";
+      }
 
-if (letter === "D") {
-  cls = "draw";
-  text = "Н";
-}
+      if (letter === "D") {
+        cls = "draw";
+        text = "Н";
+      }
 
-if (letter === "L") {
-  cls = "loss";
-  text = "П";
-}
+      if (letter === "L") {
+        cls = "loss";
+        text = "П";
+      }
+
       formHtml += `
-        <div class="form-circle ${cls}">
+        <div class="
+          form-circle ${cls}
+        ">
           ${text}
         </div>
       `;
