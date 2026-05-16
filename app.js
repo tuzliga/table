@@ -303,6 +303,7 @@ if (currentMode === "form") {
   String(team["ФОРМА"] || "")
   .replace(/\s+/g, "")
   .split("");
+    alert(team["ФОРМА"]);
     let formHtml = "";
 
     form.forEach(letter => {
