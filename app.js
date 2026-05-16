@@ -643,8 +643,6 @@ html += `
       margin:0 auto;
     "
   >
-`;
-
       <div class="
         row
         form-row
