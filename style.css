@@ -293,3 +293,39 @@ body{
   border-left:
     3px solid #efbb35;
 }
+/* FORCE CENTER TABS */
+
+.tabs{
+  display:grid !important;
+  grid-template-columns:1fr 1fr 1fr !important;
+  width:100% !important;
+}
+
+.tab{
+  width:100% !important;
+
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+
+  gap:6px !important;
+
+  padding:0 !important;
+  margin:0 !important;
+
+  height:50px !important;
+
+  text-align:center !important;
+}
+
+.tab span{
+  display:block !important;
+}
+
+.tab.active::after{
+  left:50% !important;
+  transform:
+    translateX(-50%) !important;
+
+  width:64px !important;
+}
