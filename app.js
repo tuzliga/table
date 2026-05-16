@@ -430,20 +430,34 @@ html += `
     </div>
 
 </div>
-
-<div style="
-  height:1px;
-
-  margin:
-    0 34px;
-
-  background:
-    rgba(
-      255,255,255,.08
-    );
-"></div>
-
 `;
+
+const nextMatch =
+  matches[index + 1];
+
+if (
+  nextMatch &&
+  nextMatch["ДАТА"] ===
+  match["ДАТА"]
+) {
+
+  html += `
+    <div style="
+      height:1px;
+
+      margin:
+        0 34px;
+
+      background:
+        rgba(
+          255,255,255,.05
+        );
+    "></div>
+  `;
+}
+
+});
+  
 });
   html += `
       </div>
