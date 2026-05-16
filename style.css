@@ -86,7 +86,7 @@ body{
   align-items:center;
   justify-content:center;
 
-  gap:7px;
+  gap:6px;
 
   color:#8f98a5;
 
@@ -97,12 +97,21 @@ body{
 
   cursor:pointer;
   position:relative;
+
+  padding:0;
 }
 
-.tab svg{
-  width:20px;
-  height:20px;
-  stroke-width:2;
+.tab svg,
+.tab i{
+  width:14px;
+  height:14px;
+  font-size:14px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex-shrink:0;
 }
 
 .tab.active{
@@ -116,7 +125,7 @@ body{
   left:50%;
   bottom:0;
 
-  width:96px;
+  width:70px;
   height:2px;
 
   transform:
