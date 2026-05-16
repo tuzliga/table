@@ -19,6 +19,7 @@ const MATCHES_URL =
 let standings = [];
 let teams = {};
 let settings = {};
+let matches = [];
 let currentMode = "short";
 
 async function loadData() {
@@ -27,11 +28,14 @@ async function loadData() {
     const [
       standingsRes,
       settingsRes,
-      teamsRes
+      teamsRes,
+      matchesRes
     ] = await Promise.all([
       fetch(TABLE_URL),
       fetch(SETTINGS_URL),
-      fetch(TEAMS_URL)
+      fetch(TEAMS_URL),
+      fetch(MATCHES_URL)
+      
     ]);
 
     standings =
@@ -42,6 +46,8 @@ async function loadData() {
 
     const teamsData =
       await teamsRes.json();
+    matches =
+      await matchesRes.json();
 
     // настройки
     settingsData.forEach(row => {
