@@ -267,7 +267,7 @@ body{
 /* очки */
 
 .points{
-  font-size:16px;
+  font-size:20px;
   font-weight:600;
 }
 
@@ -280,10 +280,10 @@ body{
   text-align:center;
   color:#7d8793;
 
-  font-size:9px;
+  font-size:7px;
   font-weight:400;
 
-  letter-spacing:.3px;
+  letter-spacing:.2px;
 }
 .header-row div{
   text-align:center;
@@ -296,7 +296,7 @@ body{
 
 .short-row{
   grid-template-columns:
-    26px
+    30px
     minmax(120px,1fr)
     44px
     44px
