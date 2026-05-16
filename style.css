@@ -267,7 +267,13 @@ body{
 }
 
 /* HEADER */
+.header-row > div:nth-child(2){
+  justify-content:flex-start;
 
+  padding-left:34px;
+
+  font-size:7px;
+}
 .header-row{
   min-height:30px;
 
