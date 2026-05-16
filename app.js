@@ -184,15 +184,29 @@ if (currentTab === "matches") {
     <div class="matches-wrap">
 
       <div class="
-        table-card
-        matches-card
-      ">
+  table-card
+  matches-card
+">
+
+        <div class="
+          row
+          header-row
+        ">
+
+          <div>
+            МАТЧИ
+          </div>
+
+        </div>
+
   `;
 
   matches.forEach(match => {
 
     html += `
-      <div class="row">
+      <div class="
+        row
+      ">
 
         <div style="
           width:100%;
@@ -223,6 +237,75 @@ if (currentTab === "matches") {
 
   return;
 }
+  html += `
+  <div class="table-card">
+`;
+  // ВКРАТЦЕ
+  if (currentMode === "short") {
+
+    html += `
+    <div class="row short-row header-row">
+      <div>#</div>
+      <div>КОМАНДА</div>
+      <div>ИГРЫ</div>
+      <div>+/-</div>
+      <div>ОЧКИ</div>
+    </div>
+    `;
+
+    standings.forEach(team => {
+
+      const rm =
+        Number(team["РМ"] || 0);
+
+      const logo =
+        teams[team["КОМАНДА"]] ||
+        getDefaultLogo();
+
+      html += `
+      <div class="row short-row">
+
+        <div>
+          ${team["№"]}
+        </div>
+
+        <div class="team-box">
+
+          <img
+            class="team-logo"
+            src="${logo}"
+          />
+
+          <span>
+            ${team["КОМАНДА"]}
+          </span>
+
+        </div>
+
+        <div>
+          ${team["И"]}
+        </div>
+
+        <div class="${
+          rm >= 0
+          ? "positive"
+          : "negative"
+        }">
+
+          ${rm > 0 ? "+" : ""}
+          ${rm}
+
+        </div>
+
+        <div class="points">
+          ${team["ОЧКИ"]}
+        </div>
+
+      </div>
+      `;
+    });
+  }
+
   // ПОЛНОСТЬЮ
 if (currentMode === "full") {
 
