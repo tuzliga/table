@@ -293,7 +293,7 @@ body{
   border-left:
     3px solid #efbb35;
 }
-/* FORCE CENTER TABS */
+/* FIX TOP NAV */
 
 .tabs{
   display:grid !important;
@@ -302,30 +302,40 @@ body{
 }
 
 .tab{
-  width:100% !important;
-
   display:flex !important;
   align-items:center !important;
   justify-content:center !important;
 
-  gap:6px !important;
+  gap:5px !important;
+
+  height:52px !important;
 
   padding:0 !important;
   margin:0 !important;
 
-  height:50px !important;
+  white-space:nowrap !important;
 
-  text-align:center !important;
+  font-size:10px !important;
 }
 
 .tab span{
-  display:block !important;
+  white-space:nowrap !important;
+}
+
+.tab svg,
+.tab i{
+  width:13px !important;
+  height:13px !important;
+  font-size:13px !important;
+}
+
+.football-icon{
+  font-size:15px !important;
 }
 
 .tab.active::after{
+  width:58px !important;
   left:50% !important;
   transform:
     translateX(-50%) !important;
-
-  width:64px !important;
 }
