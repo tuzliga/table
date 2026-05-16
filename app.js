@@ -202,33 +202,40 @@ const tour =
 const rawDate =
   match["ДАТА"];
 
-const parts =
-  rawDate.split(".");
+let date = "";
 
-const months = [
-  "январь",
-  "февраль",
-  "март",
-  "апрель",
-  "май",
-  "июнь",
-  "июль",
-  "август",
-  "сентябрь",
-  "октябрь",
-  "ноябрь",
-  "декабрь"
-];
+if (
+  rawDate &&
+  rawDate.includes(".")
+) {
 
-const date =
-  `${Number(parts[0])}
-  ${
-    months[
-      Number(parts[1]) - 1
-    ]
-  }
-  ${parts[2]}`;
+  const parts =
+    rawDate.split(".");
 
+  const months = [
+    "января",
+    "февраля",
+    "марта",
+    "апреля",
+    "мая",
+    "июня",
+    "июля",
+    "августа",
+    "сентября",
+    "октября",
+    "ноября",
+    "декабря"
+  ];
+
+  date =
+    `${Number(parts[0])}
+    ${
+      months[
+        Number(parts[1]) - 1
+      ]
+    }
+    ${parts[2]}`;
+}
 if (
   currentTour !==
   tour
