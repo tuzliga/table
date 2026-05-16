@@ -294,7 +294,7 @@ html += `
 
   <div style="
     color:white;
-    font-size:12px;
+    font-size:14px;
     font-weight:500;
   ">
 
@@ -383,7 +383,7 @@ html += `
 
   <div style="
     color:white;
-    font-size:12px;
+    font-size:14px;
     font-weight:500;
   ">
 
