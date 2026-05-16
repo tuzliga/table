@@ -298,10 +298,9 @@ if (currentMode === "form") {
       getDefaultLogo();
 
     const form =
-      String(team["ФОРМА"] || "")
-      .trim()
-      .split(/\s+/);
-
+  String(team["ФОРМА"] || "")
+  .replace(/\s+/g, "")
+  .split("");
     let formHtml = "";
 
     form.forEach(letter => {
