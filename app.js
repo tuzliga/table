@@ -298,9 +298,15 @@ if (currentMode === "form") {
       getDefaultLogo();
 
     html += `
-      <div class="row form-row">
+      <div class="
+        row
+        form-row
+        rank-${team["№"]}
+      ">
 
-        <div>${team["№"]}</div>
+        <div>
+          ${team["№"]}
+        </div>
 
         <div class="team-box">
 
@@ -317,9 +323,17 @@ if (currentMode === "form") {
 
         <div class="form-box">
 
-          <div class="form-circle win">В</div>
-          <div class="form-circle draw">Н</div>
-          <div class="form-circle loss">П</div>
+          <div class="form-circle win">
+            В
+          </div>
+
+          <div class="form-circle draw">
+            Н
+          </div>
+
+          <div class="form-circle loss">
+            П
+          </div>
 
         </div>
 
@@ -327,11 +341,16 @@ if (currentMode === "form") {
     `;
   });
 }
-    html += `</div>`;
 
-  container.innerHTML = html;
+/* CLOSE TABLE */
+
+html += `</div>`;
+
+container.innerHTML = html;
 }
-// переключение вкладок
+
+/* SWITCH TABS */
+
 document
 .querySelectorAll(".mode")
 .forEach(button => {
