@@ -368,7 +368,12 @@ body{
 .negative{
   color:#cf1717;
 }
+/* POSITION NUMBERS */
 
+.short-row > div:first-child{
+  font-size:16px;
+  font-weight:600;
+}
 /* TOP 3 */
 
 .row:nth-child(2){
