@@ -353,8 +353,8 @@ body{
 .points{
   color:#efbb35;
 
-  font-size:24px !important;
-  font-weight:700;
+  font-size:20px !important;
+  font-weight:600;
 
   line-height:1;
 }
@@ -366,7 +366,7 @@ body{
 }
 
 .negative{
-  color:#ff5252;
+  color:#11883e;
 }
 
 /* TOP 3 */
