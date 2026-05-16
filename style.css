@@ -454,3 +454,13 @@ body{
   border-left:
     2px solid #efbb35;
 }
+/* MOVE TEAM COLUMN LEFT */
+
+.short-row > div:nth-child(2){
+  justify-content:flex-start !important;
+  padding-left:0 !important;
+}
+
+.team-box{
+  margin-left:-10px !important;
+}
