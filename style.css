@@ -1,10 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
-
-@font-face{
-  font-family:'Bebas';
-  src:url('https://fonts.cdnfonts.com/s/15430/BebasNeue-Regular.woff')
-  format('woff');
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 *{
   margin:0;
@@ -12,7 +6,8 @@
   box-sizing:border-box;
 }
 
-html,body{
+html,
+body{
   min-height:100%;
 }
 
@@ -21,16 +16,16 @@ body{
     radial-gradient(
       circle at top,
       #082848 0%,
-      #041d34 25%,
+      #041d34 28%,
       #021425 60%,
       #010d19 100%
     );
 
   color:#fff;
+  font-family:'Roboto',sans-serif;
+
   display:flex;
   justify-content:center;
-
-  font-family:'Inter',sans-serif;
 }
 
 .app{
@@ -48,42 +43,27 @@ body{
 .league-info{
   display:flex;
   align-items:center;
-  gap:8px;
+  gap:10px;
 }
 
 .league-logo{
-  width:126px;
-  height:126px;
+  width:122px;
+  height:122px;
   object-fit:contain;
   flex-shrink:0;
 }
 
-.league-text{
-  display:flex;
-  flex-direction:column;
-}
-
 #league-name{
-  font-family:'Bebas',sans-serif;
-
-  font-size:56px;
-  font-weight:400;
-  line-height:.9;
-
-  letter-spacing:1px;
+  font-size:40px;
+  font-weight:700;
+  line-height:1;
 }
 
 #season{
-  font-family:'Bebas',sans-serif;
-
   color:#efbb35;
-
-  font-size:24px;
+  font-size:20px;
   font-weight:400;
-
-  letter-spacing:1px;
-
-  margin-top:2px;
+  margin-top:4px;
 }
 
 /* TOP MENU */
@@ -108,24 +88,21 @@ body{
   align-items:center;
   gap:8px;
 
-  color:#8b96a4;
+  color:#8893a1;
 
-  font-family:'Bebas',sans-serif;
-  font-size:22px;
+  font-size:18px;
   font-weight:400;
 
-  letter-spacing:.7px;
-
-  padding:16px 0 14px;
+  padding:18px 0 14px;
 
   cursor:pointer;
   position:relative;
 }
 
 .tab svg{
-  width:22px;
-  height:22px;
-  stroke-width:1.8;
+  width:20px;
+  height:20px;
+  stroke-width:2;
 }
 
 .tab.active{
@@ -159,22 +136,19 @@ body{
 
   height:42px;
 
-  border-radius:16px;
+  border-radius:14px;
 
   border:
     1px solid
-    rgba(255,255,255,.10);
+    rgba(255,255,255,.12);
 
   background:
-    rgba(255,255,255,.02);
+    rgba(255,255,255,.03);
 
-  color:#8d97a3;
+  color:#8f99a4;
 
-  font-family:'Bebas',sans-serif;
-  font-size:20px;
+  font-size:18px;
   font-weight:400;
-
-  letter-spacing:.6px;
 
   cursor:pointer;
 }
@@ -186,7 +160,7 @@ body{
   color:#efbb35;
 
   background:
-    rgba(239,187,53,.04);
+    rgba(239,187,53,.05);
 }
 
 /* TABLE */
@@ -201,8 +175,9 @@ body{
     rgba(255,255,255,.03);
 
   border:
-    1px solid
-    rgba(255,255,255,.08);
+    1px solid rgba(
+      255,255,255,.08
+    );
 
   backdrop-filter:
     blur(18px);
@@ -231,13 +206,11 @@ body{
 
   color:#6f7d8d;
 
-  font-family:'Bebas',sans-serif;
-  font-size:15px;
-
-  letter-spacing:.6px;
+  font-size:13px;
+  font-weight:400;
 }
 
-/* SHORT MODE */
+/* SHORT */
 
 .short-row{
   grid-template-columns:
@@ -253,15 +226,13 @@ body{
   align-items:center;
   gap:10px;
 
-  font-family:'Bebas',sans-serif;
-  font-size:24px;
-
-  letter-spacing:.5px;
+  font-size:20px;
+  font-weight:500;
 }
 
 .team-logo{
-  width:42px;
-  height:42px;
+  width:40px;
+  height:40px;
   object-fit:contain;
   flex-shrink:0;
 }
@@ -270,22 +241,23 @@ body{
 
 .points{
   color:#efbb35;
-  font-size:22px;
+  font-size:20px;
+  font-weight:700;
 }
 
 .positive{
-  color:#1dd85c;
+  color:#19db63;
 }
 
 .negative{
-  color:#ff5454;
+  color:#ff5252;
 }
 
 /* TOP 3 */
 
 .row:nth-child(2){
   border-left:
-    3px solid #14d94f;
+    3px solid #16d954;
 }
 
 .row:nth-child(3){
