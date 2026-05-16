@@ -704,9 +704,10 @@ html += `
 
     html += `
       <div class="
-        row
-        form-row
-      ">
+  row
+  form-row
+  rank-${team["№"]}
+">
 
         <div>
           ${team["№"]}
