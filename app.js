@@ -189,31 +189,81 @@ if (currentTab === "matches") {
 ">
   `;
 
-  matches.forEach(match => {
+ let currentGroup = "";
+
+matches.forEach(match => {
+
+  const groupKey =
+    `${match["ТУР"]}-${match["ДАТА"]}`;
+
+  if (
+    currentGroup !==
+    groupKey
+  ) {
+
+    currentGroup =
+      groupKey;
 
     html += `
-      <div class="
-        row
+      <div style="
+        display:flex;
+        justify-content:
+          space-between;
+
+        padding:
+          10px 16px;
+
+        font-size:11px;
+
+        border-bottom:
+          1px solid
+          rgba(
+            255,255,255,.05
+          );
       ">
 
-        <div style="
-          width:100%;
-          text-align:center;
-          color:white;
-          font-size:12px;
+        <span style="
+          color:#efbb35;
+          font-weight:600;
         ">
+          ${
+            match["ТУР"]
+          } ТУР
+        </span>
 
-          ${match["КОМАНДА 1"]}
-
-          vs
-
-          ${match["КОМАНДА 2"]}
-
-        </div>
+        <span style="
+          color:#8c96a3;
+        ">
+          ${
+            match["ДАТА"]
+          }
+        </span>
 
       </div>
     `;
-  });
+  }
+
+  html += `
+    <div class="row">
+
+      <div style="
+        width:100%;
+        text-align:center;
+        color:white;
+        font-size:12px;
+      ">
+
+        ${match["КОМАНДА 1"]}
+
+        vs
+
+        ${match["КОМАНДА 2"]}
+
+      </div>
+
+    </div>
+  `;
+});
 
   html += `
       </div>
