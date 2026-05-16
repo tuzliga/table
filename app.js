@@ -327,7 +327,7 @@ if (currentMode === "form") {
     `;
   });
 }
-  html += `</div>`;
+    html += `</div>`;
 
   container.innerHTML = html;
 }
