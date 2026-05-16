@@ -340,7 +340,7 @@ if (currentMode === "form") {
       </div>
     `;
   });
-}
+
 
 /* CLOSE TABLE */
 
