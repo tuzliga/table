@@ -330,7 +330,23 @@ body{
   justify-content:center;
   text-align:center;
 }
+/* TEAM COLUMN */
 
+.team-box{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+
+  gap:8px;
+
+  text-align:left;
+
+  width:100%;
+  padding-left:4px;
+
+  font-size:10px;
+  font-weight:400;
+}
 /* TEAM HEADER */
 
 .header-row{
