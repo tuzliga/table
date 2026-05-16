@@ -126,7 +126,9 @@ body{
 
   border-radius:2px;
 }
-
+.football-icon{
+  font-size:18px;
+}
 /* SUB TABS */
 
 .mode-switch{
