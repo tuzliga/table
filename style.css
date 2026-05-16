@@ -67,55 +67,70 @@ body{
   margin-top:4px;
 }
 
-/* TOP MENU */
+/* TOP NAV */
 
 .tabs{
-  display:flex;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
   width:100%;
+  height:52px;
+
+  border-bottom:
+    1px solid rgba(
+      255,255,255,.08
+    );
 }
 
 .tab{
-  flex:1;
-
   border:none;
   background:none;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  position:relative;
+  cursor:pointer;
 
-  height:52px;
+  color:#8f98a4;
 
-  color:#8d96a3;
+  font-family:
+    'Roboto Condensed',
+    sans-serif;
 
   font-size:11px;
   font-weight:400;
-
-  cursor:pointer;
-  position:relative;
-
-  padding:0;
 }
 
-.tab-inner{
+.tab-content{
+  position:absolute;
+  top:50%;
+  left:50%;
+
+  transform:
+    translate(-50%,-50%);
+
   display:flex;
   align-items:center;
   justify-content:center;
 
   gap:5px;
 
-  width:100px;
+  width:96px;
 }
 
-.tab svg,
-.tab i{
+.tab svg{
   width:13px;
   height:13px;
-  font-size:13px;
+}
+
+.tab i{
+  font-size:14px;
 }
 
 .football-icon{
   font-size:15px;
+}
+
+.tab span{
+  white-space:nowrap;
 }
 
 .tab.active{
@@ -126,14 +141,14 @@ body{
   content:'';
 
   position:absolute;
-  bottom:0;
   left:50%;
-
-  width:62px;
-  height:2px;
+  bottom:0;
 
   transform:
     translateX(-50%);
+
+  width:58px;
+  height:2px;
 
   background:#efbb35;
 }
