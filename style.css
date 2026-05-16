@@ -294,51 +294,71 @@ body{
   border-left:
     3px solid #efbb35;
 }
-/* FIX TOP NAV */
-
-/* TOP MENU FIX */
+/* TOP MENU */
 
 .tabs{
-  display:flex !important;
-  width:100% !important;
+  display:flex;
+  width:100%;
 }
 
 .tab{
-  flex:1 !important;
+  flex:1;
 
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
+  border:none;
+  background:none;
 
-  gap:5px !important;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-  white-space:nowrap !important;
+  gap:5px;
 
-  font-size:11px !important;
-  height:50px !important;
+  height:52px;
 
-  padding:0 !important;
-  margin:0 !important;
+  color:#8d96a3;
+
+  font-size:11px;
+  font-weight:400;
+
+  white-space:nowrap;
+
+  cursor:pointer;
+  position:relative;
+
+  padding:0;
 }
 
 .tab span{
-  white-space:nowrap !important;
+  white-space:nowrap;
 }
 
 .tab svg,
 .tab i{
-  width:13px !important;
-  height:13px !important;
-  font-size:13px !important;
+  width:13px;
+  height:13px;
+  font-size:13px;
 }
 
 .football-icon{
-  font-size:15px !important;
+  font-size:15px;
+}
+
+.tab.active{
+  color:#efbb35;
 }
 
 .tab.active::after{
-  width:62px !important;
-  left:50% !important;
+  content:'';
+
+  position:absolute;
+  bottom:0;
+  left:50%;
+
+  width:62px;
+  height:2px;
+
   transform:
-    translateX(-50%) !important;
+    translateX(-50%);
+
+  background:#efbb35;
 }
