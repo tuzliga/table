@@ -283,7 +283,7 @@ body{
 
 .short-row{
   grid-template-columns:
-    34px
+    24px
     minmax(120px,1fr)
     44px
     44px
@@ -305,9 +305,20 @@ body{
 
 /* POSITION COLUMN (# + 1-8) */
 
+/* POSITION COLUMN */
+
 .short-row > div:first-child,
 .header-row > div:first-child{
+  display:flex;
+  align-items:center;
   justify-content:center;
+
+  text-align:center;
+
+  padding:0;
+  margin:0;
+
+  width:100%;
 }
 
 /* TEAM COLUMN */
@@ -352,7 +363,7 @@ body{
 .points{
   color:#efbb35;
 
-  font-size:16px;
+  font-size:24px;
   font-weight:700;
 }
 
