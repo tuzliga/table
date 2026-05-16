@@ -184,20 +184,75 @@ if (currentTab === "matches") {
   <div class="matches-wrap">
 `;
 
- let currentGroup = "";
+ let currentTour = "";
+  let currentDate = "";
 
 matches.forEach(match => {
 
   const groupKey =
     `${match["ТУР"]}-${match["ДАТА"]}`;
 
-  if (
-    currentGroup !==
-    groupKey
-  ) {
+const tour =
+  match["ТУР"];
 
-    currentGroup =
-      groupKey;
+const date =
+  match["ДАТА"];
+
+if (
+  currentTour !==
+  tour
+) {
+
+  currentTour =
+    tour;
+
+  currentDate =
+    "";
+
+  html += `
+    <div style="
+      text-align:center;
+      padding:
+        22px 0 10px;
+    ">
+
+      <div style="
+        color:#efbb35;
+        font-size:18px;
+        font-weight:700;
+      ">
+        ${tour} ТУР
+      </div>
+
+    </div>
+  `;
+}
+
+if (
+  currentDate !==
+  date
+) {
+
+  currentDate =
+    date;
+
+  html += `
+    <div style="
+      text-align:center;
+
+      color:#8c96a3;
+
+      font-size:11px;
+
+      margin-bottom:
+        12px;
+    ">
+
+      ${date}
+
+    </div>
+  `;
+}
 
     html += `
   <div style="
