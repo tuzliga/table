@@ -732,9 +732,9 @@ body{
   display:grid;
 
   grid-template-columns:
-    34px
-    minmax(140px,1fr)
-    170px;
+  34px
+  minmax(110px,1fr)
+  220px;
 
   align-items:center;
 
@@ -806,11 +806,13 @@ body{
 
   align-items:center;
 
-  justify-content:flex-end;
+  jjustify-content:flex-end;
 
-  gap:8px;
+gap:6px;
 
-  width:100%;
+width:220px;
+
+overflow:hidden;
 }
 
 /* CIRCLES */
