@@ -153,28 +153,41 @@ body{
 
   background:#efbb35;
 }
-/* SUB TABS */
+/* SUB NAV */
 
 .mode-switch{
-  display:flex;
-  gap:10px;
+  display:grid;
+  grid-template-columns:
+    1fr 1fr 1fr;
 
-  margin:18px 16px;
-}
-
-.mode{
-  flex:1;
+  align-items:center;
 
   height:25px;
 
+  margin:14px 16px;
+
   border-radius:14px;
 
-  border:
-    1px solid
-    rgba(255,255,255,.12);
-
   background:
-    rgba(255,255,255,.03);
+    rgba(15,43,71,.95);
+
+  border:
+    1px solid rgba(
+      255,255,255,.08
+    );
+
+  overflow:hidden;
+
+  padding:2px;
+}
+
+.mode{
+  position:relative;
+
+  height:100%;
+
+  border:none;
+  background:none;
 
   color:#8f99a4;
 
@@ -182,16 +195,20 @@ body{
   font-weight:400;
 
   cursor:pointer;
+
+  border-radius:12px;
+
+  z-index:2;
 }
 
 .mode.active{
+  color:#efbb35;
+
   border:
     1px solid #efbb35;
 
-  color:#efbb35;
-
   background:
-    rgba(239,187,53,.05);
+    rgba(239,187,53,.03);
 }
 
 /* TABLE */
