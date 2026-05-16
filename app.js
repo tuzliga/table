@@ -289,30 +289,6 @@ if (currentMode === "full") {
 
   container.innerHTML = html;
 }
-// МАТЧИ
-if (currentMode === "matches") {
-
-  html += `
-    <div class="row header-row">
-      <div>МАТЧИ</div>
-    </div>
-  `;
-
-  matches.forEach(match => {
-
-    html += `
-      <div class="row">
-
-        <div>
-          ${match["КОМАНДА 1"]}
-          vs
-          ${match["КОМАНДА 2"]}
-        </div>
-
-      </div>
-    `;
-  });
-}
 // ФОРМА
 if (currentMode === "form") {
 
