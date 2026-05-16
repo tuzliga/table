@@ -268,15 +268,14 @@ body{
 
 .short-row{
   grid-template-columns:
-    24px
-    1fr
-    50px
+    26px
+    minmax(120px,1fr)
+    44px
     44px
     44px;
 
   align-items:center;
 }
-
 .team-box{
   display:flex;
   align-items:center;
@@ -308,7 +307,35 @@ body{
 .negative{
   color:#ff5252;
 }
+/* TABLE ALIGN */
 
+.short-row > div{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* TEAM COLUMN */
+
+.team-box{
+  justify-content:flex-start !important;
+
+  gap:10px;
+
+  text-align:left;
+}
+
+/* HEADER */
+
+.header-row > div{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.header-row > div:nth-child(2){
+  justify-content:flex-start;
+}
 /* TOP 3 */
 
 .row:nth-child(2){
