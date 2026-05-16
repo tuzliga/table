@@ -297,8 +297,7 @@ body{
 .short-row > div,
 .header-row > div{
   display:flex;
-  align-items:center;
-  justify-content:center;
+  justify-content:flex-start !important;
 }
 
 /* POSITION COLUMN */
@@ -313,7 +312,7 @@ body{
 
 .header-row > div:nth-child(2){
   justify-content:flex-start;
-  padding-left:8px;
+  padding-left:4px;
 }
 
 /* TEAM COLUMN */
@@ -327,8 +326,11 @@ body{
 
   text-align:left;
 
-  font-size:12px;
+  font-size:11px;
   font-weight:400;
+
+  width:100%;
+  padding-left:4px;
 }
 
 /* TEAM LOGO */
