@@ -302,9 +302,9 @@ if (currentMode === "form") {
   .trim();
 
 const form =
-  [...rawForm.matchAll(
-    /🟢|🟡|🔴/g
-  )].map(m => m[0]);
+  String(team["ФОРМА"] || "")
+  .trim()
+  .split("");
 
     let formHtml = "";
 
@@ -313,17 +313,17 @@ const form =
       let cls = "";
       let text = "";
 
-      if (letter.includes("🟢")) {
+      if (letter === "W") {
   cls = "win";
   text = "В";
 }
 
-if (letter.includes("🟡")) {
+if (letter === "D") {
   cls = "draw";
   text = "Н";
 }
 
-if (letter.includes("🔴")) {
+if (letter === "L") {
   cls = "loss";
   text = "П";
 }
