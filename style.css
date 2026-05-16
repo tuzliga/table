@@ -605,15 +605,15 @@ body{
 .full-row{
   grid-template-columns:
     22px
-    minmax(86px,1fr)
+    minmax(100px,1fr)
     22px
     22px
     22px
     22px
     28px
     28px
-    36px
-    36px;
+    34px
+    34px;
 
   align-items:center;
 }
@@ -641,14 +641,15 @@ body{
 
 /* TEAM COLUMN */
 
-.team-name{
+.full-row .team-box{
   justify-content:flex-start !important;
-
-  text-align:left;
 
   width:100%;
 
-  padding-left:4px;
+  gap:6px;
+
+  padding-left:0;
+  margin-left:-4px;
 
   font-size:10px;
 }
@@ -657,7 +658,26 @@ body{
 
 .full-header > div:nth-child(2){
   justify-content:flex-start;
-  padding-left:4px;
+  padding-left:28px;
+}
+
+/* TEAM LOGO */
+
+.full-row .team-logo{
+  width:18px;
+  height:18px;
+
+  object-fit:contain;
+  flex-shrink:0;
+}
+
+/* POSITION */
+
+.full-row > div:first-child{
+  font-size:10px;
+  font-weight:400;
+
+  color:#b2bcc8;
 }
 
 /* POINTS */
