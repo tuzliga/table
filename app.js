@@ -353,7 +353,39 @@ if (currentMode === "form") {
     `;
   });
 }
+/* TOP TABS */
 
+document
+.querySelectorAll(".tab")
+.forEach(button => {
+
+  button.addEventListener(
+    "click",
+    () => {
+
+      document
+      .querySelectorAll(".tab")
+      .forEach(btn =>
+        btn.classList.remove(
+          "active"
+        )
+      );
+
+      button.classList.add(
+        "active"
+      );
+
+      currentTab =
+        button.dataset.tab;
+
+      console.log(
+        currentTab
+      );
+
+      renderTable();
+    }
+  );
+});
 /* SWITCH TABS */
 
 document
