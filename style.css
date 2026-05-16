@@ -732,9 +732,9 @@ body{
   display:grid;
 
   grid-template-columns:
-  28px
+  24px
   minmax(120px,1fr)
-  92px;
+  60px;
 
   align-items:center;
 
