@@ -327,6 +327,10 @@ if (currentMode === "form") {
     `;
   });
 }
+  html += `</div>`;
+
+  container.innerHTML = html;
+}
 // переключение вкладок
 document
 .querySelectorAll(".mode")
