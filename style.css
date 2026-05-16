@@ -327,7 +327,7 @@ body{
 
   text-align:left;
 
-  font-size:11px;
+  font-size:12px;
   font-weight:400;
 }
 
@@ -344,8 +344,8 @@ body{
 /* TABLE NUMBERS */
 
 .short-row > div:not(.team-box){
-  font-size:18px;
-  font-weight:600;
+  font-size:11px;
+  font-weight:400;
 }
 
 /* POINTS */
