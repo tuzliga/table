@@ -732,10 +732,9 @@ body{
   display:grid;
 
   grid-template-columns:
-  24px
-  minmax(120px,1fr)
-  80px;
-
+  40px
+  95px
+  1fr;
   align-items:center;
 
   min-height:34px;
@@ -771,7 +770,7 @@ body{
 .form-header > div:nth-child(3){
   justify-content:center;
 
-  font-size:8px;
+  font-size:10px;
 }
 
 /* ROWS */
@@ -780,7 +779,10 @@ body{
   display:flex;
   align-items:center;
 }
-
+.form-row > div:first-child{
+  font-size:16px;
+  font-weight:700;
+}
 /* TEAM COLUMN */
 
 .form-row .team-box{
