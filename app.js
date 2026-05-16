@@ -200,35 +200,55 @@ matches.forEach(match => {
       groupKey;
 
     html += `
-      <div style="
-        display:flex;
-        justify-content:
-          space-between;
+  <div style="
+    text-align:center;
 
-        padding:
-          10px 16px;
+    padding:
+      18px 0 8px;
+  ">
 
-        font-size:11px;
+    <div style="
+      color:#efbb35;
 
-          <span style="
-          color:#efbb35;
-          font-weight:600;
-        ">
-          ${
-            match["ТУР"]
-          } ТУР
-        </span>
+      font-size:18px;
+      font-weight:700;
+    ">
 
-        <span style="
-          color:#8c96a3;
-        ">
-          ${
-            match["ДАТА"]
-          }
-        </span>
+      ${
+        match["ТУР"]
+      } ТУР
 
-      </div>
-    `;
+    </div>
+
+    <div style="
+      color:#8c96a3;
+
+      font-size:11px;
+
+      margin-top:2px;
+    ">
+
+      ${
+        match["ДАТА"]
+      }
+
+    </div>
+
+  </div>
+`;
+    html += `
+  <div style="
+    height:1px;
+
+    margin:
+      0 24px;
+
+    background:
+      rgba(
+        255,255,255,.05
+      );
+  "></div>
+`;
   }
 
   const finished =
@@ -241,28 +261,13 @@ html += `
   display:grid;
   grid-template-columns:
     1fr
-    70px
+    90px
     1fr;
 
   align-items:center;
 
   padding:
-    8px 16px 2px;
-
-  margin:
-    8px 10px;
-
-  border-radius:14px;
-
-  background:
-  rgba(
-    20,48,78,.58
-  );
-
-  border:
-  1px solid rgba(
-    255,255,255,.04
-  );
+    16px 18px;
 ">
 
     <div style="
@@ -273,11 +278,6 @@ html += `
   gap:10px;
 
   padding-right:0px;
-
-  border-right:
-    1px solid rgba(
-      255,255,255,.08
-    );
 ">
 
   <img
@@ -388,11 +388,6 @@ html += `
   gap:10px;
 
   padding-left:0px;
-
-  border-left:
-    1px solid rgba(
-      255,255,255,.08
-    );
 ">
 
   <div style="
