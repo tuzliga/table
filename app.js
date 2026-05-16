@@ -236,17 +236,18 @@ if (
   currentDate =
     date;
 
-  html += `
-    <div style="
-      text-align:center;
+html += `
+  <div style="
+    text-align:center;
 
-      color:#8c96a3;
+    color:white;
 
-      font-size:11px;
+    font-size:15px;
+    font-weight:500;
 
-      margin-bottom:
-        12px;
-    ">
+    margin:
+      4px 0 18px;
+  ">
 
       ${date}
 
@@ -273,15 +274,27 @@ html += `
     16px 18px;
 ">
 
-    <div style="
+<div style="
   display:flex;
   align-items:center;
-  justify-content:center;
+  justify-content:flex-end;
 
   gap:10px;
-
-  padding-right:0px;
 ">
+
+  <div style="
+    color:white;
+    font-size:14px;
+    font-weight:500;
+  ">
+
+    ${
+      match[
+        "КОМАНДА 1"
+      ]
+    }
+
+  </div>
 
   <img
     src="${
@@ -300,20 +313,6 @@ html += `
       flex-shrink:0;
     "
   />
-
-  <div style="
-    color:white;
-    font-size:14px;
-    font-weight:500;
-  ">
-
-    ${
-      match[
-        "КОМАНДА 1"
-      ]
-    }
-
-  </div>
 
 </div>
 
@@ -386,26 +385,10 @@ html += `
     <div style="
   display:flex;
   align-items:center;
-  justify-content:center;
+  justify-content:flex-start;
 
   gap:10px;
-
-  padding-left:0px;
 ">
-
-  <div style="
-    color:white;
-    font-size:14px;
-    font-weight:500;
-  ">
-
-    ${
-      match[
-        "КОМАНДА 2"
-      ]
-    }
-
-  </div>
 
   <img
     src="${
@@ -425,9 +408,21 @@ html += `
     "
   />
 
-</div>
+  <div style="
+    color:white;
+    font-size:14px;
+    font-weight:500;
+  ">
+
+    ${
+      match[
+        "КОМАНДА 2"
+      ]
+    }
 
   </div>
+
+</div>
 `;
 });
 
