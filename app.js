@@ -267,9 +267,9 @@ html += `
   <div style="
     text-align:center;
 
-    color:white;
+    color:#d9bf71;
 
-    font-size:15px;
+    font-size:12px;
     font-weight:500;
 
     margin:
