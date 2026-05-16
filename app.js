@@ -284,11 +284,13 @@ if (currentMode === "full") {
 if (currentMode === "form") {
 
   html += `
-    <div class="row form-row form-header">
-      <div>#</div>
-      <div>КОМАНДА</div>
-      <div>ФОРМА</div>
-    </div>
+    <div class="table-card">
+
+      <div class="row form-row form-header">
+        <div>#</div>
+        <div>КОМАНДА</div>
+        <div>ФОРМА</div>
+      </div>
   `;
 
   standings.forEach(team => {
@@ -340,8 +342,7 @@ if (currentMode === "form") {
       </div>
     `;
   });
-
-
+}
 /* CLOSE TABLE */
 
 html += `</div>`;
