@@ -30,7 +30,7 @@ body{
 
 .app{
   width:100%;
-  max-width:430px;
+  max-width:100%;
   min-height:100vh;
 }
 
@@ -295,27 +295,29 @@ body{
 }
 /* FIX TOP NAV */
 
+/* TOP MENU FIX */
+
 .tabs{
-  display:grid !important;
-  grid-template-columns:1fr 1fr 1fr !important;
+  display:flex !important;
   width:100% !important;
 }
 
 .tab{
+  flex:1 !important;
+
   display:flex !important;
   align-items:center !important;
   justify-content:center !important;
 
   gap:5px !important;
 
-  height:52px !important;
+  white-space:nowrap !important;
+
+  font-size:11px !important;
+  height:50px !important;
 
   padding:0 !important;
   margin:0 !important;
-
-  white-space:nowrap !important;
-
-  font-size:10px !important;
 }
 
 .tab span{
@@ -334,7 +336,7 @@ body{
 }
 
 .tab.active::after{
-  width:58px !important;
+  width:62px !important;
   left:50% !important;
   transform:
     translateX(-50%) !important;
