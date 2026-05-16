@@ -422,10 +422,9 @@ html += `
 
   </div>
 
-</div>
+  </div>
 `;
 });
-
   html += `
       </div>
   `;
