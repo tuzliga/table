@@ -276,7 +276,7 @@ if (currentMode === "full") {
     `;
   });
 }
-  // ФОРМА
+// ФОРМА
 if (currentMode === "form") {
 
   html += `
