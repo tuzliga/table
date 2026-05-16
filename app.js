@@ -277,84 +277,87 @@ if (currentMode === "full") {
   });
 }
   // ФОРМА
-  if (currentMode === "form") {
+if (currentMode === "form") {
+
+  html += `
+  <div class="row form-row form-header">
+    <div>#</div>
+    <div>КОМАНДА</div>
+    <div>ПОСЛЕДНИЕ 5 МАТЧЕЙ</div>
+  </div>
+  `;
+
+  standings.forEach(team => {
+
+    const logo =
+      teams[team["КОМАНДА"]] ||
+      getDefaultLogo();
+
+    const form =
+      (team["ФОРМА"] || "")
+      .split("");
 
     html += `
-    <div class="row form-row header-row">
-      <div>#</div>
-      <div></div>
-      <div>КОМАНДА</div>
-      <div>ФОРМА</div>
-    </div>
-    `;
+    <div class="
+      row
+      form-row
+      rank-${team["№"]}
+    ">
 
-    standings.forEach(team => {
+      <div>
+        ${team["№"]}
+      </div>
 
-      const logo =
-        teams[team["КОМАНДА"]] ||
-        getDefaultLogo();
-
-      const form =
-        (team["ФОРМА"] || "")
-        .split("");
-
-      html += `
-      <div class="row form-row">
-
-        <div>
-          ${team["№"]}
-        </div>
+      <div class="team-box">
 
         <img
           class="team-logo"
           src="${logo}"
         />
 
-        <div>
+        <span>
           ${team["КОМАНДА"]}
-        </div>
-
-        <div class="form">
-
-          ${form.map(letter => {
-
-            let cls = "";
-            let text = "";
-
-            if (letter === "W") {
-              cls = "win";
-              text = "В";
-            }
-
-            if (letter === "D") {
-              cls = "draw";
-              text = "Н";
-            }
-
-            if (letter === "L") {
-              cls = "loss";
-              text = "П";
-            }
-
-            return `
-              <div class="circle ${cls}">
-                ${text}
-              </div>
-            `;
-          }).join("")}
-
-        </div>
+        </span>
 
       </div>
-      `;
-    });
-  }
 
-  html += `</div>`;
+      <div class="form-box">
 
-  container.innerHTML = html;
+        ${form.map(letter => {
+
+          let cls = "";
+          let text = "";
+
+          if (letter === "W") {
+            cls = "win";
+            text = "В";
+          }
+
+          if (letter === "D") {
+            cls = "draw";
+            text = "Н";
+          }
+
+          if (letter === "L") {
+            cls = "loss";
+            text = "П";
+          }
+
+          return `
+            <div class="
+              form-circle ${cls}
+            ">
+              ${text}
+            </div>
+          `;
+        }).join("")}
+
+      </div>
+
+    </div>
+    `;
+  });
 }
-
 // переключение вкладок
 document
 .querySelectorAll(".mode")
