@@ -249,7 +249,7 @@ body{
 
 .header-row{
   min-height:34px;
-
+  text-align:center;
   color:#7d8793;
 
   font-size:9px;
@@ -257,7 +257,13 @@ body{
 
   letter-spacing:.3px;
 }
+.header-row div{
+  text-align:center;
+}
 
+.header-row div:nth-child(2){
+  text-align:left;
+}
 /* SHORT */
 
 .short-row{
