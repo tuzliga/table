@@ -287,7 +287,7 @@ if (currentMode === "form") {
     <div class="row form-row form-header">
       <div>#</div>
       <div>КОМАНДА</div>
-      <div>ПОСЛЕДНИЕ 5 МАТЧЕЙ</div>
+      <div>ФОРМА</div>
     </div>
   `;
 
@@ -297,19 +297,10 @@ if (currentMode === "form") {
       teams[team["КОМАНДА"]] ||
       getDefaultLogo();
 
-    const form =
-      ["W","D","L"];
-
     html += `
-      <div class="
-        row
-        form-row
-        rank-${team["№"]}
-      ">
+      <div class="row form-row">
 
-        <div>
-          ${team["№"]}
-        </div>
+        <div>${team["№"]}</div>
 
         <div class="team-box">
 
@@ -325,39 +316,13 @@ if (currentMode === "form") {
         </div>
 
         <div class="form-box">
-    `;
 
-    form.forEach(letter => {
+          <div class="form-circle win">В</div>
+          <div class="form-circle draw">Н</div>
+          <div class="form-circle loss">П</div>
 
-      let cls = "";
-      let text = "";
-
-      if (letter === "W") {
-        cls = "win";
-        text = "В";
-      }
-
-      if (letter === "D") {
-        cls = "draw";
-        text = "Н";
-      }
-
-      if (letter === "L") {
-        cls = "loss";
-        text = "П";
-      }
-
-      html += `
-        <div class="
-          form-circle ${cls}
-        ">
-          ${text}
         </div>
-      `;
-    });
 
-    html += `
-        </div>
       </div>
     `;
   });
