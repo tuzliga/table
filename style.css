@@ -312,9 +312,11 @@ body{
 
 .header-row > div:nth-child(2){
   justify-content:flex-start;
-  padding-left:4px;
-}
 
+  padding-left:34px;
+
+  font-size:8px;
+}
 /* TEAM COLUMN */
 
 .team-box{
@@ -326,7 +328,7 @@ body{
 
   text-align:left;
 
-  font-size:11px;
+  font-size:8px;
   font-weight:400;
 
   width:100%;
