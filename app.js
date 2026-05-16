@@ -635,8 +635,15 @@ if (currentMode === "full") {
 
 if (currentMode === "form") {
 
-  html += `
-    <div class="table-card">
+html += `
+  <div
+    class="table-card"
+    style="
+      width:88%;
+      margin:0 auto;
+    "
+  >
+`;
 
       <div class="
         row
