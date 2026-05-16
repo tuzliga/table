@@ -343,12 +343,6 @@ if (currentMode === "form") {
     `;
   });
 }
-/* CLOSE TABLE */
-
-html += `</div>`;
-
-container.innerHTML = html;
-
 
 /* SWITCH TABS */
 
