@@ -827,3 +827,8 @@ body{
 .loss{
   background:#d73b32;
 }
+/* MATCHES */
+
+.matches-card .row{
+  border-left:none !important;
+}
