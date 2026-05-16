@@ -237,13 +237,13 @@ body{
   border-radius:18px;
   overflow:hidden;
 
-  background:
-    rgba(11,35,58,.92);
+  background:rgba(
+    11,35,58,.92
+  );
 
-  border:
-    1px solid rgba(
-      255,255,255,.06
-    );
+  border:1px solid rgba(
+    255,255,255,.06
+  );
 }
 
 /* ROW */
@@ -283,8 +283,8 @@ body{
 
 .short-row{
   grid-template-columns:
-    22px
-    minmax(125px,1fr)
+    24px
+    minmax(120px,1fr)
     42px
     42px
     42px;
@@ -292,7 +292,7 @@ body{
   align-items:center;
 }
 
-/* CELLS */
+/* ALL CELLS */
 
 .short-row > div,
 .header-row > div{
@@ -313,7 +313,6 @@ body{
 
 .header-row > div:nth-child(2){
   justify-content:flex-start;
-
   padding-left:8px;
 }
 
@@ -351,10 +350,10 @@ body{
 
 /* POINTS */
 
-.short-row .points{
+.points{
   color:#efbb35;
 
-  font-size:24px;
+  font-size:24px !important;
   font-weight:700;
 
   line-height:1;
