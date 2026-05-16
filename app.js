@@ -187,18 +187,6 @@ if (currentTab === "matches") {
   table-card
   matches-card
 ">
-
-        <div class="
-          row
-          header-row
-        ">
-
-          <div>
-            МАТЧИ
-          </div>
-
-        </div>
-
   `;
 
   matches.forEach(match => {
