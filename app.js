@@ -21,7 +21,8 @@ let matches = [];
 let teams = {};
 let settings = {};
 let currentMode = "short";
-
+async function loadData() {
+  try {
 const [
   standingsRes,
   settingsRes,
@@ -46,7 +47,12 @@ const teamsData =
   await teamsRes.json();
 
 matches =
-  await matchesRes.json();
+  await matchesRes.json();} catch (error) {
+
+    console.error(error);
+
+  }
+}
     // настройки
     settingsData.forEach(row => {
 
