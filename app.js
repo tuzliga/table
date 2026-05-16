@@ -304,7 +304,7 @@ if (currentMode === "form") {
 const form =
   String(team["ФОРМА"] || "")
   .trim()
-  .split("");
+  .split(/\s+/);
 
     let formHtml = "";
 
@@ -327,7 +327,6 @@ if (letter === "L") {
   cls = "loss";
   text = "П";
 }
-
       formHtml += `
         <div class="form-circle ${cls}">
           ${text}
