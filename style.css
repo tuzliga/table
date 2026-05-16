@@ -307,11 +307,7 @@ body{
   border:none;
   background:none;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  gap:5px;
+  position:relative;
 
   height:52px;
 
@@ -320,25 +316,31 @@ body{
   font-size:11px;
   font-weight:400;
 
-  white-space:nowrap;
-
   cursor:pointer;
+}
+.tab{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.tab > *{
   position:relative;
-
-  padding:0;
+  z-index:2;
 }
-
 .tab span{
-  white-space:nowrap;
+  display:inline-block;
+  min-width:72px;
+  text-align:center;
 }
-
 .tab svg,
 .tab i{
   width:13px;
   height:13px;
   font-size:13px;
-}
 
+  margin-right:5px;
+}
 .football-icon{
   font-size:15px;
 }
