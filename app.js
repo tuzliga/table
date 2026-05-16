@@ -132,6 +132,19 @@ function renderTable() {
     document.getElementById(
       "table-container"
     );
+  const modeSwitch =
+  document.querySelector(
+    ".mode-switch"
+  );
+
+if (modeSwitch) {
+
+  modeSwitch.style.display =
+    currentTab ===
+    "matches"
+      ? "none"
+      : "flex";
+}
   const modeTabs =
   document.querySelector(
     ".modes"
