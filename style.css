@@ -482,3 +482,119 @@ body{
 
   padding-left:34px !important;
 }
+/* =========================
+   FULL TABLE
+========================= */
+
+.full-row{
+  grid-template-columns:
+    24px
+    minmax(92px,1fr)
+    24px
+    24px
+    24px
+    24px
+    30px
+    30px
+    40px
+    42px;
+
+  align-items:center;
+}
+
+/* FULL HEADER */
+
+.full-header{
+  min-height:30px;
+
+  color:#7d8793;
+
+  font-size:8px;
+  font-weight:400;
+
+  letter-spacing:.15px;
+}
+
+.full-header > div{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.full-header > div:nth-child(2){
+  justify-content:flex-start;
+  padding-left:34px;
+}
+
+/* FULL CELLS */
+
+.full-row > div{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:11px;
+  font-weight:400;
+}
+
+/* TEAM COLUMN */
+
+.full-row .team-box{
+  justify-content:flex-start !important;
+
+  padding-left:0;
+  margin-left:-6px;
+
+  gap:8px;
+
+  font-size:10px;
+}
+
+/* TEAM LOGO */
+
+.full-row .team-logo{
+  width:22px;
+  height:22px;
+}
+
+/* POINTS */
+
+.full-row .points{
+  color:#efbb35;
+
+  font-size:16px;
+  font-weight:700;
+}
+
+/* GOAL DIFF */
+
+.full-row .positive{
+  color:#19c85b;
+}
+
+.full-row .negative{
+  color:#cf1717;
+}
+
+/* POSITION */
+
+.full-row > div:first-child{
+  font-size:16px;
+  font-weight:500;
+
+  color:#b2bcc8;
+}
+
+/* TOP 3 */
+
+.full-row.rank-1{
+  border-left:2px solid #16d954;
+}
+
+.full-row.rank-2{
+  border-left:2px solid #2a8dff;
+}
+
+.full-row.rank-3{
+  border-left:2px solid #efbb35;
+}
