@@ -187,7 +187,11 @@ if (currentTab === "matches") {
  let currentTour = "";
   let currentDate = "";
 
-matches.forEach(match => {
+matches.forEach(
+  (
+    match,
+    index
+  ) => {
 
   const groupKey =
     `${match["ТУР"]}-${match["ДАТА"]}`;
