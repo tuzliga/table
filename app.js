@@ -195,8 +195,35 @@ matches.forEach(match => {
 const tour =
   match["ТУР"];
 
-const date =
+const rawDate =
   match["ДАТА"];
+
+const parts =
+  rawDate.split(".");
+
+const months = [
+  "ЯНВАРЯ",
+  "ФЕВРАЛЯ",
+  "МАРТА",
+  "АПРЕЛЯ",
+  "МАЯ",
+  "ИЮНЯ",
+  "ИЮЛЯ",
+  "АВГУСТА",
+  "СЕНТЯБРЯ",
+  "ОКТЯБРЯ",
+  "НОЯБРЯ",
+  "ДЕКАБРЯ"
+];
+
+const date =
+  `${Number(parts[0])}
+  ${
+    months[
+      Number(parts[1]) - 1
+    ]
+  }
+  ${parts[2]}`;
 
 if (
   currentTour !==
@@ -213,7 +240,7 @@ if (
     <div style="
       text-align:center;
       padding:
-        22px 0 10px;
+        16px 0 2px;
     ">
 
       <div style="
@@ -246,7 +273,7 @@ html += `
     font-weight:500;
 
     margin:
-      4px 0 18px;
+      0px 0 8px;
   ">
 
       ${date}
