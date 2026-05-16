@@ -299,11 +299,7 @@ if (currentMode === "form") {
       teams[team["КОМАНДА"]] ||
       getDefaultLogo();
 
-    const form =
-  String(team["ФОРМА"] || "")
-  .replace(/\s+/g, "")
-  .split("");
-    alert(team["ФОРМА"]);
+   const form = ["W","D","L"];
     let formHtml = "";
 
     form.forEach(letter => {
