@@ -598,3 +598,87 @@ body{
 .full-row.rank-3{
   border-left:2px solid #efbb35;
 }
+/* =========================
+   FULL TABLE
+========================= */
+
+.full-row{
+  grid-template-columns:
+    22px
+    minmax(86px,1fr)
+    22px
+    22px
+    22px
+    22px
+    28px
+    28px
+    36px
+    36px;
+
+  align-items:center;
+}
+
+.full-header{
+  min-height:28px;
+
+  color:#7d8793;
+
+  font-size:7px;
+  font-weight:400;
+
+  letter-spacing:.15px;
+}
+
+.full-row > div,
+.full-header > div{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:10px;
+  font-weight:400;
+}
+
+/* TEAM COLUMN */
+
+.team-name{
+  justify-content:flex-start !important;
+
+  text-align:left;
+
+  width:100%;
+
+  padding-left:4px;
+
+  font-size:10px;
+}
+
+/* HEADER TEAM */
+
+.full-header > div:nth-child(2){
+  justify-content:flex-start;
+  padding-left:4px;
+}
+
+/* POINTS */
+
+.full-row .points{
+  color:#efbb35;
+
+  font-size:10px;
+  font-weight:600;
+}
+
+/* TOP 3 */
+
+.full-row.rank-1{
+  border-left:2px solid #16d954;
+}
+
+.full-row.rank-2{
+  border-left:2px solid #2a8dff;
+}
+
+.full-row.rank-3{
+  border-left:2px solid #efbb35;
+}
