@@ -729,12 +729,19 @@ body{
 ========================= */
 
 .form-row{
+  display:grid;
+
   grid-template-columns:
-    22px
-    minmax(135px,1fr)
-    150px;
+    40px
+    minmax(120px,1fr)
+    180px;
 
   align-items:center;
+
+  min-height:58px;
+
+  padding:
+    0 14px;
 }
 
 .form-header{
@@ -758,16 +765,15 @@ body{
 /* TEAM COLUMN */
 
 .form-row .team-box{
-  justify-content:flex-start !important;
+  display:flex;
 
-  width:100%;
+  align-items:center;
 
-  gap:8px;
+  gap:10px;
 
-  margin-left:-4px;
+  justify-content:flex-start;
 
-  font-size:12px;
-  font-weight:500;
+  overflow:hidden;
 }
 
 /* HEADER TEAM */
@@ -788,12 +794,14 @@ body{
 
 .form-box{
   display:flex;
+
   align-items:center;
+
   justify-content:flex-end;
 
-  gap:6px;
+  gap:8px;
 
-  width:100%;
+  min-width:180px;
 }
 
 /* CIRCLES */
