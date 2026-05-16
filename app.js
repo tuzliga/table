@@ -450,7 +450,7 @@ if (
       height:1px;
 
       margin:
-        0 60px;
+        0 150px;
 
       background:
         rgba(
