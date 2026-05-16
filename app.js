@@ -346,43 +346,6 @@ matches.forEach(match => {
   `;
 });
 
-    html += `
-      <div class="
-        row
-      ">
-
-        <div style="
-          width:100%;
-          text-align:center;
-          color:white;
-          font-size:12px;
-        ">
-
-          ${match["КОМАНДА 1"]}
-
-          vs
-
-          ${match["КОМАНДА 2"]}
-
-        </div>
-
-      </div>
-    `;
-  });
-
-  html += `
-      </div>
-    </div>
-  `;
-
-  container.innerHTML =
-    html;
-
-  return;
-}
-  html += `
-  <div class="table-card">
-`;
   // ВКРАТЦЕ
   if (currentMode === "short") {
 
