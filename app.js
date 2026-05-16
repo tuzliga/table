@@ -297,9 +297,10 @@ if (currentMode === "form") {
       teams[team["КОМАНДА"]] ||
       getDefaultLogo();
 
-    const form =
-      (team["ФОРМА"] || "")
-      .split("");
+   const form =
+  String(team["ФОРМА"] || "")
+  .trim()
+  .split(/\s+/);
 
     let formHtml = "";
 
