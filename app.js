@@ -13,6 +13,9 @@ const SETTINGS_URL =
 const TEAMS_URL =
 `${BASE_URL}/${encodeURIComponent("СПИСОК КОМАНД")}`;
 
+const MATCHES_URL =
+`${BASE_URL}/${encodeURIComponent("МАТЧИ")}`;
+
 let standings = [];
 let teams = {};
 let settings = {};
