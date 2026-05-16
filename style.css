@@ -740,8 +740,8 @@ body{
 
   min-height:34px;
 
-  padding:
-    0 0px;
+  padding: 0 16px;
+  margin:0 -16px;
 }
 
 .form-header{
