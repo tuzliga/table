@@ -781,10 +781,7 @@ body{
 
 .form-header > div:nth-child(3){
   justify-content:flex-end;
-
   padding-right:8px;
-
-  font-size:8px;
 }
 
 /* FORM */
@@ -815,9 +812,9 @@ body{
   font-weight:600;
 
   color:#fff;
-}
 
-/* COLORS */
+  flex-shrink:0;
+}
 
 .win{
   background:#1ea446;
