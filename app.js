@@ -132,6 +132,19 @@ function renderTable() {
     document.getElementById(
       "table-container"
     );
+  const modeTabs =
+  document.querySelector(
+    ".modes"
+  );
+
+if (modeTabs) {
+
+  modeTabs.style.display =
+    currentTab ===
+    "matches"
+      ? "none"
+      : "flex";
+}
 
   let html = "";;
 // MATCHES SCREEN
@@ -141,7 +154,10 @@ if (currentTab === "matches") {
   html += `
     <div class="matches-wrap">
 
-      <div class="table-card">
+      <div class="
+  table-card
+  matches-card
+">
 
         <div class="
           row
