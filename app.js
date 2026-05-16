@@ -633,84 +633,62 @@ if (currentMode === "full") {
 }
 
 
-// ФОРМА
 if (currentMode === "form") {
 
   html += `
     <div class="table-card">
 
-      <div class="row form-row form-header">
+      <div class="
+        row
+        form-row
+        form-header
+      ">
         <div>#</div>
         <div>КОМАНДА</div>
-        <div>ФОРМА</div>
+        <div>
+          ФОРМА
+        </div>
       </div>
   `;
 
   standings.forEach(team => {
 
     const logo =
-      teams[team["КОМАНДА"]] ||
+      teams[
+        team["КОМАНДА"]
+      ] ||
       getDefaultLogo();
 
-    html += `
-      <div class="
-        row
-        form-row
-        rank-${team["№"]}
-      ">
+    const form =
+      String(
+        team["ФОРМА"] || ""
+      )
+      .trim()
+      .split(/\s+/);
 
-        <div>
-          ${team["№"]}
-        </div>
+    let formHtml = "";
 
-        <div class="team-box">
-
-          <img
-            class="team-logo"
-            src="${logo}"
-          />
-
-          <span>
-            ${team["КОМАНДА"]}
-          </span>
-
-        <div class="
-  form-box
-">
-
-  ${
-    String(
-      team["ФОРМА"] || ""
-    )
-    .trim()
-    .split(/\s+/)
-    .map(result => {
+    form.forEach(result => {
 
       let cls = "";
       let text = "";
 
-      if (
-        result === "W"
-      ) {
+      if (result === "W") {
         cls = "win";
         text = "В";
       }
 
-      if (
-        result === "D"
-      ) {
+      if (result === "D") {
         cls = "draw";
         text = "Н";
       }
 
-      if (
-        result === "L"
-      ) {
+      if (result === "L") {
         cls = "loss";
         text = "П";
       }
 
-      return `
+      formHtml += `
         <div class="
           form-circle
           ${cls}
@@ -718,17 +696,53 @@ if (currentMode === "form") {
           ${text}
         </div>
       `;
-    })
-    .join("")
-  }
+    });
 
-</div>
+    html += `
+      <div class="
+        row
+        form-row
+      ">
+
+        <div>
+          ${team["№"]}
+        </div>
+
+        <div class="
+          team-box
+        ">
+
+          <img
+            class="
+              team-logo
+            "
+            src="${logo}"
+          />
+
+          <span>
+            ${
+              team[
+                "КОМАНДА"
+              ]
+            }
+          </span>
+
+        </div>
+
+        <div class="
+          form-box
+        ">
+          ${formHtml}
+        </div>
 
       </div>
     `;
   });
+
+  html += `
+    </div>
+  `;
 }
-  html += `</div>`;
 
 container.innerHTML =
   html;
