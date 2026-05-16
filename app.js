@@ -262,17 +262,23 @@ html += `
 
 html += `
   <div style="
-  display:grid;
-  grid-template-columns:
-    1fr
-    90px
-    1fr;
+    display:grid;
 
-  align-items:center;
+    grid-template-columns:
+      minmax(0,1fr)
+      120px
+      minmax(0,1fr);
 
-  padding:
-    16px 18px;
-">
+    align-items:center;
+
+    padding:
+      18px 26px;
+
+    width:100%;
+
+    box-sizing:border-box;
+  ">
+`;
 
 <div style="
   display:flex;
@@ -280,12 +286,16 @@ html += `
   justify-content:flex-end;
 
   gap:10px;
+
+  min-width:0;
 ">
 
   <div style="
     color:white;
     font-size:14px;
     font-weight:500;
+
+    white-space:nowrap;
   ">
 
     ${
@@ -382,12 +392,14 @@ html += `
 
     </div>
 
-    <div style="
+  <div style="
   display:flex;
   align-items:center;
   justify-content:flex-start;
 
   gap:10px;
+
+  min-width:0;
 ">
 
   <img
@@ -412,6 +424,8 @@ html += `
     color:white;
     font-size:14px;
     font-weight:500;
+
+    white-space:nowrap;
   ">
 
     ${
