@@ -226,9 +226,21 @@ if (currentMode === "full") {
         ${team["№"]}
       </div>
 
-      <div class="team-name">
-        ${team["КОМАНДА"]}
-      </div>
+      <div class="team-box">
+
+  <img
+    class="team-logo"
+    src="${
+      teams[team["КОМАНДА"]] ||
+      getDefaultLogo()
+    }"
+  />
+
+  <span>
+    ${team["КОМАНДА"]}
+  </span>
+
+</div>
 
       <div>${team["И"]}</div>
       <div>${team["В"]}</div>
