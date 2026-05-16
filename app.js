@@ -17,10 +17,10 @@ const MATCHES_URL =
 `${BASE_URL}/${encodeURIComponent("МАТЧИ")}`;
 
 let standings = [];
-let matches = [];
 let teams = {};
 let settings = {};
 let currentMode = "short";
+
 async function loadData() {
   try {
 
@@ -29,11 +29,9 @@ async function loadData() {
       settingsRes,
       teamsRes
     ] = await Promise.all([
-
       fetch(TABLE_URL),
       fetch(SETTINGS_URL),
       fetch(TEAMS_URL)
-
     ]);
 
     standings =
@@ -45,37 +43,6 @@ async function loadData() {
     const teamsData =
       await teamsRes.json();
 
-    settingsData.forEach(
-      item => {
-
-        settings[
-          item["КЛЮЧ"]
-        ] =
-        item["ЗНАЧЕНИЕ"];
-
-      }
-    );
-
-    teamsData.forEach(
-      team => {
-
-        teams[
-          team["КОМАНДА"]
-        ] =
-        team["ЛОГО"];
-
-      }
-    );
-
-    renderHeader();
-    renderTable();
-
-  } catch (error) {
-
-    console.error(error);
-
-  }
-}
     // настройки
     settingsData.forEach(row => {
 
