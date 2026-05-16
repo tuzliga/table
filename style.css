@@ -732,16 +732,16 @@ body{
   display:grid;
 
   grid-template-columns:
-  34px
-  minmax(110px,1fr)
-  220px;
+  28px
+  minmax(120px,1fr)
+  92px;
 
   align-items:center;
 
   min-height:58px;
 
   padding:
-    0 16px;
+    0 10px;
 }
 
 .form-header{
@@ -810,7 +810,7 @@ body{
 
 gap:6px;
 
-width:220px;
+width:92px;
 
 overflow:hidden;
 }
