@@ -133,7 +133,7 @@ function renderTable() {
     <div class="row short-row header-row">
       <div>#</div>
       <div>КОМАНДА</div>
-      <div>И</div>
+      <div>ИГРЫ</div>
       <div>+/-</div>
       <div>ОЧКИ</div>
     </div>
