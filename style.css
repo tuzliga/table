@@ -68,12 +68,16 @@ body{
 
 /* TOP MENU */
 
+/* TOP NAV */
+
 .tabs{
   display:flex;
+  width:100%;
 
   border-bottom:
-    1px solid
-    rgba(255,255,255,.08);
+    1px solid rgba(
+      255,255,255,.08
+    );
 }
 
 .tab{
@@ -88,17 +92,22 @@ body{
 
   gap:6px;
 
-  color:#8f98a5;
+  height:50px;
+
+  color:#8b95a2;
+
+  font-family:
+    'Roboto Condensed',
+    sans-serif;
 
   font-size:12px;
   font-weight:400;
-
-  height:48px;
 
   cursor:pointer;
   position:relative;
 
   padding:0;
+  margin:0;
 }
 
 .tab svg,
@@ -107,11 +116,11 @@ body{
   height:14px;
   font-size:14px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
   flex-shrink:0;
+}
+
+.football-icon{
+  font-size:16px !important;
 }
 
 .tab.active{
@@ -122,10 +131,10 @@ body{
   content:'';
 
   position:absolute;
-  left:50%;
   bottom:0;
+  left:50%;
 
-  width:70px;
+  width:64px;
   height:2px;
 
   transform:
@@ -134,9 +143,6 @@ body{
   background:#efbb35;
 
   border-radius:2px;
-}
-.football-icon{
-  font-size:18px;
 }
 /* SUB TABS */
 
