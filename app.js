@@ -109,7 +109,7 @@ function renderHeader() {
   document.getElementById(
     "season"
   ).innerText =
-    `СЕЗОН ${season}`;
+    `${season}`;
 }
 
 function getDefaultLogo() {
