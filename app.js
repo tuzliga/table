@@ -632,12 +632,11 @@ if (currentMode === "full") {
   });
 }
 
-
+/// ФОРМА
 if (currentMode === "form") {
 
 html += `
   <div
-    class="table-card"
     style="
       width:88%;
       margin:0 auto;
