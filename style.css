@@ -310,12 +310,20 @@ body{
 
 /* TEAM HEADER */
 
-.header-row > div:nth-child(2){
-  justify-content:flex-start;
+.header-row{
+  min-height:30px;
 
-  padding-left:34px;
+  color:#7d8793;
 
-  font-size:8px;
+  font-size:7px !important;
+  font-weight:400;
+
+  letter-spacing:.2px;
+}
+/* FORCE HEADER FONT */
+
+.header-row > div{
+  font-size:7px !important;
 }
 /* TEAM COLUMN */
 
