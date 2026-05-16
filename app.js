@@ -297,10 +297,14 @@ if (currentMode === "form") {
       teams[team["КОМАНДА"]] ||
       getDefaultLogo();
 
-   const form =
+   const rawForm =
   String(team["ФОРМА"] || "")
-  .trim()
-  .split(/\s+/);
+  .trim();
+
+const form =
+  [...rawForm.matchAll(
+    /🟢|🟡|🔴/g
+  )].map(m => m[0]);
 
     let formHtml = "";
 
@@ -309,17 +313,17 @@ if (currentMode === "form") {
       let cls = "";
       let text = "";
 
-      if (letter === "🟢") {
+      if (letter.includes("🟢")) {
   cls = "win";
   text = "В";
 }
 
-if (letter === "🟡") {
+if (letter.includes("🟡")) {
   cls = "draw";
   text = "Н";
 }
 
-if (letter === "🔴") {
+if (letter.includes("🔴")) {
   cls = "loss";
   text = "П";
 }
