@@ -198,12 +198,6 @@ const tour =
 const date =
   match["ДАТА"];
 
-const tour =
-  match["ТУР"];
-
-const date =
-  match["ДАТА"];
-
 if (
   currentTour !==
   tour
