@@ -344,7 +344,7 @@ body{
 /* TABLE NUMBERS */
 
 .short-row > div:not(.team-box){
-  font-size:11px;
+  font-size:12px;
   font-weight:400;
 }
 
@@ -362,11 +362,11 @@ body{
 /* GOAL DIFFERENCE */
 
 .positive{
-  color:#11883e;
+  color:#19c85b;
 }
 
 .negative{
-  color:#881111;
+  color:#cf1717;
 }
 
 /* TOP 3 */
