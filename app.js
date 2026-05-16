@@ -250,28 +250,46 @@ matches.forEach(match => {
 
 html += `
   <div style="
-    display:grid;
-    grid-template-columns:
-      1fr
-      70px
-      1fr;
+  display:grid;
+  grid-template-columns:
+    1fr
+    70px
+    1fr;
 
-    align-items:center;
+  align-items:center;
 
-    padding:
-      14px 16px;
+  padding:
+    14px 16px;
 
-    border-bottom:
-      1px solid
-      rgba(
-        255,255,255,.05
-      );
-  ">
+  margin:
+    8px 10px;
+
+  border-radius:14px;
+
+  background:
+    rgba(
+      8,25,43,.45
+    );
+
+  border:
+    1px solid rgba(
+      255,255,255,.06
+    );
+">
 
     <div style="
   display:flex;
   align-items:center;
+  justify-content:flex-end;
+
   gap:8px;
+
+  padding-right:14px;
+
+  border-right:
+    1px solid rgba(
+      255,255,255,.08
+    );
 ">
 
   <img
@@ -377,8 +395,16 @@ html += `
     <div style="
   display:flex;
   align-items:center;
-  justify-content:flex-end;
+  justify-content:flex-start;
+
   gap:8px;
+
+  padding-left:14px;
+
+  border-left:
+    1px solid rgba(
+      255,255,255,.08
+    );
 ">
 
   <div style="
