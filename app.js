@@ -193,47 +193,69 @@ function renderTable() {
   }
 
   // ПОЛНОСТЬЮ
-  if (currentMode === "full") {
+if (currentMode === "full") {
+
+  html += `
+  <div class="row full-row full-header">
+    <div>#</div>
+    <div>КОМАНДА</div>
+    <div>И</div>
+    <div>В</div>
+    <div>Н</div>
+    <div>П</div>
+    <div>ЗМ</div>
+    <div>ПМ</div>
+    <div>+/-</div>
+    <div>ОЧКИ</div>
+  </div>
+  `;
+
+  standings.forEach(team => {
+
+    const rm =
+      Number(team["РМ"] || 0);
 
     html += `
-    <div class="row full-row header-row">
-      <div>#</div>
-      <div>КОМ</div>
-      <div>И</div>
-      <div>В</div>
-      <div>Н</div>
-      <div>П</div>
-      <div>ЗМ</div>
-      <div>ПМ</div>
-      <div>РМ</div>
-      <div>О</div>
-    </div>
-    `;
+    <div class="
+      row
+      full-row
+      rank-${team["№"]}
+    ">
 
-    standings.forEach(team => {
+      <div>
+        ${team["№"]}
+      </div>
 
-      html += `
-      <div class="row full-row">
+      <div class="team-name">
+        ${team["КОМАНДА"]}
+      </div>
 
-        <div>${team["№"]}</div>
-        <div>${team["КОМАНДА"]}</div>
-        <div>${team["И"]}</div>
-        <div>${team["В"]}</div>
-        <div>${team["Н"]}</div>
-        <div>${team["П"]}</div>
-        <div>${team["ЗМ"]}</div>
-        <div>${team["ПМ"]}</div>
-        <div>${team["РМ"]}</div>
+      <div>${team["И"]}</div>
+      <div>${team["В"]}</div>
+      <div>${team["Н"]}</div>
+      <div>${team["П"]}</div>
+      <div>${team["ЗМ"]}</div>
+      <div>${team["ПМ"]}</div>
 
-        <div class="points">
-          ${team["ОЧКИ"]}
-        </div>
+      <div class="${
+        rm >= 0
+        ? "positive"
+        : "negative"
+      }">
+
+        ${rm > 0 ? "+" : ""}
+        ${rm}
 
       </div>
-      `;
-    });
-  }
 
+      <div class="points">
+        ${team["ОЧКИ"]}
+      </div>
+
+    </div>
+    `;
+  });
+}
   // ФОРМА
   if (currentMode === "form") {
 
