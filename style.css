@@ -315,7 +315,7 @@ body{
 
   color:#7d8793;
 
-  font-size:7px !important;
+  font-size:10px !important;
   font-weight:400;
 
   letter-spacing:.2px;
@@ -323,7 +323,7 @@ body{
 /* FORCE HEADER FONT */
 
 .header-row > div{
-  font-size:7px !important;
+  font-size:10px !important;
 }
 /* TEAM COLUMN */
 
