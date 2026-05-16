@@ -132,18 +132,34 @@ function renderTable() {
     document.getElementById(
       "table-container"
     );
-  const modeSwitch =
+ const modeSwitch =
   document.querySelector(
     ".mode-switch"
   );
 
 if (modeSwitch) {
 
-  modeSwitch.style.display =
+  const showModes =
     currentTab ===
-    "matches"
-      ? "none"
-      : "flex";
+    "table";
+
+  modeSwitch.style.visibility =
+    showModes
+      ? "visible"
+      : "hidden";
+
+  modeSwitch.style.height =
+    showModes
+      ? ""
+      : "0";
+
+  modeSwitch.style.margin =
+    showModes
+      ? ""
+      : "0";
+
+  modeSwitch.style.overflow =
+    "hidden";
 }
   const modeTabs =
   document.querySelector(
