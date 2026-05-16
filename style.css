@@ -458,9 +458,9 @@ body{
 
 .short-row > div:nth-child(2){
   justify-content:flex-start !important;
-  padding-left:0 !important;
+  padding-left:34px !important;
 }
 
 .team-box{
-  margin-left:-10px !important;
+  margin-left:0px !important;
 }
