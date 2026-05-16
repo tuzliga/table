@@ -283,33 +283,30 @@ body{
 
 .short-row{
   grid-template-columns:
-    24px
-    minmax(120px,1fr)
-    44px
-    44px
-    44px;
+    22px
+    minmax(125px,1fr)
+    42px
+    42px
+    42px;
 
   align-items:center;
 }
 
-/* CENTER ALL CELLS */
+/* CENTER CELLS */
 
-/* POSITION COLUMN (# + 1-8) */
+.short-row > div,
+.header-row > div{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
 /* POSITION COLUMN */
 
 .short-row > div:first-child,
 .header-row > div:first-child{
-  display:flex;
-  align-items:center;
   justify-content:center;
-
   text-align:center;
-
-  padding:0;
-  margin:0;
-
-  width:100%;
 }
 
 /* TEAM COLUMN */
@@ -317,7 +314,7 @@ body{
 .team-box{
   display:flex;
   align-items:center;
-  justify-content:flex-start !important;
+  justify-content:flex-start;
 
   gap:10px;
 
@@ -342,7 +339,7 @@ body{
   flex-shrink:0;
 }
 
-/* NUMBERS */
+/* TABLE NUMBERS */
 
 .short-row > div:not(.team-box){
   font-size:12px;
@@ -356,6 +353,8 @@ body{
 
   font-size:24px;
   font-weight:700;
+
+  line-height:1;
 }
 
 /* GOAL DIFFERENCE */
