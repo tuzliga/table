@@ -269,19 +269,44 @@ html += `
   ">
 
     <div style="
-      text-align:left;
-      color:white;
-      font-size:12px;
-      font-weight:500;
-    ">
+  display:flex;
+  align-items:center;
+  gap:8px;
+">
 
-      ${
+  <img
+    src="${
+      teams[
         match[
           "КОМАНДА 1"
         ]
-      }
+      ] ||
+      getDefaultLogo()
+    }"
 
-    </div>
+    style="
+      width:28px;
+      height:28px;
+      object-fit:contain;
+      flex-shrink:0;
+    "
+  />
+
+  <div style="
+    color:white;
+    font-size:12px;
+    font-weight:500;
+  ">
+
+    ${
+      match[
+        "КОМАНДА 1"
+      ]
+    }
+
+  </div>
+
+</div>
 
     <div style="
       text-align:center;
@@ -350,19 +375,45 @@ html += `
     </div>
 
     <div style="
-      text-align:right;
-      color:white;
-      font-size:12px;
-      font-weight:500;
-    ">
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:8px;
+">
 
-      ${
+  <div style="
+    color:white;
+    font-size:12px;
+    font-weight:500;
+  ">
+
+    ${
+      match[
+        "КОМАНДА 2"
+      ]
+    }
+
+  </div>
+
+  <img
+    src="${
+      teams[
         match[
           "КОМАНДА 2"
         ]
-      }
+      ] ||
+      getDefaultLogo()
+    }"
 
-    </div>
+    style="
+      width:28px;
+      height:28px;
+      object-fit:contain;
+      flex-shrink:0;
+    "
+  />
+
+</div>
 
   </div>
 `;
