@@ -21,6 +21,7 @@ let teams = {};
 let settings = {};
 let matches = [];
 let currentMode = "short";
+let currentTab = "table";
 
 async function loadData() {
   try {
