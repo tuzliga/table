@@ -280,11 +280,11 @@ if (currentMode === "full") {
 if (currentMode === "form") {
 
   html += `
-  <div class="row form-row form-header">
-    <div>#</div>
-    <div>КОМАНДА</div>
-    <div>ПОСЛЕДНИЕ 5 МАТЧЕЙ</div>
-  </div>
+    <div class="row form-row form-header">
+      <div>#</div>
+      <div>КОМАНДА</div>
+      <div>ПОСЛЕДНИЕ 5 МАТЧЕЙ</div>
+    </div>
   `;
 
   standings.forEach(team => {
@@ -297,64 +297,64 @@ if (currentMode === "form") {
       (team["ФОРМА"] || "")
       .split("");
 
+    let formHtml = "";
+
+    form.forEach(letter => {
+
+      let cls = "";
+      let text = "";
+
+      if (letter === "W") {
+        cls = "win";
+        text = "В";
+      }
+
+      if (letter === "D") {
+        cls = "draw";
+        text = "Н";
+      }
+
+      if (letter === "L") {
+        cls = "loss";
+        text = "П";
+      }
+
+      formHtml += `
+        <div class="form-circle ${cls}">
+          ${text}
+        </div>
+      `;
+    });
+
     html += `
-    <div class="
-      row
-      form-row
-      rank-${team["№"]}
-    ">
+      <div class="
+        row
+        form-row
+        rank-${team["№"]}
+      ">
 
-      <div>
-        ${team["№"]}
-      </div>
+        <div>
+          ${team["№"]}
+        </div>
 
-      <div class="team-box">
+        <div class="team-box">
 
-        <img
-          class="team-logo"
-          src="${logo}"
-        />
+          <img
+            class="team-logo"
+            src="${logo}"
+          />
 
-        <span>
-          ${team["КОМАНДА"]}
-        </span>
+          <span>
+            ${team["КОМАНДА"]}
+          </span>
 
-      </div>
+        </div>
 
-      <div class="form-box">
-
-        ${form.map(letter => {
-
-          let cls = "";
-          let text = "";
-
-          if (letter === "W") {
-            cls = "win";
-            text = "В";
-          }
-
-          if (letter === "D") {
-            cls = "draw";
-            text = "Н";
-          }
-
-          if (letter === "L") {
-            cls = "loss";
-            text = "П";
-          }
-
-          return `
-            <div class="
-              form-circle ${cls}
-            ">
-              ${text}
-            </div>
-          `;
-        }).join("")}
+        <div class="form-box">
+          ${formHtml}
+        </div>
 
       </div>
-
-    </div>
     `;
   });
 }
