@@ -285,8 +285,8 @@ html += `
     }"
 
     style="
-      width:36px;
-      height:36px;
+      width:42px;
+      height:42px;
       object-fit:contain;
       flex-shrink:0;
     "
@@ -383,7 +383,7 @@ html += `
 
   <div style="
     color:white;
-    font-size:12px;
+    font-size:16px;
     font-weight:500;
   ">
 
@@ -406,8 +406,8 @@ html += `
     }"
 
     style="
-      width:36px;
-      height:36px;
+      width:42px;
+      height:42px;
       object-fit:contain;
       flex-shrink:0;
     "
