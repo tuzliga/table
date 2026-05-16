@@ -177,8 +177,6 @@ body{
     );
 
   overflow:hidden;
-
-  padding:2px;
 }
 
 .mode{
@@ -196,7 +194,7 @@ body{
 
   cursor:pointer;
 
-  border-radius:12px;
+  border-radius:14px;
 
   z-index:2;
 }
@@ -209,8 +207,11 @@ body{
 
   background:
     rgba(239,187,53,.03);
-}
 
+  border-radius:14px;
+
+  height:100%;
+}
 /* TABLE */
 
 .table-card{
