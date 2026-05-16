@@ -676,23 +676,55 @@ if (currentMode === "form") {
             ${team["КОМАНДА"]}
           </span>
 
+        <div class="
+  form-box
+">
+
+  ${
+    String(
+      team["ФОРМА"] || ""
+    )
+    .trim()
+    .split(/\s+/)
+    .map(result => {
+
+      let cls = "";
+      let text = "";
+
+      if (
+        result === "W"
+      ) {
+        cls = "win";
+        text = "В";
+      }
+
+      if (
+        result === "D"
+      ) {
+        cls = "draw";
+        text = "Н";
+      }
+
+      if (
+        result === "L"
+      ) {
+        cls = "loss";
+        text = "П";
+      }
+
+      return `
+        <div class="
+          form-circle
+          ${cls}
+        ">
+          ${text}
         </div>
+      `;
+    })
+    .join("")
+  }
 
-        <div class="form-box">
-
-          <div class="form-circle win">
-            В
-          </div>
-
-          <div class="form-circle draw">
-            Н
-          </div>
-
-          <div class="form-circle loss">
-            П
-          </div>
-
-        </div>
+</div>
 
       </div>
     `;
