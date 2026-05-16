@@ -429,7 +429,20 @@ html += `
 
     </div>
 
-  </div>
+</div>
+
+<div style="
+  height:1px;
+
+  margin:
+    0 34px;
+
+  background:
+    rgba(
+      255,255,255,.08
+    );
+"></div>
+
 `;
 });
   html += `
