@@ -243,9 +243,17 @@ if (currentMode === "full") {
 </div>
 
       <div>${team["И"]}</div>
-      <div>${team["В"]}</div>
-      <div>${team["Н"]}</div>
-      <div>${team["П"]}</div>
+      <div class="wins">
+  ${team["В"]}
+</div>
+
+<div class="draws">
+  ${team["Н"]}
+</div>
+
+<div class="losses">
+  ${team["П"]}
+</div>
       <div>${team["ЗМ"]}</div>
       <div>${team["ПМ"]}</div>
 
