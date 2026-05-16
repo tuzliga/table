@@ -292,7 +292,9 @@ if (currentMode === "form") {
   `;
 
   standings.forEach(team => {
-console.log(team);
+    
+  console.log(team);
+    
     const logo =
       teams[team["КОМАНДА"]] ||
       getDefaultLogo();
