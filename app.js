@@ -23,31 +23,54 @@ let settings = {};
 let currentMode = "short";
 async function loadData() {
   try {
-const [
-  standingsRes,
-  settingsRes,
-  teamsRes,
-  matchesRes
-] = await Promise.all([
 
-  fetch(TABLE_URL),
-  fetch(SETTINGS_URL),
-  fetch(TEAMS_URL),
-  fetch(MATCHES_URL)
+    const [
+      standingsRes,
+      settingsRes,
+      teamsRes
+    ] = await Promise.all([
 
-]);
+      fetch(TABLE_URL),
+      fetch(SETTINGS_URL),
+      fetch(TEAMS_URL)
 
-standings =
-  await standingsRes.json();
+    ]);
 
-const settingsData =
-  await settingsRes.json();
+    standings =
+      await standingsRes.json();
 
-const teamsData =
-  await teamsRes.json();
+    const settingsData =
+      await settingsRes.json();
 
-matches =
-  await matchesRes.json();} catch (error) {
+    const teamsData =
+      await teamsRes.json();
+
+    settingsData.forEach(
+      item => {
+
+        settings[
+          item["КЛЮЧ"]
+        ] =
+        item["ЗНАЧЕНИЕ"];
+
+      }
+    );
+
+    teamsData.forEach(
+      team => {
+
+        teams[
+          team["КОМАНДА"]
+        ] =
+        team["ЛОГО"];
+
+      }
+    );
+
+    renderHeader();
+    renderTable();
+
+  } catch (error) {
 
     console.error(error);
 
