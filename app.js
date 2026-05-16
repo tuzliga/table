@@ -243,26 +243,129 @@ matches.forEach(match => {
     `;
   }
 
-  html += `
-    <div class="row">
+  const finished =
+  match[
+    "СТАТУС МАТЧА"
+  ] === "Завершен";
 
-      <div style="
-        width:100%;
-        text-align:center;
-        color:white;
-        font-size:12px;
-      ">
+html += `
+  <div style="
+    display:grid;
+    grid-template-columns:
+      1fr
+      70px
+      1fr;
 
-        ${match["КОМАНДА 1"]}
+    align-items:center;
 
-        vs
+    padding:
+      14px 16px;
 
-        ${match["КОМАНДА 2"]}
+    border-bottom:
+      1px solid
+      rgba(
+        255,255,255,.05
+      );
+  ">
 
-      </div>
+    <div style="
+      text-align:left;
+      color:white;
+      font-size:12px;
+      font-weight:500;
+    ">
+
+      ${
+        match[
+          "КОМАНДА 1"
+        ]
+      }
 
     </div>
-  `;
+
+    <div style="
+      text-align:center;
+    ">
+
+      ${
+        finished
+
+        ? `
+
+        <div style="
+          color:white;
+          font-size:18px;
+          font-weight:700;
+        ">
+
+          ${
+            match[
+              "ГОЛЫ 1"
+            ]
+          }
+          -
+          ${
+            match[
+              "ГОЛЫ 2"
+            ]
+          }
+
+        </div>
+
+        <div style="
+          font-size:8px;
+          color:#8d96a1;
+          margin-top:2px;
+        ">
+          ЗАВЕРШЕН
+        </div>
+
+        `
+
+        : `
+
+        <div style="
+          color:white;
+          font-size:16px;
+          font-weight:600;
+        ">
+          ${
+            match[
+              "ВРЕМЯ"
+            ]
+          }
+        </div>
+
+        <div style="
+          font-size:8px;
+          color:#8d96a1;
+          margin-top:2px;
+        ">
+          VS
+        </div>
+
+        `
+      }
+
+    </div>
+
+    <div style="
+      text-align:right;
+      color:white;
+      font-size:12px;
+      font-weight:500;
+    ">
+
+      ${
+        match[
+          "КОМАНДА 2"
+        ]
+      }
+
+    </div>
+
+  </div>
+`;
 });
 
   html += `
