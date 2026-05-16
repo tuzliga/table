@@ -198,6 +198,12 @@ const tour =
 const date =
   match["ДАТА"];
 
+const tour =
+  match["ТУР"];
+
+const date =
+  match["ДАТА"];
+
 if (
   currentTour !==
   tour
@@ -253,58 +259,6 @@ if (
     </div>
   `;
 }
-
-    html += `
-  <div style="
-    text-align:center;
-
-    padding:
-      18px 0 8px;
-  ">
-
-    <div style="
-      color:#efbb35;
-
-      font-size:18px;
-      font-weight:700;
-    ">
-
-      ${
-        match["ТУР"]
-      } ТУР
-
-    </div>
-
-    <div style="
-      color:#8c96a3;
-
-      font-size:11px;
-
-      margin-top:2px;
-    ">
-
-      ${
-        match["ДАТА"]
-      }
-
-    </div>
-
-  </div>
-`;
-    html += `
-  <div style="
-    height:1px;
-
-    margin:
-      0 24px;
-
-    background:
-      rgba(
-        255,255,255,.05
-      );
-  "></div>
-`;
-  }
 
   const finished =
   match[
