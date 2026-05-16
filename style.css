@@ -732,20 +732,20 @@ body{
   display:grid;
 
   grid-template-columns:
-    40px
-    minmax(120px,1fr)
-    180px;
+    34px
+    minmax(140px,1fr)
+    170px;
 
   align-items:center;
 
   min-height:58px;
 
   padding:
-    0 14px;
+    0 16px;
 }
 
 .form-header{
-  min-height:30px;
+  min-height:34px;
 
   color:#7d8793;
 
@@ -755,11 +755,30 @@ body{
   letter-spacing:.2px;
 }
 
-.form-header > div,
-.form-row > div{
+/* HEADER */
+
+.form-header > div{
   display:flex;
   align-items:center;
   justify-content:center;
+}
+
+.form-header > div:nth-child(2){
+  justify-content:flex-start;
+  padding-left:38px;
+}
+
+.form-header > div:nth-child(3){
+  justify-content:center;
+
+  font-size:8px;
+}
+
+/* ROWS */
+
+.form-row > div{
+  display:flex;
+  align-items:center;
 }
 
 /* TEAM COLUMN */
@@ -769,25 +788,15 @@ body{
 
   align-items:center;
 
+  justify-content:flex-start;
+
   gap:10px;
 
-  justify-content:flex-start;
-
-  overflow:hidden;
+  min-width:0;
 }
 
-/* HEADER TEAM */
-
-.form-header > div:nth-child(2){
-  justify-content:flex-start;
-  padding-left:34px;
-}
-
-/* HEADER LAST MATCHES */
-
-.form-header > div:nth-child(3){
-  justify-content:flex-end;
-  padding-right:8px;
+.form-row .team-box span{
+  white-space:nowrap;
 }
 
 /* FORM */
@@ -801,7 +810,7 @@ body{
 
   gap:8px;
 
-  min-width:180px;
+  width:100%;
 }
 
 /* CIRCLES */
@@ -824,6 +833,8 @@ body{
   flex-shrink:0;
 }
 
+/* COLORS */
+
 .win{
   background:#1ea446;
 }
@@ -835,8 +846,15 @@ body{
 .loss{
   background:#d73b32;
 }
-/* MATCHES */
 
-.matches-card .row{
+/* REMOVE TABLE RANK COLORS */
+
+.form-row{
+  border-left:none !important;
+}
+
+.form-row.rank-1,
+.form-row.rank-2,
+.form-row.rank-3{
   border-left:none !important;
 }
