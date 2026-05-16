@@ -347,7 +347,6 @@ if (currentMode === "form") {
 html += `</div>`;
 
 container.innerHTML = html;
-}
 
 /* SWITCH TABS */
 
