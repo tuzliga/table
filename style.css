@@ -734,7 +734,7 @@ body{
  grid-template-columns:
   36px
   140px
-  minmax(170px,1fr);
+  minmax(300px,1fr);
   align-items:center;
 
   min-height:34px;
