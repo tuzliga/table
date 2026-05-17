@@ -1112,6 +1112,14 @@ font-weight:500;
     )
   );
 }
+.scorer-card:not(.gold) img{
+  width:42px;
+  height:42px;
+
+  object-fit:contain;
+
+  flex-shrink:0;
+}
 /* NAME */
 
 .scorer-name{
