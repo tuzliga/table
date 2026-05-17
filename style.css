@@ -887,6 +887,7 @@ font-weight:500;
 .scorers-wrap{
   width:100%;
   margin:0 auto;
+  margin-left:-12px;
 
   padding-bottom:20px;
 }
@@ -1141,7 +1142,6 @@ font-weight:500;
   position:relative;
 
   top:0;
-  left:-8px;
 
   text-shadow:none;
 }
