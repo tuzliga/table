@@ -1004,7 +1004,7 @@ font-weight:500;
     );
 }
 .scorer-card.gold .scorer-name{
-  font-size:25px;
+  font-size:20px;
 
   color:#111;
 
@@ -1017,6 +1017,8 @@ font-weight:500;
   left:-8px;
 
   top:0;
+
+  max-width:140px;
 }
 /* RANK */
 
@@ -1055,8 +1057,12 @@ font-weight:500;
   min-width:0;
 
   overflow:visible;
+
   position:relative;
+
   padding-left:95px;
+
+  width:100%;
 }
 .scorer-avatar{
   width:50px;
