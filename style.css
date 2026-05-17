@@ -946,13 +946,13 @@ font-weight:500;
     center / cover
     no-repeat;
 
-  min-height:78px;
+  min-height:90px;
 
   position:relative;
 
   border:none;
 
-  border-radius:12px;
+  border-radius:20px;
 
   overflow:visible;
 
@@ -979,16 +979,28 @@ font-weight:500;
 /* RANK */
 
 .scorer-rank{
-  font-size:16px;
-  font-weight:600;
+  display:flex;
 
-  color:white;
+  align-items:center;
+  justify-content:center;
+
+  height:100%;
+
+  font-size:22px;
+  font-weight:700;
 
   text-align:center;
-  height:100%;
-display:flex;
-align-items:center;
-justify-content:center;
+
+  color:#1a1305;
+
+  text-shadow:
+    0 1px 0
+    rgba(
+      255,
+      220,
+      120,
+      .4
+    );
 }
 
 /* PLAYER */
@@ -1071,4 +1083,12 @@ justify-content:center;
 .scorer-card.gold
 .scorer-goals{
   color:#111;
+}
+.scorer-card.gold
+.scorer-rank{
+  color:#120d03;
+
+  font-size:26px;
+
+  font-weight:800;
 }
