@@ -1069,20 +1069,22 @@ font-weight:500;
 /* FIRST PLACE */
 
 .big-avatar{
-  width:110px;
-  height:110px;
+  width:130px;
+  height:130px;
 
   object-fit:contain;
 
   position:relative;
 
-  top:-14px;
+  bottom:-2px;
 
   left:-30px;
 
   z-index:3;
 
   flex-shrink:0;
+
+  align-self:flex-end;
 }
 /* NAME */
 
