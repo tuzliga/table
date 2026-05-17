@@ -1187,7 +1187,7 @@ font-weight:500;
 
   position:relative;
   .scorer-card:not(.gold) .scorer-goals{
-  left:60px;
+  left:100px;
 }
 
   background:
