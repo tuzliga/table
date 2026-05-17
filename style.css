@@ -739,7 +739,10 @@ body{
 
   min-height:34px;
 
-  padding: 0 16px;
+  padding:
+  0 16px
+  0 13px;
+  box-sizing:border-box;
   
 }
 
@@ -865,15 +868,15 @@ font-weight:500;
 
 .form-row.rank-1{
   border-left:
-    3px solid #00d26a;
+    1px solid #00d26a;
 }
 
 .form-row.rank-2{
   border-left:
-    3px solid #1185ff;
+    1px solid #1185ff;
 }
 
 .form-row.rank-3{
   border-left:
-    3px solid #f4b400;
+    1px solid #f4b400;
 }
