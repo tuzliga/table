@@ -916,7 +916,7 @@ font-weight:500;
 
   align-items:center;
 
-  min-height:96px;
+  min-height:36px;
 
   background:
     rgba(0,0,0,.45);
@@ -947,7 +947,7 @@ font-weight:500;
       #efc14d
     );
 
-  min-height:135px;
+  min-height:50px;
 }
 
 /* RANK */
