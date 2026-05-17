@@ -741,6 +741,7 @@ body{
 
   padding:
   0 16px;
+  margin:0 -32px;
   box-sizing:border-box;
   
 }
