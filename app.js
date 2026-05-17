@@ -185,13 +185,13 @@ if (currentTab === "scorers") {
       name:"Эрнист Болотбеков",
       team:"1996",
       goals:25,
-      photo:"https://i.pravatar.cc/300?img=12"
+      photo:"https://randomuser.me/api/portraits/men/44.jpg"
     },
     {
       name:"Мирлан Уулу",
       team:"1994",
       goals:19,
-      photo:"https://i.pravatar.cc/300?img=13"
+      photo:"https://randomuser.me/api/portraits/men/32.jpg"
     },
     {
       name:"Бексултан Абдиев",
