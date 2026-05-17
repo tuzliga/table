@@ -894,11 +894,12 @@ font-weight:500;
   left:0px;
 }
 .scorers-title{
-  font-size:30px;
+  font-size:25px;
 
-  font-weight:900;
+  font-weight:800;
 
   text-align:right;
+  padding-right:18px;
 
   margin:
     0 6px 8px 0;
