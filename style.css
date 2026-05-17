@@ -1111,6 +1111,8 @@ font-weight:500;
   object-fit:contain;
 
   justify-self:center;
+  position:relative;
+  left:18px;
 }
 
 /* GOALS */
@@ -1122,8 +1124,10 @@ font-weight:500;
   color:#f4b400;
 
   text-align:center;
-}
 
+  position:relative;
+  left:16px;
+}
 .scorer-card.gold
 .scorer-goals{
   color:#111;
