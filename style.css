@@ -864,14 +864,10 @@ font-weight:500;
 /* REMOVE TABLE RANK COLORS */
 
 .form-row{
-  border-left:none !important;
+  border-left:
+    3px solid transparent;
 }
 
-.form-row.rank-1,
-.form-row.rank-2,
-.form-row.rank-3{
-  border-left:none !important;
-}
 .form-row.rank-1{
   border-left:
     3px solid #00d26a;
