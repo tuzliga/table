@@ -1076,13 +1076,17 @@ font-weight:500;
 
   position:relative;
 
-  top:-20px;
+  top:-30px;
 
-  left:-36px;
+  bottom:0;
+
+  left:-40px;
 
   z-index:3;
 
   flex-shrink:0;
+
+  margin-bottom:0;
 }
 /* NAME */
 
