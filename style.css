@@ -1187,13 +1187,13 @@ font-weight:500;
 
   position:absolute;
 
-  left:54px;
+  left:62px;
+  right:12px;
+
   top:4px;
   bottom:4px;
 
-  width:120px;
-
-  border-radius:10px;
+  border-radius:8px;
 
   background:
     linear-gradient(
@@ -1202,9 +1202,14 @@ font-weight:500;
         90,
         45,
         0,
-        .28
+        .22
       ),
-      transparent
+      rgba(
+        90,
+        45,
+        0,
+        .08
+      )
     );
 
   pointer-events:none;
