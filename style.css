@@ -963,14 +963,16 @@ font-weight:500;
 
 /* PLAYER */
 
-..scorer-player{
+.scorer-player{
   display:flex;
 
-  align-items:center;
+  align-items:flex-end;
 
-  gap:16px;
+  gap:8px;
 
   min-width:0;
+
+  height:100%;
 }
 .scorer-avatar{
   width:58px;
@@ -985,12 +987,18 @@ font-weight:500;
 /* FIRST PLACE */
 
 .big-avatar{
-  width:155px;
-  height:155px;
-
-  margin-top:-42px;
+  width:170px;
+  height:170px;
 
   object-fit:contain;
+
+  position:relative;
+
+  top:-42px;
+
+  left:-8px;
+
+  flex-shrink:0;
 }
 
 /* NAME */
@@ -999,13 +1007,14 @@ font-weight:500;
   font-size:16px;
   font-weight:700;
 
-  line-height:1.05;
-
   color:white;
 
-  min-width:0;
-}
+  line-height:1.05;
 
+  position:relative;
+
+  top:-6px;
+}
 /* TEAM */
 
 .scorer-team-logo{
