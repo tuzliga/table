@@ -921,11 +921,21 @@ font-weight:500;
   min-height:42px;
 
   background:
-    rgba(0,0,0,.45);
+  linear-gradient(
+    180deg,
+    #06213f 0%,
+    #041a33 45%,
+    #021428 100%
+  );
 
   border:
-    1px solid
-    rgba(244,180,0,.16);
+  1px solid
+  rgba(
+    255,
+    200,
+    70,
+    .22
+  );
 
   border-radius:7px;
 
@@ -1108,7 +1118,7 @@ font-weight:500;
 
 .scorer-name{
   font-size:12px;
-  font-weight:600;
+  font-weight:400;
 
   color:white;
 
