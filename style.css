@@ -741,7 +741,7 @@ body{
 
   padding:
   0 16px
-  0 13px;
+  0 0px;
   box-sizing:border-box;
   
 }
@@ -868,15 +868,15 @@ font-weight:500;
 
 .form-row.rank-1{
   border-left:
-    1px solid #00d26a;
+    2px solid #00d26a;
 }
 
 .form-row.rank-2{
   border-left:
-    1px solid #1185ff;
+    2px solid #1185ff;
 }
 
 .form-row.rank-3{
   border-left:
-    1px solid #f4b400;
+    2px solid #f4b400;
 }
