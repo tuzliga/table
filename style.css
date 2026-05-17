@@ -949,7 +949,15 @@ font-weight:500;
 
   box-sizing:border-box;
 }
+.scorer-card:not(.gold) .scorer-name{
+  white-space:nowrap;
 
+  max-width:none;
+
+  line-height:1;
+
+  left:-12px;
+}
 /* GOLD FIRST */
 
 .scorer-card.gold{
@@ -1155,7 +1163,7 @@ font-weight:500;
 
   justify-self:center;
   position:relative;
-  left:30px;
+  left:40px;
 }
 
 /* GOALS */
