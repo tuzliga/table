@@ -1004,21 +1004,22 @@ font-weight:500;
     );
 }
 .scorer-card.gold .scorer-name{
-  font-size:20px;
+  position:absolute;
 
-  color:#111;
+  left:170px;
+  top:14px;
+
+  font-size:16px;
 
   font-weight:700;
 
-  line-height:1.05;
+  color:#111;
 
-  
+  line-height:.95;
 
-  left:-8px;
+  max-width:150px;
 
-  top:0;
-
-  max-width:140px;
+  z-index:5;
 }
 /* RANK */
 
@@ -1050,7 +1051,7 @@ font-weight:500;
 .scorer-player{
   display:flex;
 
-  align-items:flex-end;
+  align-items:center;
 
   gap:8px;
 
@@ -1085,10 +1086,9 @@ font-weight:500;
   position:absolute;
 
   left:-36px;
-  bottom:-20px;
+  bottom:-16px;
 
-  transform:
-    translateY(0px);
+  transform:none;
 
   z-index:3;
 
