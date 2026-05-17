@@ -15,11 +15,17 @@ const TEAMS_URL =
 
 const MATCHES_URL =
 `${BASE_URL}/${encodeURIComponent("МАТЧИ")}`;
+const SCORERS_URL =
+`${BASE_URL}/${encodeURIComponent("БОМБАРДИРЫ")}`;
+
+const PLAYER_PHOTOS_URL =
+`${BASE_URL}/${encodeURIComponent("ФОТО ФУТБОЛИСТОВ")}`;
 
 let standings = [];
 let teams = {};
 let settings = {};
 let matches = [];
+let scorers = [];
 let currentMode = "short";
 let currentTab = "table";
 
@@ -27,17 +33,20 @@ async function loadData() {
   try {
 
     const [
-      standingsRes,
-      settingsRes,
-      teamsRes,
-      matchesRes
-    ] = await Promise.all([
-      fetch(TABLE_URL),
-      fetch(SETTINGS_URL),
-      fetch(TEAMS_URL),
-      fetch(MATCHES_URL)
-      
-    ]);
+  standingsRes,
+  settingsRes,
+  teamsRes,
+  matchesRes,
+  scorersRes,
+  playerPhotosRes
+] = await Promise.all([
+  fetch(TABLE_URL),
+  fetch(SETTINGS_URL),
+  fetch(TEAMS_URL),
+  fetch(MATCHES_URL),
+  fetch(SCORERS_URL),
+  fetch(PLAYER_PHOTOS_URL)
+]);
 
     standings =
       await standingsRes.json();
@@ -49,6 +58,11 @@ async function loadData() {
       await teamsRes.json();
     matches =
       await matchesRes.json();
+    const scorersData =
+  await scorersRes.json();
+
+const photosData =
+  await playerPhotosRes.json();
 
     // настройки
     settingsData.forEach(row => {
