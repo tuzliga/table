@@ -1083,6 +1083,17 @@ font-weight:500;
 .scorer-card:not(.gold) .scorer-player{
   padding-left:68px;
 }
+.scorer-card:not(.gold) .scorer-player{
+  padding-left:68px;
+}
+.scorer-card:not(.gold) .scorer-avatar{
+  position:relative;
+  left:-10px;
+}
+.scorer-card:not(.gold) .scorer-name{
+  position:relative;
+  left:-12px;
+}
 /* FIRST PLACE */
 
 .big-avatar{
