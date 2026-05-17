@@ -892,7 +892,7 @@ font-weight:500;
 }
 
 .scorers-title{
-  font-size:56px;
+  font-size:15px;
   font-weight:900;
 
   color:#f4b400;
@@ -941,7 +941,7 @@ font-weight:500;
 /* GOLD FIRST */
 
 .scorer-card.gold{
-  min-height:65px;
+  min-height:55px;
 
   position:relative;
 
