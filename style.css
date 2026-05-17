@@ -1151,31 +1151,7 @@ font-weight:500;
       #d79d28 55%,
       #ffd86a 100%
     );
-  .scorer-goals::after{
-  content:"";
-
-  position:absolute;
-
-  left:24px;
-
-  top:50%;
-
-  transform:
-    translateY(-50%);
-
-  width:1px;
-
-  height:25px;
-
-  background:
-    rgba(
-      255,
-      214,
-      90,
-      .55
-    );
-}
-
+  
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   
