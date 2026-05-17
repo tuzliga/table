@@ -909,27 +909,32 @@ font-weight:500;
   display:grid;
 
   grid-template-columns:
-    70px
-    1fr
-    70px
-    90px;
+    60px
+    minmax(0,1fr)
+    64px
+    80px;
 
   align-items:center;
 
-  min-height:86px;
+  min-height:96px;
 
   background:
     rgba(0,0,0,.45);
 
   border:
     1px solid
-    rgba(244,180,0,.18);
+    rgba(244,180,0,.16);
 
-  border-radius:18px;
+  border-radius:22px;
 
   overflow:hidden;
 
-  margin-bottom:10px;
+  margin-bottom:12px;
+
+  padding:
+    0 18px;
+
+  box-sizing:border-box;
 }
 
 /* GOLD FIRST */
@@ -938,20 +943,11 @@ font-weight:500;
   background:
     linear-gradient(
       90deg,
-      #c89218,
-      #f2c14f
+      #cb971d,
+      #efc14d
     );
 
-  min-height:120px;
-
-  box-shadow:
-    0 0 20px
-    rgba(
-      244,
-      180,
-      0,
-      .18
-    );
+  min-height:135px;
 }
 
 /* RANK */
@@ -967,39 +963,47 @@ font-weight:500;
 
 /* PLAYER */
 
-.scorer-player{
+..scorer-player{
   display:flex;
 
   align-items:center;
 
-  gap:18px;
-}
+  gap:16px;
 
+  min-width:0;
+}
 .scorer-avatar{
-  width:62px;
-  height:62px;
+  width:58px;
+  height:58px;
 
   object-fit:cover;
-}
 
+  border-radius:12px;
+
+  flex-shrink:0;
+}
 /* FIRST PLACE */
 
 .big-avatar{
-  width:150px;
-  height:150px;
+  width:155px;
+  height:155px;
 
-  margin-top:-30px;
+  margin-top:-42px;
+
+  object-fit:contain;
 }
 
 /* NAME */
 
 .scorer-name{
-  font-size:18px;
+  font-size:16px;
   font-weight:700;
 
-  line-height:1.1;
+  line-height:1.05;
 
   color:white;
+
+  min-width:0;
 }
 
 /* TEAM */
