@@ -616,9 +616,17 @@ if (currentMode === "full") {
 <div class="losses">
   ${team["П"]}
 </div>
-      <div>${team["ЗМ"]}</div>
-      <div>${team["ПМ"]}</div>
+      <div style="
+  color:#7d8793;
+">
+  ${team["ЗМ"]}
+</div>
 
+<div style="
+  color:#7d8793;
+">
+  ${team["ПМ"]}
+</div>
       <div class="${
         rm >= 0
         ? "positive"
