@@ -1156,20 +1156,29 @@ font-weight:500;
 /* TEAM */
 
 .scorer-team-logo{
-  width:42px;
-  height:42px;
-
   object-fit:contain;
 
   justify-self:center;
   position:relative;
 }
 .scorer-card.gold .scorer-team-logo{
+  width:52px;
+  height:52px;
+
   left:18px;
 }
 .scorer-card:not(.gold) .scorer-team-logo{
-  position:relative;
+  width:42px;
+  height:42px;
+
   left:30px;
+}
+.scorer-card.gold .scorer-team-logo{
+  left:40px;
+}
+.scorer-card:not(.gold) .scorer-team-logo{
+  position:relative;
+  left:40px;
 }
 /* GOALS */
 
@@ -1182,7 +1191,7 @@ font-weight:500;
 
   position:relative;
   .scorer-card:not(.gold) .scorer-goals{
-  left:20px;
+  left:2px;
 }
 
   background:
@@ -1208,7 +1217,7 @@ font-weight:500;
 
   background:none;
   position:relative;
-left:8px;
+left:2px;
 
   text-shadow:
     0 2px 6px
