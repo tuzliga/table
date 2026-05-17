@@ -1146,7 +1146,7 @@ font-weight:500;
 
   position:absolute;
 
-  left:4px;
+  left:24px;
 
   top:50%;
 
@@ -1155,7 +1155,7 @@ font-weight:500;
 
   width:1px;
 
-  height:34px;
+  height:25px;
 
   background:
     rgba(
@@ -1251,7 +1251,7 @@ font-weight:500;
   position:absolute;
 
   left:45px;
-  right:12px;
+  right:25px;
 
   top:0px;
   bottom:0px;
