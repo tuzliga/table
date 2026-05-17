@@ -880,3 +880,151 @@ font-weight:500;
   border-left:
     2px solid #f4b400;
 }
+/* =========================
+   SCORERS
+========================= */
+
+.scorers-wrap{
+  width:92%;
+  margin:0 auto;
+
+  padding-bottom:20px;
+}
+
+.scorers-title{
+  font-size:56px;
+  font-weight:900;
+
+  color:#f4b400;
+
+  margin:
+    8px 0 20px;
+
+  letter-spacing:-2px;
+}
+
+/* CARD */
+
+.scorer-card{
+  display:grid;
+
+  grid-template-columns:
+    70px
+    1fr
+    70px
+    90px;
+
+  align-items:center;
+
+  min-height:86px;
+
+  background:
+    rgba(0,0,0,.45);
+
+  border:
+    1px solid
+    rgba(244,180,0,.18);
+
+  border-radius:18px;
+
+  overflow:hidden;
+
+  margin-bottom:10px;
+}
+
+/* GOLD FIRST */
+
+.scorer-card.gold{
+  background:
+    linear-gradient(
+      90deg,
+      #c89218,
+      #f2c14f
+    );
+
+  min-height:120px;
+
+  box-shadow:
+    0 0 20px
+    rgba(
+      244,
+      180,
+      0,
+      .18
+    );
+}
+
+/* RANK */
+
+.scorer-rank{
+  font-size:38px;
+  font-weight:800;
+
+  color:white;
+
+  text-align:center;
+}
+
+/* PLAYER */
+
+.scorer-player{
+  display:flex;
+
+  align-items:center;
+
+  gap:18px;
+}
+
+.scorer-avatar{
+  width:62px;
+  height:62px;
+
+  object-fit:cover;
+}
+
+/* FIRST PLACE */
+
+.big-avatar{
+  width:150px;
+  height:150px;
+
+  margin-top:-30px;
+}
+
+/* NAME */
+
+.scorer-name{
+  font-size:18px;
+  font-weight:700;
+
+  line-height:1.1;
+
+  color:white;
+}
+
+/* TEAM */
+
+.scorer-team-logo{
+  width:58px;
+  height:58px;
+
+  object-fit:contain;
+
+  justify-self:center;
+}
+
+/* GOALS */
+
+.scorer-goals{
+  font-size:56px;
+  font-weight:900;
+
+  color:#f4b400;
+
+  text-align:center;
+}
+
+.scorer-card.gold
+.scorer-goals{
+  color:#111;
+}
