@@ -185,13 +185,13 @@ if (currentTab === "scorers") {
       name:"Эрнист Болотбеков",
       team:"1996",
       goals:25,
-      photo:"https://randomuser.me/api/portraits/men/44.jpg"
+      photo:"./assets/player1.png"
     },
     {
       name:"Мирлан Уулу",
       team:"1994",
       goals:19,
-      photo:"https://randomuser.me/api/portraits/men/32.jpg"
+    photo:"./assets/player2.png"
     },
     {
       name:"Бексултан Абдиев",
@@ -234,7 +234,7 @@ if (currentTab === "scorers") {
 
     const avatar =
       player.photo ||
-      "./img/avatar.png";
+      "./assets/defaultplayer.png";
 
     html += `
       <div class="
