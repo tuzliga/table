@@ -1026,21 +1026,18 @@ font-weight:500;
 
   height:100%;
 
-  font-size:22px;
-  font-weight:700;
+  font-size:34px;
+  font-weight:800;
 
   text-align:center;
 
-  color:#1a1305;
+  color:#120d03;
 
-  text-shadow:
-    0 1px 0
-    rgba(
-      255,
-      220,
-      120,
-      .4
-    );
+  line-height:1;
+
+  position:relative;
+
+  top:-1px;
 }
 
 /* PLAYER */
