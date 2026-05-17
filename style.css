@@ -740,7 +740,7 @@ body{
   min-height:34px;
 
   padding:
-  0 0px;
+  0 16px;
   box-sizing:border-box;
   
 }
@@ -865,17 +865,32 @@ font-weight:500;
 
 /* REMOVE TABLE RANK COLORS */
 
-.form-row.rank-1{
-  border-left:
-    2px solid #00d26a;
+.form-row{
+  position:relative;
 }
 
-.form-row.rank-2{
-  border-left:
-    2px solid #1185ff;
+.form-row.rank-1::before,
+.form-row.rank-2::before,
+.form-row.rank-3::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:0;
+  bottom:0;
+
+  width:2px;
 }
 
-.form-row.rank-3{
-  border-left:
-    2px solid #f4b400;
+.form-row.rank-1::before{
+  background:#00d26a;
+}
+
+.form-row.rank-2::before{
+  background:#1185ff;
+}
+
+.form-row.rank-3::before{
+  background:#f4b400;
 }
