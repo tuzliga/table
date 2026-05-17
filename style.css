@@ -1054,7 +1054,7 @@ font-weight:500;
 
   min-width:0;
 
-  height:100%;
+  overflow:visible;
 }
 .scorer-avatar{
   width:40px;
