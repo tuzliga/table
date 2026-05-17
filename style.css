@@ -1151,10 +1151,10 @@ font-weight:500;
   background:
     linear-gradient(
       to top,
-      #2a1700 0%,
-      #5a3300 35%,
-      #8f5d0c 65%,
-      #f4c650 100%
+      #6c4207 0%,
+      #9b6711 25%,
+      #d79d28 55%,
+      #ffd86a 100%
     );
 
   -webkit-background-clip:text;
@@ -1251,4 +1251,52 @@ font-weight:500;
     );
 
   pointer-events:none;
+}
+.scorer-goals::before{
+  content:"";
+
+  position:absolute;
+
+  left:-18px;
+
+  top:50%;
+
+  transform:
+    translateY(-50%);
+
+  width:1px;
+
+  height:42px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(
+        255,
+        214,
+        90,
+        .08
+      ),
+      rgba(
+        255,
+        214,
+        90,
+        .75
+      ),
+      rgba(
+        255,
+        214,
+        90,
+        .08
+      )
+    );
+
+  box-shadow:
+    0 0 6px
+    rgba(
+      255,
+      200,
+      50,
+      .18
+    );
 }
