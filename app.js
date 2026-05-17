@@ -228,9 +228,14 @@ if (currentTab === "scorers") {
       index
     ) => {
 
-    const logo =
-      teams[player.team]
-      || getDefaultLogo();
+    let logo =
+  teams[player.team]
+  || getDefaultLogo();
+
+  if (index === 0) {
+  logo =
+    "./assets/1990.png";
+}
 
     const avatar =
       player.photo ||
