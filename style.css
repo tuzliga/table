@@ -918,7 +918,7 @@ font-weight:500;
 
   align-items:center;
 
-  min-height:36px;
+  min-height:42px;
 
   background:
     rgba(0,0,0,.45);
@@ -1031,7 +1031,7 @@ font-weight:500;
 
   height:100%;
 
-  font-size:36px;
+  font-size:20px;
   font-weight:600;
 
   text-align:center;
@@ -1054,7 +1054,7 @@ font-weight:500;
   align-items:center;
 
   gap:8px;
-
+  font-size:16px;
   min-width:0;
 
   overflow:visible;
@@ -1066,8 +1066,8 @@ font-weight:500;
   width:100%;
 }
 .scorer-avatar{
-  width:50px;
-  height:50px;
+  width:42px;
+  height:42px;
 
   object-fit:cover;
 
