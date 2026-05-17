@@ -261,7 +261,7 @@ const topScorers =
     "./assets/1990.png";
 }
 
-    cconst avatar =
+    const avatar =
   player.photo &&
   player.photo.trim()
     ? player.photo
