@@ -1078,11 +1078,11 @@ font-weight:500;
 
   position:absolute;
 
-  left:-30px;
+  left:-40px;
   bottom:0px;
 
   transform:
-    translateY(-20px);
+    translateY(0px);
 
   z-index:3;
 
