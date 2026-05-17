@@ -941,61 +941,23 @@ font-weight:500;
 
 .scorer-card.gold{
   background:
-    linear-gradient(
-      90deg,
-      #c18c16,
-      #e7b941
-    );
+    url("./assets/goldcard.png")
+    center / 100% 100%
+    no-repeat;
 
   min-height:72px;
 
   position:relative;
 
-  border:
-    1px solid
-    rgba(
-      255,220,120,.35
-    );
+  border:none;
 
-  border-radius:6px;
+  border-radius:0;
 
   overflow:visible;
 
-  z-index:1;
+  box-shadow:none;
 }
-/* SECOND GOLD BOX */
 
-.scorer-card.gold::before{
-  content:"";
-
-  position:absolute;
-
-  left:58px;
-  right:0;
-
-  top:0;
-  bottom:0;
-
-  border-radius:6px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #b88312,
-      #dba62f
-    );
-
-  box-shadow:
-    inset 0 1px 0
-    rgba(
-      255,
-      255,
-      255,
-      .18
-    );
-
-  z-index:-1;
-}
 /* RANK */
 
 .scorer-rank{
