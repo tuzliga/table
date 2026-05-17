@@ -943,7 +943,7 @@ font-weight:500;
 /* GOLD FIRST */
 
 .scorer-card.gold{
-  min-height:55px;
+  min-height:70px;
 
   position:relative;
 
@@ -1059,8 +1059,8 @@ font-weight:500;
   padding-left:95px;
 }
 .scorer-avatar{
-  width:40px;
-  height:40px;
+  width:50px;
+  height:50px;
 
   object-fit:cover;
 
@@ -1078,11 +1078,11 @@ font-weight:500;
 
   position:absolute;
 
-  left:-18px;
-  bottom:-2px;
+  left:-30px;
+  bottom:0px;
 
   transform:
-    translateY(-12px);
+    translateY(-20px);
 
   z-index:3;
 
