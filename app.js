@@ -176,6 +176,132 @@ if (modeTabs) {
 }
 
   let html = "";;
+  // SCORERS SCREEN
+
+if (currentTab === "scorers") {
+
+  const topScorers = [
+    {
+      name:"Эрнист Болотбеков",
+      team:"1996",
+      goals:25,
+      photo:"./img/player1.png"
+    },
+    {
+      name:"Мирлан Уулу",
+      team:"1994",
+      goals:19,
+      photo:"./img/player2.png"
+    },
+    {
+      name:"Бексултан Абдиев",
+      team:"00-01",
+      goals:16
+    },
+    {
+      name:"Айдарбек Молдокулов",
+      team:"2006",
+      goals:14
+    },
+    {
+      name:"Нурболот Мурзаев",
+      team:"УЛУУ МУУН",
+      goals:11
+    }
+  ];
+
+  html += `
+    <div class="
+      scorers-wrap
+    ">
+
+      <div class="
+        scorers-title
+      ">
+        ТОП-5
+      </div>
+  `;
+
+  topScorers.forEach(
+    (
+      player,
+      index
+    ) => {
+
+    const logo =
+      teams[player.team]
+      || getDefaultLogo();
+
+    const avatar =
+      player.photo ||
+      "./img/avatar.png";
+
+    html += `
+      <div class="
+        scorer-card
+        ${
+          index === 0
+          ? "gold"
+          : ""
+        }
+      ">
+
+        <div class="
+          scorer-rank
+        ">
+          ${index + 1}
+        </div>
+
+        <div class="
+          scorer-player
+        ">
+
+          <img
+            src="${avatar}"
+            class="
+              scorer-avatar
+              ${
+                index === 0
+                ? "big-avatar"
+                : ""
+              }
+            "
+          />
+
+          <div class="
+            scorer-name
+          ">
+            ${player.name}
+          </div>
+
+        </div>
+
+        <img
+          src="${logo}"
+          class="
+            scorer-team-logo
+          "
+        />
+
+        <div class="
+          scorer-goals
+        ">
+          ${player.goals}
+        </div>
+
+      </div>
+    `;
+  });
+
+  html += `
+    </div>
+  `;
+
+  container.innerHTML =
+    html;
+
+  return;
+}
 // MATCHES SCREEN
 
 if (currentTab === "matches") {
