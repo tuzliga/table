@@ -940,21 +940,14 @@ font-weight:500;
 
 /* GOLD FIRST */
 
-.scorer-card.gold{
-  background:
-    url("./assets/goldcard.png")
-    center / 100% 100%
-    no-repeat;
-
+..scorer-card.gold{
   min-height:86px;
 
   position:relative;
 
   border:none;
 
-  border-radius:18px;
-
-  overflow:hidden;
+  overflow:visible;
 
   padding:
     0 12px;
@@ -1091,4 +1084,25 @@ font-weight:500;
   font-size:26px;
 
   font-weight:800;
+}
+.scorer-card.gold::before{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    url("./assets/goldcard.png")
+    center / 100% 100%
+    no-repeat;
+
+  border-radius:18px;
+
+  z-index:0;
+}
+
+.scorer-card.gold > *{
+  position:relative;
+  z-index:1;
 }
