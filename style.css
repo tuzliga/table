@@ -1072,6 +1072,9 @@ font-weight:500;
   position:relative;
 
   padding-left:95px;
+  .scorer-card:not(.gold) .scorer-player{
+  padding-left:68px;
+}
 
   width:100%;
 }
