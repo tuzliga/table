@@ -320,17 +320,24 @@ html += `
     <!-- LEFT TEAM -->
 
     <div style="
-      display:flex;
-      align-items:center;
-      justify-content:flex-end;
-      gap:10px;
-    ">
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+
+  gap:10px;
+
+  min-width:0;
+">
 
       <div style="
-        color:white;
-        font-size:14px;
-        font-weight:500;
-      ">
+  color:white;
+  font-size:14px;
+  font-weight:500;
+
+  text-align:right;
+
+  line-height:1.15;
+">
         ${match["КОМАНДА 1"]}
       </div>
 
