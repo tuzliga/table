@@ -1006,8 +1006,8 @@ font-weight:500;
 .scorer-card.gold .scorer-name{
   position:absolute;
 
-  left:150px;
-  top:-8px;
+  left:80px;
+  top:-12px;
 
   font-size:16px;
 
@@ -1086,7 +1086,7 @@ font-weight:500;
   position:absolute;
 
   left:-36px;
-  bottom:-24px;
+  bottom:-30px;
 
   transform:none;
 
