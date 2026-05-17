@@ -927,12 +927,12 @@ font-weight:500;
     1px solid
     rgba(244,180,0,.16);
 
-  border-radius:5px;
+  border-radius:10px;
 
   overflow:hidden;
 
   margin:
-  0 0 4px;;
+  0 0 1px;;
 
   padding:
     0 18px;
@@ -1031,7 +1031,7 @@ font-weight:500;
 
   height:100%;
 
-  font-size:35px;
+  font-size:30px;
   font-weight:600;
 
   text-align:center;
@@ -1043,7 +1043,7 @@ font-weight:500;
   position:relative;
 
   top:0px;
-  left:0px;
+  left:-20px;
 }
 
 /* PLAYER */
