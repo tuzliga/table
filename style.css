@@ -1123,11 +1123,26 @@ font-weight:500;
 }
 .scorer-card.gold
 .scorer-rank{
-  color:#120d03;
-
-  font-size:26px;
+  font-size:36px !important;
 
   font-weight:800;
+
+  color:#1a1305 !important;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  line-height:1;
+
+  position:relative;
+
+  top:0;
+
+  text-shadow:none;
 }
 /* GOLD METAL TEXTURE */
 
