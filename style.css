@@ -942,10 +942,10 @@ font-weight:500;
 .scorer-card.gold{
   background:
     url("./assets/goldcard.png")
-    center / 100% 100%
+    center / cover
     no-repeat;
 
-  min-height:72px;
+  min-height:78px;
 
   position:relative;
 
@@ -955,9 +955,26 @@ font-weight:500;
 
   overflow:visible;
 
-  box-shadow:none;
-}
+  padding:
+    0 12px;
 
+  box-sizing:border-box;
+}
+.scorer-card.gold .scorer-name{
+  font-size:14px;
+
+  color:#111;
+
+  font-weight:700;
+
+  line-height:1.05;
+
+  position:relative;
+
+  left:-8px;
+
+  top:0;
+}
 /* RANK */
 
 .scorer-rank{
@@ -999,20 +1016,21 @@ justify-content:center;
 /* FIRST PLACE */
 
 .big-avatar{
-  width:50px;
-  height:50px;
+  width:76px;
+  height:76px;
 
   object-fit:contain;
 
   position:relative;
 
-  top:-42px;
+  top:-6px;
 
-  left:-8px;
+  left:-6px;
+
+  z-index:3;
 
   flex-shrink:0;
 }
-
 /* NAME */
 
 .scorer-name{
@@ -1030,8 +1048,8 @@ justify-content:center;
 /* TEAM */
 
 .scorer-team-logo{
-  width:58px;
-  height:58px;
+  width:42px;
+  height:42px;
 
   object-fit:contain;
 
@@ -1041,8 +1059,8 @@ justify-content:center;
 /* GOALS */
 
 .scorer-goals{
-  font-size:56px;
-  font-weight:900;
+  font-size:34px;
+  font-weight:700;
 
   color:#f4b400;
 
