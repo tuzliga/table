@@ -1088,11 +1088,11 @@ font-weight:500;
 }
 .scorer-card:not(.gold) .scorer-avatar{
   position:relative;
-  left:-36px;
+  left:-100px;
 }
 .scorer-card:not(.gold) .scorer-name{
   position:relative;
-  left:-36px;
+  left:-40px;
 }
 /* FIRST PLACE */
 
