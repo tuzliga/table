@@ -1186,10 +1186,7 @@ font-weight:500;
   
 
   position:relative;
-  .scorer-card:not(.gold) .scorer-goals{
-  left:100px;
-}
-
+  
   background:
     linear-gradient(
       to top,
@@ -1203,6 +1200,21 @@ font-weight:500;
   -webkit-text-fill-color:transparent;
   
   background-clip:text;
+}
+/* GOALS 2–5 */
+
+.scorer-card:not(.gold) .scorer-goals{
+  position:relative;
+
+  left:10px;
+
+  font-size:34px;
+}
+.scorer-card.gold
+.scorer-goals{
+  left:20px;
+
+  font-size:40px;
 }
 .scorer-card.gold
 .scorer-goals{
