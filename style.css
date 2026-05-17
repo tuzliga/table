@@ -1335,3 +1335,90 @@ font-weight:500;
       .18
     );
 }
+.scorer-card.gold .scorer-player::before{
+  content:"";
+
+  position:absolute;
+
+  width:120px;
+  height:120px;
+
+  left:-12px;
+  top:-36px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(
+        0,
+        0,
+        0,
+        0
+      ) 15%,
+
+      rgba(
+        70,
+        35,
+        0,
+        .12
+      ) 45%,
+
+      rgba(
+        35,
+        18,
+        0,
+        .28
+      ) 100%
+    );
+
+  z-index:0;
+
+  pointer-events:none;
+}
+.scorer-card.gold .scorer-goals::after{
+  content:"";
+
+  position:absolute;
+
+  width:90px;
+  height:90px;
+
+  right:-12px;
+  top:50%;
+
+  transform:
+    translateY(-50%);
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(
+        0,
+        0,
+        0,
+        0
+      ) 15%,
+
+      rgba(
+        70,
+        35,
+        0,
+        .14
+      ) 50%,
+
+      rgba(
+        35,
+        18,
+        0,
+        .30
+      ) 100%
+    );
+
+  z-index:-1;
+
+  pointer-events:none;
+}
