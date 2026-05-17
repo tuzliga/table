@@ -936,6 +936,8 @@ font-weight:500;
     0 18px;
 
   box-sizing:border-box;
+  position:relative;
+  left:-14px;
 }
 
 /* GOLD FIRST */
