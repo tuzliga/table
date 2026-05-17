@@ -192,38 +192,48 @@ if (modeTabs) {
   let html = "";;
   // SCORERS SCREEN
 
-if (currentTab === "scorers") {
+const photoMap = {};
 
-  const topScorers = [
-    {
-      name:"Эрнист Болотбеков",
-      team:"1996",
-      goals:25,
-      photo:"./assets/player1.png"
-    },
-    {
-      name:"Мирлан Уулу",
-      team:"1994",
-      goals:19,
-    photo:"./assets/player2.png"
-    },
-    {
-      name:"Бексултан Абдиев",
-      team:"00-01",
-      goals:16
-    },
-    {
-      name:"Айдарбек Молдокулов",
-      team:"2006",
-      goals:14
-    },
-    {
-      name:"Нурболот Мурзаев",
-      team:"УЛУУ МУУН",
-      goals:11
-    }
-  ];
+photosData.forEach(player => {
 
+  const playerName =
+    (player["ИГРОК"] || "")
+    .trim();
+
+  const photo =
+    (player["ФОТО"] || "")
+    .trim();
+
+  if (playerName) {
+
+    photoMap[playerName] =
+      photo;
+  }
+});
+
+const topScorers =
+  scorersData
+    .slice(0, 5)
+    .map(player => ({
+
+      name:
+        player["ИГРОК"],
+
+      team:
+        player["КОМАНДА"],
+
+      goals:
+        Number(
+          player["ГОЛЫ"]
+        ) || 0,
+
+      photo:
+        photoMap[
+          player["ИГРОК"]
+        ]
+        ||
+        "./assets/defaultplayer.png"
+    }));
   html += `
     <div class="
       scorers-wrap
@@ -251,10 +261,11 @@ if (currentTab === "scorers") {
     "./assets/1990.png";
 }
 
-    const avatar =
-      player.photo ||
-      "./assets/defaultplayer.png";
-
+    cconst avatar =
+  player.photo &&
+  player.photo.trim()
+    ? player.photo
+    : "./assets/defaultplayer.png";
     html += `
       <div class="
         scorer-card
