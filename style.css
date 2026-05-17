@@ -885,7 +885,7 @@ font-weight:500;
 ========================= */
 
 .scorers-wrap{
-  width:92%;
+  width:100%;
   margin:0 auto;
 
   padding-bottom:20px;
@@ -929,7 +929,8 @@ font-weight:500;
 
   overflow:hidden;
 
-  margin-bottom:12px;
+  margin:
+  0 0 4px;;
 
   padding:
     0 18px;
@@ -951,7 +952,7 @@ font-weight:500;
 
   border:none;
 
-  border-radius:0;
+  border-radius:12px;
 
   overflow:visible;
 
