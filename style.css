@@ -1340,56 +1340,11 @@ font-weight:500;
 
   position:absolute;
 
-  width:120px;
-  height:120px;
+  width:180px;
+  height:180px;
 
-  left:-12px;
-  top:-36px;
-
-  border-radius:50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(
-        0,
-        0,
-        0,
-        0
-      ) 15%,
-
-      rgba(
-        70,
-        35,
-        0,
-        .12
-      ) 45%,
-
-      rgba(
-        35,
-        18,
-        0,
-        .28
-      ) 100%
-    );
-
-  z-index:0;
-
-  pointer-events:none;
-}
-.scorer-card.gold .scorer-goals::after{
-  content:"";
-
-  position:absolute;
-
-  width:90px;
-  height:90px;
-
-  right:-12px;
-  top:50%;
-
-  transform:
-    translateY(-50%);
+  left:-20px;
+  top:-55px;
 
   border-radius:50%;
 
@@ -1400,22 +1355,29 @@ font-weight:500;
         0,
         0,
         0,
+        .38
+      ) 0%,
+
+      rgba(
+        0,
+        0,
+        0,
+        .22
+      ) 28%,
+
+      rgba(
+        0,
+        0,
+        0,
+        .08
+      ) 55%,
+
+      rgba(
+        0,
+        0,
+        0,
         0
-      ) 15%,
-
-      rgba(
-        70,
-        35,
-        0,
-        .14
-      ) 50%,
-
-      rgba(
-        35,
-        18,
-        0,
-        .30
-      ) 100%
+      ) 78%
     );
 
   z-index:-1;
