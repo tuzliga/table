@@ -1115,7 +1115,6 @@ font-weight:500;
 .scorer-card:not(.gold) img{
   width:46px;
   height:46px;
-  left:-36px;
 
   object-fit:contain;
 
