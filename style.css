@@ -1069,16 +1069,16 @@ font-weight:500;
 /* FIRST PLACE */
 
 .big-avatar{
-  width:76px;
-  height:76px;
+  width:92px;
+  height:92px;
 
   object-fit:contain;
 
   position:relative;
 
-  top:-6px;
+  top:-14px;
 
-  left:-6px;
+  left:-18px;
 
   z-index:3;
 
