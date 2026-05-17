@@ -732,7 +732,7 @@ body{
   display:grid;
 
  grid-template-columns:
-  36px
+  24px
   150px
   minmax(150px,1fr);
   align-items:center;
@@ -741,7 +741,7 @@ body{
 
   padding:
   0 16px;
-  margin:0 -20px;
+  margin:0 -16px;
   box-sizing:border-box;
   
 }
