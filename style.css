@@ -1112,29 +1112,53 @@ font-weight:500;
 
   justify-self:center;
   position:relative;
-  left:20px;
+  left:18px;
 }
 
 /* GOALS */
 
 .scorer-goals{
-  font-size:50px;
+  font-size:40px;
   font-weight:700;
-
-  color:#f4b400;
 
   text-align:center;
 
   position:relative;
   left:20px;
+
+  background:
+    linear-gradient(
+      to top,
+      #6c4207 0%,
+      #9b6711 25%,
+      #d79d28 55%,
+      #ffd86a 100%
+    );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  background-clip:text;
 }
 .scorer-card.gold
 .scorer-goals{
-  color:#111;
+  background:
+    linear-gradient(
+      to top,
+      #2a1700 0%,
+      #5a3300 35%,
+      #8f5d0c 65%,
+      #f4c650 100%
+    );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  background-clip:text;
 }
 .scorer-card.gold
 .scorer-rank{
-  font-size:50px !important;
+  font-size:40px !important;
 
   font-weight:700;
 
