@@ -733,7 +733,7 @@ body{
 
  grid-template-columns:
   36px
-  120px
+  150px
   minmax(150px,1fr);
   align-items:center;
 
