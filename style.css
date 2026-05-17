@@ -1064,7 +1064,9 @@ font-weight:500;
   align-items:center;
 
   gap:8px;
+
   font-size:16px;
+
   min-width:0;
 
   overflow:visible;
@@ -1072,21 +1074,14 @@ font-weight:500;
   position:relative;
 
   padding-left:95px;
-  .scorer-card:not(.gold) .scorer-player{
-  padding-left:68px;
-}
 
   width:100%;
 }
-.scorer-avatar{
-  width:42px;
-  height:42px;
 
-  object-fit:cover;
+/* ONLY 2–5 */
 
-  border-radius:12px;
-
-  flex-shrink:0;
+.scorer-card:not(.gold) .scorer-player{
+  padding-left:68px;
 }
 /* FIRST PLACE */
 
