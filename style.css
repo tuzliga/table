@@ -941,13 +941,13 @@ font-weight:500;
 /* GOLD FIRST */
 
 .scorer-card.gold{
-  min-height:88px;
+  min-height:70px;
 
   position:relative;
 
   overflow:visible;
 
-  border-radius:18px;
+  border-radius:8px;
 
   padding:0 12px;
 
