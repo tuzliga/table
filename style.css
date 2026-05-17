@@ -1055,6 +1055,8 @@ font-weight:500;
   min-width:0;
 
   overflow:visible;
+  position:relative;
+  padding-left:95px;
 }
 .scorer-avatar{
   width:40px;
@@ -1074,19 +1076,17 @@ font-weight:500;
 
   object-fit:contain;
 
-  position:relative;
+  position:absolute;
 
-  top:-30px;
-
+  left:42px;
   bottom:0;
 
-  left:-40px;
+  transform:
+    translateY(-30px);
 
   z-index:3;
 
-  flex-shrink:0;
-
-  margin-bottom:0;
+  pointer-events:none;
 }
 /* NAME */
 
