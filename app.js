@@ -191,7 +191,7 @@ if (modeTabs) {
 
   let html = "";;
   // SCORERS SCREEN
-
+if (currentTab === "scorers") {
 const photoMap = {};
 
 photos.forEach(player => {
