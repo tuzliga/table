@@ -1,4 +1,4 @@
-const SHEET_ID =
+  const SHEET_ID =
 "1Pax-uq-WIefiiInGaYvvECl0Mlg_hGvLtEzZDzIJT1g";
 
 const BASE_URL =
@@ -428,9 +428,7 @@ const sortedMatches =
   );
   
 sortedMatches.forEach(
-    match,
-    index
-  ) => {
+  (match, index) => {
 
   const groupKey =
     `${match["ТУР"]}-${match["ДАТА"]}`;
