@@ -235,6 +235,12 @@ const topScorers =
     }));
   const leaderGoals =
   topScorers[0]?.goals || 0;
+  const goldCount =
+  topScorers.filter(
+    p =>
+      p.goals ===
+      leaderGoals
+  ).length;
 
   html += `
     <div class="
@@ -295,8 +301,14 @@ const topScorers =
               ${
                 player.goals ===
 leaderGoals
-  ? "big-avatar"
-  : ""  
+
+? (
+    goldCount > 1
+      ? "big-avatar small-gold-avatar"
+      : "big-avatar"
+  )
+
+: ""
               }
             "
           />
