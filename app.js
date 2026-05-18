@@ -639,9 +639,6 @@ if (
     html;
 
   return;
-  html += `
-  <div class="table-card">
-`;
 }
   // ВКРАТЦЕ
   if (currentMode === "short") {
