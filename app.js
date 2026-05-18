@@ -1004,3 +1004,7 @@ document
 
 
 loadData();
+
+setInterval(() => {
+  loadData();
+}, 60000);
