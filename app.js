@@ -233,6 +233,8 @@ const topScorers =
         ||
         "./assets/defaultplayer.png"
     }));
+  const leaderGoals =
+  topScorers[0]?.goals || 0;
 
   html += `
     <div class="
@@ -264,8 +266,9 @@ const topScorers =
       <div class="
         scorer-card
         ${
-          index === 0
-          ? "gold"
+          player.goals ===
+          leaderGoals
+           ? "gold"
           : ""
         }
       ">
@@ -273,7 +276,12 @@ const topScorers =
         <div class="
           scorer-rank
         ">
-          ${index + 1}
+          ${
+  player.goals ===
+  leaderGoals
+    ? 1
+    : index + 1
+}
         </div>
 
         <div class="
@@ -285,9 +293,10 @@ const topScorers =
             class="
               scorer-avatar
               ${
-                index === 0
-                ? "big-avatar"
-                : ""
+                player.goals ===
+leaderGoals
+  ? "big-avatar"
+  : ""  
               }
             "
           />
