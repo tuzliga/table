@@ -640,7 +640,11 @@ if (
 
   return;
 }
-  // ВКРАТЦЕ
+  html += `
+  <div class="table-card">
+`;
+
+// ВКРАТЦЕ
   if (currentMode === "short") {
 
     html += `
