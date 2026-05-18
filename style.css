@@ -998,6 +998,7 @@ font-weight:500;
   padding:0 12px;
 
   box-sizing:border-box;
+  
 
   border:
     1px solid
@@ -1046,6 +1047,9 @@ font-weight:500;
       0,
       .15
     );
+}
+.scorer-card.gold + .scorer-card.gold{
+  margin-top:6px;
 }
 .scorer-card.gold .scorer-name{
   position:absolute;
