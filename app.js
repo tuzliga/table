@@ -358,16 +358,19 @@ if (currentTab === "matches") {
  let currentTour = "";
   let currentDate = "";
 const sortedMatches =
-  [...matches]
-    .sort((a, b) => {
+  [...matches].sort(
+    function(a, b) {
 
       // ТУР
-
       const tourA =
-        Number(a["ТУР"]) || 0;
+        parseInt(
+          a["ТУР"]
+        ) || 0;
 
       const tourB =
-        Number(b["ТУР"]) || 0;
+        parseInt(
+          b["ТУР"]
+        ) || 0;
 
       if (
         tourA !==
@@ -380,44 +383,50 @@ const sortedMatches =
       }
 
       // ДАТА
-
       const dateA =
-        a["ДАТА"]
-          ?.split(".")
-          .reverse()
-          .join("-")
-        || "";
+        (
+          a["ДАТА"] || ""
+        )
+        .split(".")
+        .reverse()
+        .join("-");
 
       const dateB =
-        b["ДАТА"]
-          ?.split(".")
-          .reverse()
-          .join("-")
-        || "";
+        (
+          b["ДАТА"] || ""
+        )
+        .split(".")
+        .reverse()
+        .join("-");
 
       if (
         dateA !==
         dateB
       ) {
-        return dateA
-          .localeCompare(
-            dateB
-          );
+        return (
+          dateA >
+          dateB
+            ? 1
+            : -1
+        );
       }
 
       // ВРЕМЯ
-
       const timeA =
         a["ВРЕМЯ"] || "";
 
       const timeB =
         b["ВРЕМЯ"] || "";
 
-      return timeA
-        .localeCompare(
-          timeB
-        );
-    });
+      return (
+        timeA >
+        timeB
+          ? 1
+          : -1
+      );
+    }
+  );
+  
 sortedMatches.forEach(
     match,
     index
