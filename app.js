@@ -256,11 +256,6 @@ const topScorers =
   teams[player.team]
   || getDefaultLogo();
 
-  if (index === 0) {
-  logo =
-    "./assets/1990.png";
-}
-
     const avatar =
       player.photo ||
       "./assets/defaultplayer.png";
