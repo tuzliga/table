@@ -1172,6 +1172,9 @@ font-weight:500;
   font-weight:400;
 
   color:white;
+  .scorer-card:not(.gold) .scorer-name{
+  color:#d6dde7;
+}
 
   line-height:1.05;
 
