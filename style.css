@@ -1161,6 +1161,12 @@ font-weight:500;
     )
   );
 }
+.small-gold-avatar{
+  width:94px;
+  height:94px;
+
+  bottom:-12px;
+}
 .scorer-card:not(.gold) img{
   width:46px;
   height:46px;
