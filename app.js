@@ -26,6 +26,7 @@ let teams = {};
 let settings = {};
 let matches = [];
 let scorers = [];
+let photos = [];
 let currentMode = "short";
 let currentTab = "table";
 
@@ -58,12 +59,11 @@ async function loadData() {
       await teamsRes.json();
     matches =
       await matchesRes.json();
-    const scorersData =
+    scorers =
   await scorersRes.json();
 
-const photosData =
+    photos =
   await playerPhotosRes.json();
-
     // настройки
     settingsData.forEach(row => {
 
